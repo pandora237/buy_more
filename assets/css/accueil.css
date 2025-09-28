@@ -1,0 +1,291 @@
+/* Variables existantes */
+:root {
+    --font-family: 'Poppins', sans-serif;
+
+    --col-background: #f8f9fa;
+    --col-text: #212529;
+    --col-text-light: #ffffff;
+
+    --col-primary: #ff6f00;
+    --col-secondary: #007bff;
+    --col-tertiary: #289fa7;
+
+    --col-success: #28a745;
+    --col-warning: #ffc107;
+    --col-danger: #dc3545;
+
+    --col-border: #dee2e6;
+
+    /* Ajout des hover (à ajuster si besoin) */
+    --col-primary-hover: #e65c00;
+    --col-secondary-hover: #0056b3;
+    --col-success-hover: #218838;
+    --col-warning-hover: #e0a800;
+    --col-danger-hover: #c82333;
+}
+
+html,
+body {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--col-background);
+    color: var(--col-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-family);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-sizing: border-box;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--col-primary);
+    color: var(--col-text-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--col-primary-hover);
+}
+
+.btn-secondary {
+    background-color: var(--col-secondary);
+    color: var(--col-text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--col-secondary-hover);
+}
+
+.btn-success {
+    background-color: var(--col-success);
+    color: var(--col-text-light);
+}
+
+.btn-success:hover {
+    background-color: var(--col-success-hover);
+}
+
+.btn-warning {
+    background-color: var(--col-warning);
+    color: var(--col-text);
+}
+
+.btn-warning:hover {
+    background-color: var(--col-warning-hover);
+}
+
+.btn-danger {
+    background-color: var(--col-danger);
+    color: var(--col-text-light);
+}
+
+.btn-danger:hover {
+    background-color: var(--col-danger-hover);
+}
+
+/* Header */
+header {
+    background-color: var(--col-secondary);
+    color: var(--col-text-light);
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav a {
+    color: var(--col-text-light);
+    text-decoration: none;
+}
+
+header .search {
+    display: flex;
+    gap: 0.5rem;
+}
+
+header input {
+    padding: 0.5rem;
+    border: 1px solid var(--col-border);
+    border-radius: 0.5rem;
+}
+
+header .btn {
+    background-color: var(--col-primary);
+    color: var(--col-text-light);
+}
+
+/* Bannière */
+.banner {
+    background-color: var(--col-secondary);
+    color: var(--col-text-light);
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    color: var(--col-primary);
+}
+
+.banner p {
+    font-size: 1.2rem;
+}
+
+/* Sections cartes */
+.section {
+    padding: 2rem 0;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--col-text-light);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 300px;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--col-border);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.card h3 {
+    margin: 1rem 0;
+}
+
+.card p {
+    font-size: 0.9rem;
+}
+
+.card .rating {
+    color: var(--col-warning);
+    font-size: 1.2rem;
+}
+
+.card .btn {
+    margin-top: 1rem;
+}
+
+/* Fiche produit */
+.product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.product-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.product-info h1 {
+    font-size: 2rem;
+}
+
+.product-info .price {
+    font-size: 1.5rem;
+    color: var(--col-primary);
+    margin: 1rem 0;
+}
+
+.reviews {
+    margin-top: 2rem;
+}
+
+.review {
+    background-color: var(--col-text-light);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--col-border);
+}
+
+/* Page 404 */
+.error-404 {
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.error-404 h1 {
+    font-size: 4rem;
+    color: var(--col-danger);
+}
+
+.error-404 p {
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    .categories {
+        flex-direction: column;
+    }
+    .product-detail {
+        flex-direction: column;
+    }
+}
