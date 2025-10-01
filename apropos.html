@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos de nous - Buy_More</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: rgb(236, 233, 228);
+            padding: 20px;
+        }
+
+        .about-section {
+            background: rgb(180, 74, 32);
+            color: rgb(212, 199, 199);
+            padding: 50px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .about-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .priority-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .priority-section h2 {
+            color: #474e5d;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #474e5d;
+            margin: 15px 0 10px;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .thank-you {
+            padding: 30px 20px;
+            text-align: center;
+            background-color: #f8f9fa;
+            border-top: 1px solid #eee;
+            font-style: italic;
+        }
+
+        @media screen and (max-width: 650px) {
+            .about-section {
+                padding: 30px 15px;
+            }
+            
+            .about-section h1 {
+                font-size: 2em;
+            }
+            
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .feature-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="about-section">
+            <h1>À propos de nous</h1>
+            <p>Bienvenue chez <strong>Buy More</strong>, votre boutique en ligne de confiance pour des produits de qualité à prix abordables.</p>
+            <p>Depuis 2025, nous simplifions vos achats en ligne avec une large gamme d'articles : mode, électronique, maison, et plus encore.</p>
+        </div>
+
+        <div class="priority-section">
+            <h2>Notre priorité :</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Votre satisfaction</h3>
+                    <p>Notre engagement total envers votre expérience client</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Des produits fiables</h3>
+                    <p>Des articles de qualité testés et vérifiés</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Une livraison rapide</h3>
+                    <p>Recevez vos commandes dans les délais les plus courts</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="thank-you">
+            <p>Merci de faire confiance à <strong>Buy More</strong> !</p>
+            <p>— L'équipe Buy More</p>
+        </div>
+    </div>
+</body>
+</html>
