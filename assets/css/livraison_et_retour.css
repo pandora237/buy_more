@@ -1,0 +1,94 @@
+/* Utilisation des variables de couleur du projet */
+:root {
+    --font-family: 'Poppins', sans-serif;
+
+    --col-background: #f8f9fa;
+    --col-text: #212529;
+    --col-text-light: #ffffff;
+
+    --col-primary: #ff6f00;
+    --col-secondary: #007bff;
+    --col-tertiary: #289fa7;
+
+    --col-success: #28a745;
+    --col-warning: #ffc107;
+    --col-danger: #dc3545;
+
+    --col-border: #dee2e6;
+}
+
+body {
+    background-color: var(--col-background);
+    color: var(--col-text);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+#introduction,
+#Livraison,
+#retour,
+#exceptions\ \&\ cas\ particuliers,
+#Contact\ \/\ Support,
+#Mentions\ légales\ \(si\ applicables\) {
+    background: var(--col-tertiary);
+    color: var(--col-text-light);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 900px;
+    box-shadow: 0 2px 8px rgba(40, 159, 167, 0.08);
+    border: 1px solid var(--col-border);
+}
+
+h2,
+h3 {
+    color: var(--col-primary);
+    margin-top: 0;
+}
+
+a {
+    color: var(--col-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--col-primary);
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem 0;
+    background: var(--col-secondary);
+    color: var(--col-text-light);
+    text-align: center;
+    font-size: 1rem;
+    border-top: 1px solid var(--col-border);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+
+    #introduction,
+    #Livraison,
+    #retour,
+    #exceptions\ \&\ cas\ particuliers,
+    #Contact\ \/\ Support,
+    #Mentions\ légales\ \(si\ applicables\) {
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
+
+/*//////////////////////////////////////////////////*/
+
+.mini {
+    color: red;
+    font-size: 5px;
+}
+
+h5 p {
+    font-size: small;
+}
