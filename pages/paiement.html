@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Paiement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/paiement.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Formulaire de paiement -->
+    <div class="form-container">
+      <div class="progressbar">
+        <div class="progress-step">1</div>
+        <div class="progress-step completed">2</div>
+        <div class="progress-step active">3</div>
+      </div>
+      <div class="progress-labels">
+        <span>Panier</span>
+        <span>Livraison</span>
+        <span>Paiement</span>
+      </div>
+
+      <h2>Paiement</h2>
+      <form>
+        <div>
+          <label for="card-name">Nom du titulaire</label>
+          <input type="text" id="card-name" placeholder="Ex: FOSSO Stephane" required>
+        </div>
+        <div>
+          <label for="card-number">Numéro de carte</label>
+          <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+        </div>
+        <div>
+          <label for="expiry">Date d'expiration</label>
+          <input type="month" id="expiry" required>
+        </div>
+        <div>
+          <label for="cvc">Code CVC</label>
+          <input type="text" id="cvc" placeholder="123" required>
+        </div>
+        <div>
+          <label for="mobile-pay">Paiement mobile</label>
+          <select id="mobile-pay">
+            <option value="">Choisir une option</option>
+            <option value="mobile-money">Mobile Money</option>
+            <option value="orange-money">Orange Money</option>
+            <option value="paypal">PayPal</option>
+          </select>
+        </div>
+        <div>
+          <label for="phone-otp">Numéro de téléphone pour confirmation</label>
+          <input type="tel" id="phone-otp" placeholder="Ex: +237 653 48 27 17">
+        </div>
+        <!-- <div>
+          <label for="otp">Code de confirmation (OTP)</label>
+          <input type="text" id="otp" placeholder="123456">
+        </div> -->
+
+        <div class="buttons">
+          <button type="button" class="back" onclick="window.location.href='livraison.html'">← Retour Livraison</button>
+          <button type="submit" class="next">Confirmer le paiement →</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Section Résumé -->
+    <div class="summary-section">
+      <h2>Résumé de la commande</h2>
+      <div class="summary-box">
+
+        <div class="summary-item">
+          <div class="img-wrapper">
+            <img src="../assets/images/iphone15pro.jpeg" alt="iPhone" class="summary-img">
+            <span class="quantity-badge">2</span>
+          </div>
+          <div class="summary-details">
+            <h4>iPhone 14 128GB - Midnight - Unlocked</h4>
+            <p class="summary-shipping">Shipping</p>
+          </div>
+          <div class="summary-price">
+            <div>$328.00</div>
+            <div style="margin-top:3px;">Free</div>
+          </div>
+        </div>
+
+        <div class="summary-item">
+          <div class="img-wrapper">
+            <img src="../assets/images/iphone15pro.jpeg" alt="iPhone" class="summary-img">
+            <span class="quantity-badge">3</span>
+          </div>
+          <div class="summary-details">
+            <h4>iPhone 14 128GB - Midnight - Unlocked</h4>
+            <p class="summary-shipping">Shipping</p>
+          </div>
+          <div class="summary-price">
+            <div>$328.00</div>
+            <div style="margin-top:3px;">Free</div>
+          </div>
+        </div>
+
+        <div class="summary-item">
+          <div class="img-wrapper">
+            <img src="../assets/images/iphone15pro.jpeg" alt="iPhone" class="summary-img">
+            <span class="quantity-badge">1</span>
+          </div>
+          <div class="summary-details">
+            <h4>iPhone 14 128GB - Midnight - Unlocked</h4>
+            <p class="summary-shipping">Shipping</p>
+          </div>
+          <div class="summary-price">
+            <div>$328.00</div>
+            <div style="margin-top:3px;">Free</div>
+          </div>
+        </div>
+
+        <div class="summary-item">
+          <div class="img-wrapper">
+            <img src="../assets/images/iphone15pro.jpeg" alt="iPhone" class="summary-img">
+            <span class="quantity-badge">1</span>
+          </div>
+          <div class="summary-details">
+            <h4>iPhone 14 128GB - Midnight - Unlocked</h4>
+            <p class="summary-shipping">Shipping</p>
+          </div>
+          <div class="summary-price">
+            <div>$328.00</div>
+            <div style="margin-top:3px;">Free</div>
+          </div>
+        </div>
+
+        <div class="summary-totals">
+          <div class="total-row">
+            <span>Sous-total</span>
+            <span>$656.00</span>
+          </div>
+          <div class="total-row">
+            <span><a href="#">Frais d’assurance qualité</a></span>
+            <span>$8.99</span>
+          </div>
+
+          <div class="final-total">
+            <span class="total-label">Total</span>
+            <span class="total-amount">$664.99</span>
+          </div>
+
+          <p class="terms-text">En confirmant cette commande, vous acceptez nos <a href="#">Conditions Générales</a> et notre <a href="#">Politique de Confidentialité</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
