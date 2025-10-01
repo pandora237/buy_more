@@ -1,0 +1,14 @@
+/* Page 404 */
+.error-404 {
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.error-404 h1 {
+    font-size: 4rem;
+    color: var(--col-danger);
+}
+
+.error-404 p {
+    font-size: 1.2rem;
+}
