@@ -265,6 +265,14 @@ header {
     gap: 10px;
 }
 
+.logo a {
+    cursor: pointer;
+}
+
+.logo a:hover {
+    opacity: 0.8;
+}
+
 .search-bar {
     flex: 1;
     max-width: 500px;
