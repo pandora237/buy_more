@@ -81,3 +81,14 @@ footer {
         margin: 1rem;
     }
 }
+
+/*//////////////////////////////////////////////////*/
+
+.mini {
+    color: red;
+    font-size: 5px;
+}
+
+h5 p {
+    font-size: small;
+}
