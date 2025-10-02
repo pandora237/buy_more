@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Bloc FAQ */
+details {
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background: #fff;
+}
+
+/* Question cliquable */
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #785a5a;
+}
+
+summary:hover {
+    color: #ff8800; /* bleu au survol */
+}
+/* Réponse */
+details p {
+    margin: 10px 0 0 0;
+    padding-left: 15px;
+    color: #1a191c;
+}
