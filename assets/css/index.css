@@ -1,3 +1,5 @@
+@import url("../libs/fontawesome-free-6.7.2-web/css/all.css");
+
 :root {
     --font-family: 'Poppins', sans-serif;
 
@@ -211,6 +213,7 @@ header {
     background-color: var(--col-border);
     transition: all 0.2s;
     height: 60vh;
+    z-index: 100;
 }
 
 .menu-nav:hover .menu-items {

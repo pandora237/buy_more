@@ -1,4 +1,4 @@
-/* Variables existantes */
+/* Variables existantes
 :root {
     --font-family: 'Poppins', sans-serif;
     --col-background: #f8f9fa;
@@ -16,8 +16,8 @@
     --col-success-hover: #218838;
     --col-warning-hover: #e0a800;
     --col-danger-hover: #c82333;
-}
-
+} */
+/* 
 html,
 body {
     box-sizing: border-box;
@@ -80,7 +80,7 @@ body {
     background-color: var(--col-success-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
-}
+} */
 
 .btn-warning {
     background-color: var(--col-warning);
