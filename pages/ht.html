@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UniMarket • Vitrine e‑commerce étudiant</title>
+  <meta name="description" content="Site vitrine d'un e‑commerce pour étudiants : produits abordables, livraison campus, commandes rapides." />
+  <style>
+    /* ==========================
+       Design system (sans framework)
+       ========================== */
+    :root{
+      --bg: #0f1221;
+      --surface: #141833;
+      --surface-2:#10142b;
+      --text: #e8ecff;
+      --muted:#aab4d6;
+      --primary:#6c8cff;      /* bleu étudiant moderne */
+      --accent:#22e3b7;       /* vert menthe */
+      --danger:#ff7a7a;
+      --ring: rgba(108,140,255,.35);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius-sm: 12px;
+      --maxw: 1200px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg),#0b0e1a);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,Arial,sans-serif}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--maxw);margin:auto;padding:0 20px}
+    .chip{font-size:.85rem;padding:6px 12px;border-radius:999px;background:rgb(255 255 255 / .08);border:1px solid rgb(255 255 255 / .08)}
+
+    /* ==========================
+       Header / Nav
+       ========================== */
+    header{position:sticky;top:0;z-index:50;background:rgba(15,18,33,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgb(255 255 255 / .06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;gap:10px;align-items:center}
+    .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));box-shadow:0 4px 18px rgba(108,140,255,.45)}
+    .brand b{letter-spacing:.2px}
+    .nav ul{display:flex;gap:18px;list-style:none;padding:0;margin:0}
+    .btn{display:inline-flex;gap:8px;align-items:center;padding:10px 14px;border-radius:12px;background:linear-gradient(180deg,#1b2146,#141a3a);border:1px solid rgb(255 255 255 / .08);transition:transform .06s ease, box-shadow .2s ease}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(108,140,255,.25)}
+    .btn.primary{background:linear-gradient(180deg,var(--primary),#4d6cf6);border-color:transparent;color:white}
+
+    /* ==========================
+       Hero
+       ========================== */
+    .hero{padding:64px 0 24px}
+    .hero .wrap{display:grid;grid-template-columns:1.2fr .9fr;gap:28px;align-items:center}
+    .card{background:linear-gradient(180deg,var(--surface),var(--surface-2));border:1px solid rgb(255 255 255 / .06);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-card{padding:28px}
+    .hero h1{font-size:clamp(28px,4.2vw,44px);line-height:1.1;margin:10px 0}
+    .hero p{color:var(--muted);font-size:1.05rem}
+    .hero .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .badges{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+    .hero-visual{ position:relative; padding:10px }
+    .glass{position:relative;border-radius:var(--radius);overflow:hidden}
+    .glass::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg, rgb(255 255 255 / .06), transparent 40%)}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+
+    /* floating tag */
+    .tag{position:absolute;right:14px;top:14px;background:linear-gradient(180deg,#1c254f,#12183a);border:1px solid rgb(255 255 255 / .08);padding:8px 12px;border-radius:999px;font-size:.85rem}
+
+    /* ==========================
+       Sections
+       ========================== */
+    section{padding:36px 0}
+    h2{font-size:clamp(22px,3.5vw,32px);margin:0 0 6px}
+    .sub{color:var(--muted);margin:0 0 18px}
+
+    /* Catégories */
+    .categories{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .cat{padding:16px;display:flex;gap:12px;align-items:center}
+    .cat i{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent))}
+
+    /* Produits vedettes (vitrine, pas de panier) */
+    .products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .prod{overflow:hidden}
+    .prod img{border-top-left-radius:var(--radius);border-top-right-radius:var(--radius)}
+    .prod .info{padding:14px}
+    .price{display:flex;gap:8px;align-items:center}
+    .price .now{font-weight:700}
+    .price .old{color:var(--muted);text-decoration:line-through;font-size:.9rem}
+    .pill{margin-left:auto;font-size:.8rem;padding:6px 10px;border-radius:999px;background:#17204a;border:1px solid rgb(255 255 255 / .08)}
+
+    /* Bande arguments */
+    .benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .benefit{padding:16px;display:flex;gap:12px}
+    .benefit i{width:38px;height:38px;border-radius:10px;background:#1c234a}
+
+    /* Témoignages */
+    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .t{padding:18px}
+    .t .u{display:flex;gap:12px;align-items:center;margin-top:12px}
+    .avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--primary))}
+
+    /* FAQ */
+    .faq{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    details{background:linear-gradient(180deg,#161b3b,#121735);border:1px solid rgb(255 255 255 / .07);border-radius:14px;padding:14px}
+    details[open]{outline:2px solid var(--ring)}
+    summary{cursor:pointer;font-weight:600}
+    summary::-webkit-details-marker{display:none}
+
+    /* Contact */
+    form{display:grid;gap:12px}
+    input,textarea,select{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgb(255 255 255 / .1);background:#0e1330;color:var(--text)}
+    input:focus,textarea:focus{outline:2px solid var(--ring);border-color:transparent}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .note{font-size:.9rem;color:var(--muted)}
+
+    /* Footer */
+    footer{padding:26px 0;border-top:1px solid rgb(255 255 255 / .06);color:var(--muted)}
+
+    /* ==========================
+       Cartes génériques
+       ========================== */
+    .card:hover{box-shadow:0 12px 34px rgba(108,140,255,.18)}
+
+    /* ==========================
+       Responsive
+       ========================== */
+    @media (max-width: 1024px){
+      .hero .wrap{grid-template-columns:1fr}
+      .products{grid-template-columns:repeat(3,1fr)}
+      .categories,.benefits{grid-template-columns:repeat(3,1fr)}
+      .testimonials{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width: 720px){
+      .nav ul{display:none}
+      .products{grid-template-columns:repeat(2,1fr)}
+      .categories,.benefits{grid-template-columns:repeat(2,1fr)}
+      .testimonials{grid-template-columns:1fr}
+      .faq{grid-template-columns:1fr}
+      .form-grid{grid-template-columns:1fr}
+      .btn{width:100%;justify-content:center}
+    }
+  </style>
+</head>
+<body>
+  <!-- ==========================
+       HEADER / NAV
+       ========================== -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <b>UniMarket</b>
+        <span class="chip" title="Projet étudiant">Vitrine</span>
+      </div>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a class="btn" href="#produits">Produits</a></li>
+          <li><a class="btn" href="#faq">FAQ</a></li>
+          <li><a class="btn" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn primary" href="#contact" aria-label="Bouton de contact">Demander un devis</a>
+    </div>
+  </header>
+
+  <!-- ==========================
+       HERO
+       ========================== -->
+  <section class="hero container">
+    <div class="wrap">
+      <div class="hero-card card">
+        <span class="chip">Campus • Prix étudiants</span>
+        <h1>Votre boutique <span style="background:linear-gradient(90deg,var(--primary),var(--accent));-webkit-background-clip:text;color:transparent">étudiante</span> livrée sur le campus</h1>
+        <p>Site vitrine d'e‑commerce pensé pour la vie étudiante : fournitures, gadgets tech, snacks et merch. Commandes par formulaire, retrait point relais campus, réponse sous 24h ouvrées.</p>
+        <div class="cta">
+          <a href="#produits" class="btn primary">Voir la sélection</a>
+          <a href="#contact" class="btn">Obtenir une offre BDE</a>
+        </div>
+        <div class="badges">
+          <span class="chip">Sans framework</span>
+          <span class="chip">HTML + CSS pur</span>
+          <span class="chip">Responsive</span>
+          <span class="chip">Accessibilité</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="tag">-20% avec carte étudiant</div>
+        <div class="grid">
+          <div class="glass card"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop" alt="Accessoires tech étudiants" loading="lazy"></div>
+          <div class="glass card"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop" alt="Casque audio" loading="lazy"></div>
+          <div class="glass card"><img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format&fit=crop" alt="Snacks" loading="lazy"></div>
+          <div class="glass card"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop" alt="Montres et gadgets" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================
+       CATEGORIES
+       ========================== -->
+  <section class="container">
+    <h2>Catégories phares</h2>
+    <p class="sub">Une sélection adaptée aux budgets étudiants. (Exemple vitrine)</p>
+    <div class="categories">
+      <div class="cat card"><i aria-hidden="true"></i><div><b>Tech & Accessoires</b><div class="note">Claviers, souris, hubs USB‑C…</div></div></div>
+      <div class="cat card"><i aria-hidden="true"></i><div><b>Fournitures</b><div class="note">Cahiers, surligneurs, kits TD</div></div></div>
+      <div class="cat card"><i aria-hidden="true"></i><div><b>Snacks & Boissons</b><div class="note">Boîtes étudiantes dès 2€</div></div></div>
+      <div class="cat card"><i aria-hidden="true"></i><div><b>Merch Campus</b><div class="note">Sweats BDE, tote bags</div></div></div>
+    </div>
+  </section>
+
+  <!-- ==========================
+       PRODUITS (VITRINE)
+       ========================== -->
+  <section id="produits" class="container">
+    <h2>Produits vedettes</h2>
+    <p class="sub">Section purement démonstrative (pas de paiement). Les prix et images sont fictifs.</p>
+    <div class="products">
+      <!-- Produit 1 -->
+      <article class="prod card" aria-label="Souris sans fil étudiant">
+        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=800&auto=format&fit=crop" alt="Souris sans fil" loading="lazy">
+        <div class="info">
+          <b>Souris sans fil compact</b>
+          <p class="note">Confort pour amphi & bibli</p>
+          <div class="price"><span class="now">9,90€</span><span class="old">14,90€</span><span class="pill">En stock</span></div>
+        </div>
+      </article>
+      <!-- Produit 2 -->
+      <article class="prod card" aria-label="Cahier A4 recyclé">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=800&auto=format&fit=crop" alt="Cahier A4" loading="lazy">
+        <div class="info">
+          <b>Cahier A4 • 120 pages</b>
+          <p class="note">Papier recyclé • Pack de 3</p>
+          <div class="price"><span class="now">6,50€</span><span class="pill">Top ventes</span></div>
+        </div>
+      </article>
+      <!-- Produit 3 -->
+      <article class="prod card" aria-label="Écouteurs intra‑auriculaires">
+        <img src="https://images.unsplash.com/photo-1518441823719-b5a7a2c5a58e?q=80&w=800&auto=format&fit=crop" alt="Écouteurs" loading="lazy">
+        <div class="info">
+          <b>Écouteurs filaires</b>
+          <p class="note">Micro + réduction de bruit</p>
+          <div class="price"><span class="now">7,90€</span><span class="old">11,90€</span><span class="pill">-30%</span></div>
+        </div>
+      </article>
+      <!-- Produit 4 -->
+      <article class="prod card" aria-label="Tote bag campus">
+        <img src="https://images.unsplash.com/photo-1585386959984-a4155223168f?q=80&w=800&auto=format&fit=crop" alt="Tote bag" loading="lazy">
+        <div class="info">
+          <b>Tote bag UniMarket</b>
+          <p class="note">Coton épais • 38×42 cm</p>
+          <div class="price"><span class="now">5,00€</span><span class="pill">Nouveau</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==========================
+       BENEFICES / ARGUMENTS
+       ========================== -->
+  <section class="container">
+    <div class="benefits">
+      <div class="benefit card"><i aria-hidden="true"></i><div><b>Retrait sur campus</b><div class="note">Point relais BDE / Bibli</div></div></div>
+      <div class="benefit card"><i aria-hidden="true"></i><div><b>Prix étudiants</b><div class="note">Réductions avec carte</div></div></div>
+      <div class="benefit card"><i aria-hidden="true"></i><div><b>Support rapide</b><div class="note">Réponse en -24h ouvrées</div></div></div>
+      <div class="benefit card"><i aria-hidden="true"></i><div><b>Éco‑responsable</b><div class="note">Emballages réduits</div></div></div>
+    </div>
+  </section>
+
+  <!-- ==========================
+       TEMOIGNAGES
+       ========================== -->
+  <section class="container">
+    <h2>Ils en parlent</h2>
+    <p class="sub">Avis fictifs d'étudiants pour illustrer la vitrine.</p>
+    <div class="testimonials">
+      <article class="t card">
+        “Parfait pour la rentrée, j'ai tout récupéré au BDE.”
+        <div class="u"><div class="avatar" aria-hidden="true"></div><div><b>Sarah • L2 Éco</b><div class="note">Rouen</div></div></div>
+      </article>
+      <article class="t card">
+        “Les prix sont doux et la comm' est réactive.”
+        <div class="u"><div class="avatar" aria-hidden="true"></div><div><b>Mehdi • M1 Info</b><div class="note">Rennes</div></div></div>
+      </article>
+      <article class="t card">
+        “On a commandé des tote bags pour l'asso : top !”
+        <div class="u"><div class="avatar" aria-hidden="true"></div><div><b>Inès • BDE</b><div class="note">Lille</div></div></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==========================
+       FAQ
+       ========================== -->
+  <section id="faq" class="container">
+    <h2>FAQ</h2>
+    <p class="sub">Questions fréquentes sur le fonctionnement (exemple pédagogique).</p>
+    <div class="faq">
+      <details>
+        <summary>Comment passer commande sur la vitrine ?</summary>
+        <p class="note">Sélectionnez vos produits de la section “Produits vedettes”, puis utilisez le <a href="#contact">formulaire de contact</a> pour demander un devis. Nous confirmons les dispos et le point de retrait.</p>
+      </details>
+      <details>
+        <summary>Quels moyens de paiement sont acceptés ?</summary>
+        <p class="note">Pour le prototype, le paiement n'est pas activé. En réel : espèces, carte, Lydia, virement.</p>
+      </details>
+      <details>
+        <summary>Livrez‑vous en dehors du campus ?</summary>
+        <p class="note">Oui, en point relais proche du campus (selon villes partenaires).</p>
+      </details>
+      <details>
+        <summary>Proposez‑vous des tarifs d'association ?</summary>
+        <p class="note">Oui, devis groupés pour BDE, BDS, clubs. Contactez‑nous.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ==========================
+       CONTACT (DEMANDE DE DEVIS)
+       ========================== -->
+  <section id="contact" class="container">
+    <h2>Contact / Devis</h2>
+    <p class="sub">Formulaire fictif pour recueillir les demandes (aucun envoi réel).</p>
+    <form class="card" onsubmit="event.preventDefault(); alert('Merci ! Votre demande a été simulée.');" style="padding:18px">
+      <div class="form-grid">
+        <div>
+          <label for="nom">Nom</label>
+          <input id="nom" placeholder="Ex. Joël DIANGON" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="prenom.nom@etudiant.fr" required>
+        </div>
+      </div>
+      <div class="form-grid">
+        <div>
+          <label for="campus">Campus</label>
+          <input id="campus" placeholder="Ex. ESIGELEC, Rouen">
+        </div>
+        <div>
+          <label for="categorie">Catégorie</label>
+          <select id="categorie">
+            <option>Tech & Accessoires</option>
+            <option>Fournitures</option>
+            <option>Snacks & Boissons</option>
+            <option>Merch Campus</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label for="message">Votre demande</label>
+        <textarea id="message" rows="4" placeholder="Liste des produits, quantités, date souhaitée…"></textarea>
+      </div>
+      <div class="note">En soumettant, vous acceptez d'être recontacté par email. (Démo pédagogique)</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+        <button class="btn primary" type="submit">Envoyer la demande</button>
+        <a class="btn" href="#">Télécharger la brochure</a>
+      </div>
+    </form>
+  </section>
+
+  <!-- ==========================
+       FOOTER
+       ========================== -->
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="year"></span> UniMarket • Projet vitrine étudiant</div>
+      <div>
+        <a href="#faq">FAQ</a> · <a href="#contact">Contact</a> · <a href="#" aria-disabled="true">Mentions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Année dynamique pour le footer (vanilla JS)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+<!-- ==========================
+     FICHIER 2 : account.html (Mon compte / Tableau de bord)
+     ========================== -->
+<!--
+  Ouvre ceci comme un NOUVEAU FICHIER nommé `account.html` à la racine.
+  Il utilise uniquement HTML/CSS/JS (sans framework) et simule l'authentification + commandes
+  via localStorage pour coller aux contraintes TP1/TP2. Relie le bouton "Mon compte" du header
+  si tu veux depuis index.html.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UniMarket • Mon compte (Tableau de bord)</title>
+  <meta name="description" content="Espace Mon compte : profil, commandes, adresses, paramètres – démo étudiante sans framework." />
+  <style>
+    :root{
+      --bg:#0f1221;--surface:#141833;--surface-2:#10142b;--text:#e8ecff;--muted:#aab4d6;
+      --primary:#6c8cff;--accent:#22e3b7;--ring:rgba(108,140,255,.35);--radius:16px;--shadow:0 10px 30px rgba(0,0,0,.35);
+      --ok:#25d366;--warn:#ffb020;--err:#ff6b6b
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg),#0b0e1a);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1200px;margin:auto;padding:0 20px}
+    .card{background:linear-gradient(180deg,var(--surface),var(--surface-2));border:1px solid rgb(255 255 255 / .08);border-radius:var(--radius);box-shadow:var(--shadow)}
+    header{position:sticky;top:0;z-index:30;background:rgba(15,18,33,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgb(255 255 255 / .06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;gap:10px;align-items:center}
+    .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent))}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid rgb(255 255 255 / .08);background:#192049}
+    .btn.primary{background:linear-gradient(180deg,var(--primary),#4d6cf6);border-color:transparent;color:#fff}
+
+    /* Layout tableau de bord */
+    .dash{display:grid;grid-template-columns:260px 1fr;gap:16px;padding:20px}
+    .aside{padding:12px}
+    .main{display:grid;gap:16px}
+    .hello{padding:18px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .kpi{padding:16px}
+    .kpi .val{font-size:1.8rem;font-weight:800}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap}
+    .tab{padding:10px 14px;border-radius:999px;border:1px solid rgb(255 255 255 / .08);background:#151a3a;cursor:pointer}
+    .tab.active{outline:2px solid var(--ring)}
+
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:12px 10px;border-bottom:1px solid rgb(255 255 255 / .06);text-align:left}
+    th{color:var(--muted);font-weight:600}
+    .status{padding:6px 10px;border-radius:999px;font-size:.85rem;display:inline-block}
+    .status.ok{background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.25)}
+    .status.warn{background:rgba(255,176,32,.15);border:1px solid rgba(255,176,32,.25)}
+    .status.err{background:rgba(255,107,107,.15);border:1px solid rgba(255,107,107,.25)}
+
+    form{display:grid;gap:12px}
+    input,textarea,select{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgb(255 255 255 / .1);background:#0e1330;color:var(--text)}
+    input:focus,textarea:focus{outline:2px solid var(--ring);border-color:transparent}
+
+    footer{padding:24px;color:var(--muted);border-top:1px solid rgb(255 255 255 / .06)}
+
+    /* Responsive */
+    @media (max-width: 960px){
+      .dash{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><div class="logo" aria-hidden="true"></div><b>UniMarket</b><span style="margin-left:8px;color:var(--muted)">• Mon compte</span></div>
+      <nav>
+        <a class="btn" href="index.html">Accueil</a>
+        <button id="logoutBtn" class="btn">Se déconnecter</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container dash">
+    <!-- Menu latéral -->
+    <aside class="aside card">
+      <div style="padding:12px 12px 0; color:var(--muted); font-size:.9rem">Navigation</div>
+      <div style="padding:8px 12px; display:grid; gap:8px">
+        <button class="tab active" data-tab="overview">Tableau de bord</button>
+        <button class="tab" data-tab="orders">Mes commandes</button>
+        <button class="tab" data-tab="addresses">Adresses</button>
+        <button class="tab" data-tab="profile">Profil</button>
+        <button class="tab" data-tab="settings">Paramètres</button>
+      </div>
+    </aside>
+
+    <!-- Contenu principal -->
+    <div class="main">
+      <!-- Bonjour & KPIs -->
+      <div class="hello card">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+          <div>
+            <div id="helloName" style="font-size:1.2rem;font-weight:700">Bonjour 👋</div>
+            <div style="color:var(--muted);margin-top:4px">Voici un aperçu rapide de votre activité.</div>
+          </div>
+          <div class="tabs">
+            <span class="tab active" data-tab="overview">Aperçu</span>
+            <span class="tab" data-tab="orders">Commandes</span>
+            <span class="tab" data-tab="profile">Profil</span>
+          </div>
+        </div>
+        <div class="grid" style="margin-top:14px">
+          <div class="kpi card"><div class="note" style="color:var(--muted)">Commandes</div><div class="val" id="kpiOrders">0</div></div>
+          <div class="kpi card"><div class="note" style="color:var(--muted)">Total dépensé</div><div class="val" id="kpiSpent">0€</div></div>
+          <div class="kpi card"><div class="note" style="color:var(--muted)">Dernière commande</div><div class="val" id="kpiLast">—</div></div>
+        </div>
+      </div>
+
+      <!-- Onglet : Commandes -->
+      <div id="tab-orders" class="card" style="padding:16px; display:none">
+        <h2 style="margin:0 0 6px">Mes commandes</h2>
+        <p style="margin:0 0 10px;color:var(--muted)">Historique (données locales de démonstration)</p>
+        <div style="overflow:auto">
+          <table aria-label="Historique des commandes">
+            <thead>
+              <tr><th>#</th><th>Date</th><th>Articles</th><th>Total</th><th>Statut</th></tr>
+            </thead>
+            <tbody id="ordersBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Onglet : Adresses -->
+      <div id="tab-addresses" class="card" style="padding:16px; display:none">
+        <h2 style="margin:0 0 6px">Mes adresses</h2>
+        <p style="margin:0 0 10px;color:var(--muted)">Livraison / facturation</p>
+        <form id="addrForm">
+          <div style="display:grid;gap:12px;grid-template-columns:1fr 1fr">
+            <div>
+              <label>Adresse</label>
+              <input id="addr" placeholder="Ex. 12 rue du Campus">
+            </div>
+            <div>
+              <label>Ville</label>
+              <input id="city" placeholder="Ex. Rouen">
+            </div>
+            <div>
+              <label>Code postal</label>
+              <input id="zip" placeholder="Ex. 76000">
+            </div>
+            <div>
+              <label>Pays</label>
+              <input id="country" placeholder="Ex. France">
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:8px">
+            <button class="btn primary" type="submit">Enregistrer</button>
+            <button class="btn" type="button" id="addrReset">Réinitialiser</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Onglet : Profil -->
+      <div id="tab-profile" class="card" style="padding:16px; display:none">
+        <h2 style="margin:0 0 6px">Profil</h2>
+        <form id="profileForm">
+          <div style="display:grid;gap:12px;grid-template-columns:1fr 1fr">
+            <div>
+              <label>Nom</label>
+              <input id="name" required placeholder="Votre nom">
+            </div>
+            <div>
+              <label>Email</label>
+              <input id="email" type="email" required placeholder="prenom.nom@etudiant.fr">
+            </div>
+          </div>
+          <div>
+            <label>Bio</label>
+            <textarea id="bio" rows="3" placeholder="Optionnel"></textarea>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:8px">
+            <button class="btn primary" type="submit">Mettre à jour</button>
+            <button class="btn" type="button" id="profileReset">Réinitialiser</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Onglet : Paramètres (préférences simples) -->
+      <div id="tab-settings" class="card" style="padding:16px; display:none">
+        <h2 style="margin:0 0 6px">Paramètres</h2>
+        <form id="settingsForm">
+          <div style="display:grid;gap:12px;grid-template-columns:1fr 1fr">
+            <label style="display:flex;align-items:center;gap:10px">
+              <input id="prefNews" type="checkbox"> Recevoir les offres étudiants
+            </label>
+            <label style="display:flex;align-items:center;gap:10px">
+              <input id="prefDark" type="checkbox" checked> Thème sombre
+            </label>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:8px">
+            <button class="btn primary" type="submit">Sauvegarder</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© <span id="year"></span> UniMarket — Démo "Mon compte" (sans framework)</div>
+  </footer>
+
+  <script>
+    // --- Helpers localStorage
+    const store = {
+      get(key, fallback){ try{ return JSON.parse(localStorage.getItem(key)) ?? fallback } catch{ return fallback } },
+      set(key, val){ localStorage.setItem(key, JSON.stringify(val)) }
+    }
+
+    // --- Données seed si absent (commandes fictives)
+    const seedOrders = [
+      { id: 'CMD-2025-001', date: '2025-09-10', items: ['Cahier A4 (x2)','Souris sans fil'], total: 26.3, status: 'livrée' },
+      { id: 'CMD-2025-014', date: '2025-09-25', items: ['Tote bag UniMarket','Écouteurs'], total: 12.9, status: 'en cours' },
+      { id: 'CMD-2025-019', date: '2025-10-01', items: ['Pack surligneurs'], total: 5.0, status: 'préparée' }
+    ]
+
+    const user = store.get('um_user', { name:'Étudiant·e', email:'etu@example.com', bio:'' })
+    const orders = store.get('um_orders', seedOrders)
+    const address = store.get('um_address', { addr:'', city:'', zip:'', country:'' })
+    const prefs = store.get('um_prefs', { news:false, dark:true })
+
+    // --- UI init
+    document.getElementById('year').textContent = new Date().getFullYear()
+    document.getElementById('helloName').textContent = `Bonjour ${user.name} 👋`
+
+    // KPIs
+    const totalSpent = orders.reduce((s,o)=>s+o.total,0)
+    const lastOrder = orders[orders.length-1]
+    document.getElementById('kpiOrders').textContent = orders.length
+    document.getElementById('kpiSpent').textContent = `${totalSpent.toFixed(2)}€`
+    document.getElementById('kpiLast').textContent = lastOrder ? new Date(lastOrder.date).toLocaleDateString() : '—'
+
+    // Table commandes
+    const tbody = document.getElementById('ordersBody')
+    function statusClass(st){ return st.includes('livr') ? 'ok' : st.includes('cours') ? 'warn' : 'err' }
+    tbody.innerHTML = orders.map(o => `
+      <tr>
+        <td>${o.id}</td>
+        <td>${new Date(o.date).toLocaleDateString()}</td>
+        <td>${o.items.join(', ')}</td>
+        <td>${o.total.toFixed(2)}€</td>
+        <td><span class="status ${statusClass(o.status)}">${o.status}</span></td>
+      </tr>`).join('')
+
+    // Onglets
+    const tabButtons = document.querySelectorAll('.tab[data-tab]')
+    const views = {
+      overview: [document.querySelector('.hello')],
+      orders:   [document.getElementById('tab-orders')],
+      addresses:[document.getElementById('tab-addresses')],
+      profile:  [document.getElementById('tab-profile')],
+      settings: [document.getElementById('tab-settings')]
+    }
+    function show(tab){
+      // boutons
+      tabButtons.forEach(b=>b.classList.toggle('active', b.dataset.tab===tab))
+      // cartes
+      Object.values(views).flat().forEach(el=>{ if(!el) return; el.style.display='none' })
+      (views[tab]||[]).forEach(el=>{ if(!el) return; el.style.display='block' })
+      // toujours afficher la carte hello (aperçu) quand tab=overview
+      document.querySelector('.hello').style.display = tab==='overview' ? 'block' : 'none'
+      if(tab==='orders'){ document.getElementById('tab-orders').style.display='block' }
+    }
+    tabButtons.forEach(b=>b.addEventListener('click',()=>show(b.dataset.tab)))
+    show('overview')
+
+    // Form Profil
+    const nameI = document.getElementById('name'), emailI = document.getElementById('email'), bioI = document.getElementById('bio')
+    nameI.value = user.name; emailI.value = user.email; bioI.value = user.bio || ''
+    document.getElementById('profileForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const u = { name:nameI.value.trim()||'Étudiant·e', email:emailI.value.trim()||'etu@example.com', bio:bioI.value.trim() }
+      store.set('um_user', u)
+      document.getElementById('helloName').textContent = `Bonjour ${u.name} 👋`
+      alert('Profil mis à jour !')
+    })
+    document.getElementById('profileReset').addEventListener('click',()=>{
+      nameI.value = 'Étudiant·e'; emailI.value = 'etu@example.com'; bioI.value='';
+    })
+
+    // Form Adresses
+    const addrI = document.getElementById('addr'), cityI=document.getElementById('city'), zipI=document.getElementById('zip'), countryI=document.getElementById('country')
+    addrI.value = address.addr||''; cityI.value=address.city||''; zipI.value=address.zip||''; countryI.value=address.country||''
+    document.getElementById('addrForm').addEventListener('submit',(e)=>{
+      e.preventDefault();
+      const a = { addr:addrI.value.trim(), city:cityI.value.trim(), zip:zipI.value.trim(), country:countryI.value.trim() }
+      store.set('um_address', a)
+      alert('Adresse enregistrée !')
+    })
+    document.getElementById('addrReset').addEventListener('click',()=>{ addrI.value=''; cityI.value=''; zipI.value=''; countryI.value='' })
+
+    // Form Settings
+    const prefNews=document.getElementById('prefNews'), prefDark=document.getElementById('prefDark')
+    prefNews.checked = !!prefs.news; prefDark.checked = !!prefs.dark
+    document.getElementById('settingsForm').addEventListener('submit',(e)=>{
+      e.preventDefault();
+      store.set('um_prefs', { news:prefNews.checked, dark:prefDark.checked })
+      alert('Préférences sauvegardées !')
+    })
+
+    // Déconnexion (simulée)
+    document.getElementById('logoutBtn').addEventListener('click',()=>{
+      alert('Session fermée (simulation).')
+      window.location.href = 'index.html'
+    })
+  </script>
+</body>
+</html>
