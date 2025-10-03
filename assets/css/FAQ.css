@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Titre principal */
 h3 {
     text-align: center;
     color: #333;
@@ -21,7 +20,7 @@ h3 {
 
 /* Bloc FAQ */
 details {
-    width: 60%; /* Prend toute la largeur du conteneur */
+    width: 60%; 
     margin: 4px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -39,7 +38,6 @@ details::before {
     background-color: #000;
 }
 
-/* Question cliquable */
 summary {
     font-weight: bold;
     cursor: pointer;
@@ -52,7 +50,6 @@ summary:hover {
     color: #ff8800;
 }
 
-/* Réponse */
 details p {
     margin: 0;
     padding: 15px 20px;
