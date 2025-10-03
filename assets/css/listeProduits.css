@@ -16,7 +16,8 @@
     gap:50px;
     
     margin:auto;    
-    margin-left:100px;
+    margin-left:5%;
+    margin-right:5%;
 
 }
 
@@ -107,34 +108,34 @@ input[class="visibleCheckbox"] {
 .main-filtre{
     font-weight: bold;
     font-size:22px;
-    margin-left: 500px;
+    position:absolute;
+    right:8.2%;
+    top:4.6%;
 
 }
 
-.main .enteteMain{
+/*.main .enteteMain{
     display :flex;
     flex-direction:row;
     margin-top:200px;
+}*/
+
+.main .main-title{
+    margin-top:200px;
+    margin-left: 3%;
 }
 
-.main .enteteMain .main-title{
-    margin-left: 800px;
-}
 
-.main .entete-menu{
-    display:flex;
-    flex-direction: row;
-    margin-bottom:30px;
-    margin-left:200px;
-}
-.main .entete-menu button{ 
-    margin-left:750px;
+.main  button{ 
+    position:absolute;
+    top:0;
+    right:0;
     font-weight:bold;
     font-size:20px;
 }
-.main .entete-menu h3{ 
-    margin-left:600px;
+.main h3{ 
     font-size:20px;
+    margin-bottom:20px;
 
 }
 
@@ -166,3 +167,4 @@ input[type="checkbox"]:checked + .menu-label .chevron{
 input[type="checkbox"]:checked ~ .submenu{
   display:flex;
 }
+
