@@ -1,5 +1,6 @@
 .main{
     text-align:center;   
+    position:relative;
 }
 
 .main .container{
@@ -73,4 +74,95 @@
     bottom:20px;
     right:150px;
     z-index:1;
+}
+
+
+.main .menu{
+    position: absolute;
+    top:0;
+    right:0;
+    left:0px;
+    box-shadow: 2px 2px 25px rgba(0,0,0,0.1);
+    background-color:var(--col-white);
+    margin-bottom:100px;
+    padding: 20px;
+    
+}
+.main .contenuFiltre{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    gap:50px
+}
+
+input[class="visibleCheckbox"] {
+    display:none;
+}
+
+
+.main .menu-label{
+    font-weight: bold;
+}
+
+.main-filtre{
+    font-weight: bold;
+    font-size:22px;
+    margin-left: 500px;
+
+}
+
+.main .enteteMain{
+    display :flex;
+    flex-direction:row;
+    margin-top:200px;
+}
+
+.main .enteteMain .main-title{
+    margin-left: 800px;
+}
+
+.main .entete-menu{
+    display:flex;
+    flex-direction: row;
+    margin-bottom:30px;
+    margin-left:200px;
+}
+.main .entete-menu button{ 
+    margin-left:750px;
+    font-weight:bold;
+    font-size:20px;
+}
+.main .entete-menu h3{ 
+    margin-left:600px;
+    font-size:20px;
+
+}
+
+.main .filtre1{
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+}
+
+.main .filtre1 p{
+   margin-bottom: 8px;
+}
+
+.submenu{
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    display:none;
+}
+
+.chevron{
+    display:inline-block;
+}
+
+input[type="checkbox"]:checked + .menu-label .chevron{
+    transform:rotate(90deg);
+}
+
+input[type="checkbox"]:checked ~ .submenu{
+  display:flex;
 }
