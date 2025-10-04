@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/listeProduits.css">
     <title>Listing des Produits</title>
@@ -117,8 +118,58 @@
 
     <main class="main">
         
-        <h1 class="main-title">Nos Produits</h1> 
-
+        <div class="menu">
+                
+                    <h3>Catégories</h3>
+                    <button>X</button>
+                
+                <div class="contenuFiltre">
+                    <div class="filtre1"> 
+                        
+                        <input type="checkbox" id="item1" name="item1" class="visibleCheckbox" checked>
+                        <label for="item1" class="menu-label">Manuels universitaires <span class="chevron">▶</span></label>
+                        
+                        <div class="submenu">
+                            <label><input type="checkbox">Informatique</label>
+                            <label><input type="checkbox">Chimie</label>
+                            <label><input type="checkbox">Physique</label>
+                        </div>
+                    </div>
+                   
+                
+                    <div class="filtre1">
+                        
+                        <input type="checkbox" id="item2" name="item2" class="visibleCheckbox" checked>
+                        <label for="item2" class="menu-label"> Électronique & Informatique <span class="chevron">▶</span></label>
+                        
+                        <div class="submenu">
+                            <label><input type="checkbox" id="ordinateur"> Ordinateur</label>
+                            <label><input type="checkbox" id="disque"> Disque dur</label>
+                            <label><input type="checkbox" id="ecouteur"> Ecouteur</label>
+                        </div>
+                    </div>
+                
+                    <div class="filtre1">
+                        
+                        <input type="checkbox" id="item3" name="item3" class="visibleCheckbox" checked>
+                        <label for="item3" class="menu-label">Matériel d'études <span class="chevron">▶</span></label>
+                        
+                        <div class="submenu">
+                            <label><input type="checkbox"> MSP2</label>
+                            <label><input type="checkbox"> 3e annee</label>
+                            <label><input type="checkbox"> 4e annee</label>
+                        </div>
+                    </div>
+                </div>
+        </div>    
+        
+        <div class="enteteMain">
+            <h1 class="main-title">Nos Produits</h1> 
+            
+            <label for="filtre" class="main-filtre">Filtre</label>
+            <input type="checkbox" id="filtre" name="filtre" class="visibleCheckbox" >
+            
+        </div> 
         <div class="container">
             <div class="box">
                 <a href="produit.html">     
