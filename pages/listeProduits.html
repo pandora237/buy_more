@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <title>Listing des Produits</title>
 
 </head>
+
 <body>
     <header>
         <div id="anchor-top"></div>
@@ -54,12 +56,12 @@
                                 </li>
                             </ul>
                             <div class="img-menu-logo">
-                                <a href="#"> <img src="/assets/img/logo2.png" alt="category"></a>
+                                <img src="/assets/img/logo2.png" alt="category">
                             </div>
                         </div>
                     </div>
                     <div class="logo">
-                        <a href="#">
+                        <a href="../index.html">
                             <img src="/assets/img/logo2.png" alt="logo" title="Buy More" width="100" height="70">
                         </a>
                     </div>
@@ -91,14 +93,14 @@
                         </svg>
 
                         <ul class="profile-menu">
-                            <li><a href="/pages/inscription.html">Inscription</a></li>
-                            <li><a href="/pages/connexion.html">Connexion</a></li>
-                            <li><a href="/pages/mon-compte.html">Mon compte</a></li>
+                            <li><a href="../pages/inscription.html">Inscription</a></li>
+                            <li><a href="../pages/connexion.html">Connexion</a></li>
+                            <li><a href="../pages/mon-compte.html">Mon compte</a></li>
                             <li><a href="#">Déconnexion</a></li>
                         </ul>
                     </div>
 
-                    <a href="/pages/panier.html">
+                    <a href="./panier.html">
                         <div class="cart">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#333"
                                 viewBox="0 0 24 24">
@@ -116,445 +118,482 @@
         </div>
     </header>
 
-    <main class="main">
-        
-        <div class="menu">
-                
-                    <h3>Catégories</h3>
-                    <button>X</button>
-                
-                <div class="contenuFiltre">
-                    <div class="filtre1"> 
-                        
-                        <input type="checkbox" id="item1" name="item1" class="visibleCheckbox" checked>
-                        <label for="item1" class="menu-label">Manuels universitaires <span class="chevron">▶</span></label>
-                        
-                        <div class="submenu">
-                            <label><input type="checkbox">Informatique</label>
-                            <label><input type="checkbox">Chimie</label>
-                            <label><input type="checkbox">Physique</label>
+    <main class="main container">
+
+        <!-- <div class="menu">
+
+            <h3>Catégories</h3>
+            <button>X</button>
+
+            <div class="contenuFiltre">
+                <div class="filtre1">
+
+                    <input type="checkbox" id="item1" name="item1" class="visibleCheckbox" checked>
+                    <label for="item1" class="menu-label">Manuels universitaires <span class="chevron">▶</span></label>
+
+                    <div class="submenu">
+                        <label><input type="checkbox">Informatique</label>
+                        <label><input type="checkbox">Chimie</label>
+                        <label><input type="checkbox">Physique</label>
+                    </div>
+                </div>
+
+
+                <div class="filtre1">
+
+                    <input type="checkbox" id="item2" name="item2" class="visibleCheckbox" checked>
+                    <label for="item2" class="menu-label"> Électronique & Informatique <span
+                            class="chevron">▶</span></label>
+
+                    <div class="submenu">
+                        <label><input type="checkbox" id="ordinateur"> Ordinateur</label>
+                        <label><input type="checkbox" id="disque"> Disque dur</label>
+                        <label><input type="checkbox" id="ecouteur"> Ecouteur</label>
+                    </div>
+                </div>
+
+                <div class="filtre1">
+
+                    <input type="checkbox" id="item3" name="item3" class="visibleCheckbox" checked>
+                    <label for="item3" class="menu-label">Matériel d'études <span class="chevron">▶</span></label>
+
+                    <div class="submenu">
+                        <label><input type="checkbox"> MSP2</label>
+                        <label><input type="checkbox"> 3e annee</label>
+                        <label><input type="checkbox"> 4e annee</label>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <h1 class="main-title">Nos Produits</h1>
+        <section class="section-content">
+            <div class="filtre">
+                <div class="content-filtre">
+                    <h2>Filtre</h2>
+                    <div>
+                        <div class="items-filter">
+                            <div class="filter-group">
+                                <label for="categorie">Catégorie :</label>
+                                <select id="categorie" name="categorie">
+                                    <option value="">Toutes</option>
+                                    <option value="informatique">Informatique</option>
+                                    <option value="electronique">Électronique</option>
+                                    <option value="vetement">Vêtements</option>
+                                </select>
+                            </div>
+
+                            <div class="filter-group">
+                                <label>Prix :</label>
+                                <input type="number" placeholder="Min" min="0"> -
+                                <input type="number" placeholder="Max" min="0">
+                            </div>
+
+                            <div class="filter-group">
+                                <label>
+                                    <input type="checkbox" name="disponible" value="1">
+                                    Disponible
+                                </label>
+                            </div>
+
+                            <div class="filter-group">
+                                <label>
+                                    <input type="checkbox" name="promo" value="1">
+                                    En promotion
+                                </label>
+                            </div>
+
                         </div>
                     </div>
-                   
-                
-                    <div class="filtre1">
-                        
-                        <input type="checkbox" id="item2" name="item2" class="visibleCheckbox" checked>
-                        <label for="item2" class="menu-label"> Électronique & Informatique <span class="chevron">▶</span></label>
-                        
-                        <div class="submenu">
-                            <label><input type="checkbox" id="ordinateur"> Ordinateur</label>
-                            <label><input type="checkbox" id="disque"> Disque dur</label>
-                            <label><input type="checkbox" id="ecouteur"> Ecouteur</label>
+                </div>
+            </div>
+
+            </div>
+            <div class="content-product">
+                <div class="box">
+                    <a href="produit.html">
+                        <div class="image"><a href=""><img src="/assets/images/img/img0.jpeg" alt="Livre 1"></a></div>
+                        <div class="content">
+                            <div class="description">
+                                <h3><a href="">Chawama</a></h3>
+                                <p class="price">1500 FCFA</p>
+                            </div>
+                            <a href="#" class="btn btn-primary">Ajouter au panier</a>
                         </div>
-                    </div>
-                
-                    <div class="filtre1">
-                        
-                        <input type="checkbox" id="item3" name="item3" class="visibleCheckbox" checked>
-                        <label for="item3" class="menu-label">Matériel d'études <span class="chevron">▶</span></label>
-                        
-                        <div class="submenu">
-                            <label><input type="checkbox"> MSP2</label>
-                            <label><input type="checkbox"> 3e annee</label>
-                            <label><input type="checkbox"> 4e annee</label>
+                    </a>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img1.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Casque</a></h3>
+                            <p class="price">5000 FCFA</p>
                         </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
                     </div>
                 </div>
-        </div>    
-        
-        <div class="enteteMain">
-            <h1 class="main-title">Nos Produits</h1> 
-            
-            <label for="filtre" class="main-filtre">Filtre</label>
-            <input type="checkbox" id="filtre" name="filtre" class="visibleCheckbox" >
-            
-        </div> 
-        <div class="container">
-            <div class="box">
-                <a href="produit.html">     
-                <div class="image"><a href=""><img src="/assets/images/img/img0.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Chawama</a></h3>
-                        <p class="price">1500 FCFA</p>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img2.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Samsung A30</a></h3>
+                            <p class="price">60000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
                     </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
                 </div>
-                </a>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img3.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Kit-Arduino</a></h3>
+                            <p class="price">1500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img4.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Poulet pane</a></h3>
+                            <p class="price">2500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img5.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Goffre au Chocolat</a></h3>
+                            <p class="price">350 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img6.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">DELL-Desktop</a></h3>
+                            <p class="price">150000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img7.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">H-Prepa Maths</a></h3>
+                            <p class="price">1500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img8.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">H-Prepa Maths Exercices</a></h3>
+                            <p class="price">1500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img9.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Burger</a></h3>
+                            <p class="price">1500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img10.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Differentiel et Integral</a></h3>
+                            <p class="price">3000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img11.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Iphone 15</a></h3>
+                            <p class="price">100000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img12.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">HP</a></h3>
+                            <p class="price">100500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img13.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Kit-Arduino</a></h3>
+                            <p class="price">25000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img14.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Tout-en-un- 1ere annee</a></h3>
+                            <p class="price">1500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img15.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">DELL</a></h3>
+                            <p class="price">200000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img16.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Orimo</a></h3>
+                            <p class="price">1000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img17.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Pizza</a></h3>
+                            <p class="price">2500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img18.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Casque</a></h3>
+                            <p class="price">4500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img19.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Maths de LSI</a></h3>
+                            <p class="price">2500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img20.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Chips Sweet</a></h3>
+                            <p class="price">1000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img21.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Casque</a></h3>
+                            <p class="price">5000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img22.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Airport</a></h3>
+                            <p class="price">4500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img23.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">DELL</a></h3>
+                            <p class="price">140000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img24.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Iphone</a></h3>
+                            <p class="price">70500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img25.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Outis mathematiques pour la physique</a></h3>
+                            <p class="price">2500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img26.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Airport</a></h3>
+                            <p class="price">3500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img27.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Equations differentielles</a></h3>
+                            <p class="price">2500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img28.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Airport</a></h3>
+                            <p class="price">3500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img29.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Casque</a></h3>
+                            <p class="price">5000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img30.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Casque</a></h3>
+                            <p class="price">5000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img31.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Ecouteur</a></h3>
+                            <p class="price">1500 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img32.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Casque</a></h3>
+                            <p class="price">5000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img33.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">Casque</a></h3>
+                            <p class="price">5000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img34.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">DELL</a></h3>
+                            <p class="price">200000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img35.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">DELL</a></h3>
+                            <p class="price">200000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img36.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">DELL</a></h3>
+                            <p class="price">200000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image"><a href=""><img src="/assets/images/img/img37.jpeg" alt="Livre 1"></a></div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="">HP</a></h3>
+                            <p class="price">200000 FCFA</p>
+                        </div>
+                        <a href="#" class="btn btn-primary position">Ajouter au panier</a>
+                    </div>
+                </div>
+
             </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img1.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Casque</a></h3>
-                        <p class="price">5000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img2.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Samsung A30</a></h3>
-                        <p class="price">60000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img3.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Kit-Arduino</a></h3>
-                        <p class="price">1500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img4.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Poulet pane</a></h3>
-                        <p class="price">2500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img5.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Goffre au Chocolat</a></h3>
-                        <p class="price">350 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img6.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">DELL-Desktop</a></h3>
-                        <p class="price">150000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img7.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">H-Prepa Maths</a></h3>
-                        <p class="price">1500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img8.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">H-Prepa Maths Exercices</a></h3>
-                        <p class="price">1500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img9.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Burger</a></h3>
-                        <p class="price">1500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img10.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Differentiel et Integral</a></h3>
-                        <p class="price">3000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img11.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Iphone 15</a></h3>
-                        <p class="price">100000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img12.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">HP</a></h3>
-                        <p class="price">100500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img13.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Kit-Arduino</a></h3>
-                        <p class="price">25000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img14.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Tout-en-un- 1ere annee</a></h3>
-                        <p class="price">1500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img15.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">DELL</a></h3>
-                        <p class="price">200000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img16.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Orimo</a></h3>
-                        <p class="price">1000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img17.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Pizza</a></h3>
-                        <p class="price">2500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img18.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Casque</a></h3>
-                        <p class="price">4500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img19.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Maths de LSI</a></h3>
-                        <p class="price">2500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img20.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Chips Sweet</a></h3>
-                        <p class="price">1000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img21.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Casque</a></h3>
-                        <p class="price">5000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img22.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Airport</a></h3>
-                        <p class="price">4500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img23.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">DELL</a></h3>
-                        <p class="price">140000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img24.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Iphone</a></h3>
-                        <p class="price">70500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img25.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Outis mathematiques pour la physique</a></h3>
-                        <p class="price">2500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img26.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Airport</a></h3>
-                        <p class="price">3500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img27.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Equations differentielles</a></h3>
-                        <p class="price">2500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img28.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Airport</a></h3>
-                        <p class="price">3500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img29.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Casque</a></h3>
-                        <p class="price">5000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img30.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Casque</a></h3>
-                        <p class="price">5000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img31.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Ecouteur</a></h3>
-                        <p class="price">1500 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img32.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Casque</a></h3>
-                        <p class="price">5000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img33.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">Casque</a></h3>
-                        <p class="price">5000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img34.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">DELL</a></h3>
-                        <p class="price">200000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img35.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">DELL</a></h3>
-                        <p class="price">200000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img36.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                    <div class="description">
-                        <h3><a href="">DELL</a></h3>
-                        <p class="price">200000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image"><a href=""><img src="/assets/images/img/img37.jpeg" alt="Livre 1"></a></div>
-                <div class="content">
-                   <div class="description">
-                        <h3><a href="">HP</a></h3>
-                        <p class="price">200000 FCFA</p>
-                    </div>
-                    <a href="#" class="btn btn-primary position">Ajouter au panier</a>
-                </div>
-            </div>
-            
-        </div>    
+        </section>
     </main>
 
     <footer>
@@ -677,4 +716,5 @@
         </a>
     </footer>
 </body>
+
 </html>
