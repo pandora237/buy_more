@@ -226,7 +226,7 @@ header {
     position: absolute;
     left: -20px;
     top: 100%;
-    width: calc(100vw - 15px);
+    width: calc(100vw - 20px);
     display: flex;
     align-items: center;
     height: max-content;
