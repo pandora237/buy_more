@@ -2,7 +2,7 @@
  .commande-card {
      background: white;
      border-radius: 12px;
-     padding: 25px;
+     padding: 10px;
      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
      border: 1px solid var(--col-border);
  }
@@ -74,7 +74,7 @@
  }
 
  .prix-total {
-     font-size: 1.1rem;
+     font-size: 1rem;
      font-weight: 600;
      color: var(--col-tertiary);
  }
@@ -88,11 +88,11 @@
      background-color: var(--col-tertiary);
      transform: translateY(-2px);
      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
- } 
+ }
 
- .co-comme{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+ .co-comme {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+     gap: 10px;
+     width: 100%;
  }

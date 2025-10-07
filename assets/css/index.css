@@ -151,6 +151,26 @@ section {
     background-color: var(--col-danger-hover);
 }
 
+/* badge */
+.badge {
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+    color: var(--col-text-light);
+    font-size: 0.8rem;
+}
+
+.badge.success {
+    background-color: var(--col-success);
+}
+
+.badge.warning {
+    background-color: var(--col-warning);
+}
+
+.badge.danger {
+    background-color: var(--col-danger);
+}
+
 /* start header */
 header {
     padding-top: 10px;
@@ -300,7 +320,7 @@ header {
 .search-bar button {
     padding: 8px 15px;
     border: none;
-    background: #ff6f00;
+    background: var(--col-primary);
     color: #fff;
     border-radius: 0 0.5rem 0.5rem 0;
     cursor: pointer;
@@ -571,6 +591,116 @@ footer #go-top {
     }
 }
 
+/* chat */
+.chat-container {
+    position: fixed;
+    right: 10px;
+    bottom: 31px;
+}
+
+.chat-toggle {
+    position: fixed;
+    bottom: 0;
+    right: 25px;
+    background-color: var(--col-primary-hover);
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border: 2px solid var(--col-border);
+    border-bottom: 0;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--col-white);
+}
+
+.chat-box {
+    width: 320px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: var(--col-primary);
+    color: white;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.chat-body {
+    padding: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.message {
+    max-width: 80%;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.message.user {
+    background: var(--col-primary);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.message.bot {
+    background: #e5e7eb;
+    color: #111827;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+.chat-footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #e5e7eb;
+    padding: 8px;
+    gap: 8px;
+}
+
+.chat-footer input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 8px;
+    background: #f3f4f6;
+}
+
+.chat-footer input:focus {
+    outline: 2px solid var(--col-primary);
+    background: white;
+}
+
+.chat-footer button {
+    background: var(--col-primary);
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
 /* end footer */
 
 
@@ -588,4 +718,73 @@ footer #go-top {
 
 .error-404 p {
     font-size: 1.2rem;
+}
+
+
+/* admin pages */
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: var(--col-white);
+    border-right: 1px solid var(--col-border);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0 1.5rem 1.5rem;
+    border-bottom: 1px solid var(--col-border);
+    color: var(--col-primary);
+}
+
+.sidebar-menu {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.sidebar-menu li {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--col-text);
+    transition: all 0.3s;
+}
+
+.sidebar-menu li:hover,
+.sidebar-menu li.active {
+    background-color: var(--col-primary);
+    color: var(--col-text-light);
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-info img {
+    border-radius: 50%;
 }
