@@ -402,6 +402,43 @@
         <i class="fa-solid fa-comments "></i>
       </button>
     </div>
+    <!-- Nouveau chat ajouté, indépendant du précédent -->
+    <div class="chat-container-alt" style="position: fixed; bottom: 120px; right: 40px; z-index: 9999;">
+      <div class="chat-box">
+        <div class="chat-header">
+          <h3><i class="fa-solid fa-comments"></i> Assistance Live</h3>
+          <i class="fa-solid fa-xmark" id="closeChatAlt"></i>
+        </div>
+        <div class="chat-body">
+          <div class="message bot">
+            Bonjour, besoin d’aide supplémentaire ?
+          </div>
+        </div>
+        <div class="chat-footer">
+          <input type="text" placeholder="Votre message...">
+          <button><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+      </div>
+      <button class="chat-toggle-alt" id="chatToggleAlt" style="margin-top: 8px;">
+        <i class="fa-solid fa-comments"></i>
+      </button>
+    </div>
+    <script>
+      // Simple toggle for the second chat
+      const chatContainerAlt = document.querySelector('.chat-container-alt .chat-box');
+      const chatToggleAlt = document.getElementById('chatToggleAlt');
+      const closeChatAlt = document.getElementById('closeChatAlt');
+      chatContainerAlt.style.display = 'none';
+      chatToggleAlt.addEventListener('click', () => {
+        chatContainerAlt.style.display = 'block';
+        chatToggleAlt.style.display = 'none';
+      });
+      closeChatAlt.addEventListener('click', () => {
+        chatContainerAlt.style.display = 'none';
+        chatToggleAlt.style.display = 'inline-block';
+      });
+    </script>
+<!-- ...existing code... -->
   </footer>
 </body>
 
