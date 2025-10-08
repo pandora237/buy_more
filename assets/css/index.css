@@ -3,21 +3,25 @@
 :root {
     --font-family: 'Poppins', sans-serif;
 
-    --col-background: #f8f9fa;
+    --col-background: #f8f8f8;
     --col-white: #fff;
     --col-text: #212529;
     --col-text-light: #ffffff;
-    --col-primary: #ff6f00;
-    --col-primary-hover: #fd9547;
-    --col-secondary: #007bff;
-    --col-secondary-hover: #0358b4;
+    --col-primary: #1A2A40;
+    --col-primary-hover: #d44609;
+    --col-secondary: #0358b4;
+    --col-secondary-hover: #007bff;
     --col-tertiary: #289fa7;
-
+    #007bff
     --col-success: #28a745;
     --col-warning: #ffc107;
     --col-danger: #dc3545;
 
     --col-border: #dee2e6;
+    --col-footer: #101730;
+    --col-newsletter-background:#1A2A40;
+    
+  
 }
 
 * {
@@ -458,7 +462,7 @@ main {
 footer {}
 
 #new-letter {
-    background-color: var(--col-secondary);
+    background-color: var(--col-newsletter-background);
     padding-bottom: 50px;
     padding-top: 50px;
 }
@@ -486,12 +490,16 @@ footer {}
     font-size: 1em;
     font-weight: 600;
     border-radius: 0.5em;
+    
+}
+.new-letter-content  {
+    color:var(--col-text-light);
 }
 
 #content-footer {
-    background: var(--col-primary);
+    background: var(--col-footer);
     padding-top: 20px;
-    /* background: linear-gradient(to top, var(--col-primary), var(--col-secondary)); */
+    /* background: linear-gradient(90deg, var(--col-primary), var(--col-secondary)); */
 }
 
 #content-footer .footer-item {
@@ -601,7 +609,7 @@ footer #go-top {
     position: fixed;
     bottom: 0;
     right: 25px;
-    background-color: var(--col-primary-hover);
+    background-color: var(--col-secondary-hover);
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
     border: 2px solid var(--col-border);
@@ -625,7 +633,7 @@ footer #go-top {
 }
 
 .chat-header {
-    background: var(--col-primary);
+    background: var(--col-secondary-hover);
     color: white;
     padding: 12px;
     display: flex;
@@ -655,7 +663,7 @@ footer #go-top {
 }
 
 .message.user {
-    background: var(--col-primary);
+    background: var(--col-secondary-hover);
     color: white;
     align-self: flex-end;
     border-bottom-right-radius: 0;
