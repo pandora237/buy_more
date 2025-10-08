@@ -88,7 +88,13 @@
 
 .filter-group label {
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: bold; 
+}
+
+.filter-group .slider-container label { 
+    display: grid;
+    grid-template-columns: 50px auto;
+    gap: 5px; 
 }
 
 .filter-group input[type="number"],
