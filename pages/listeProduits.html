@@ -166,6 +166,7 @@
             </div>
         </div> -->
         <h1 class="main-title">Nos Produits</h1>
+        
         <section class="section-content">
             <div class="filtre">
                 <div class="content-filtre">
@@ -183,10 +184,18 @@
                                 </select>
                             </div>
 
-                            <div class="filter-group">
+                            <!--<div class="filter-group">
                                 <label>Prix :</label>
                                 <input type="number" placeholder="Min" min="0"> -
                                 <input type="number" placeholder="Max" min="0">
+                            </div>-->
+
+                            <div class="filter-group">
+                                    <div class="slider-container">
+                                       <label><span>min :</span><input type="range" min="0" max="100" value="0" id="minRange"></label> 
+                                        <label>max :<input type="range" min="0" max="100" value="0" id="maxRange"></label> 
+                                        <!--<p>Valeur min: <span id="minVal">25</span> / Valeur max: <span id="maxVal">75</span></p>-->
+                                    </div>
                             </div>
 
                             <div class="content-filter">
@@ -225,7 +234,7 @@
                         <div class="content">
                             <div class="description">
                                 <h3><a href="">Chawama</a></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deserunt!</p>
+                                <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deserunt!</p>
                                 <div>
                                     <div class="rating">★★★★☆</div>
                                     <button class="like-btn">♡</button>
@@ -306,7 +315,7 @@
                         <div class="description">
                             <h3><a href="">Goffre au Chocolat</a></h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deserunt!</p>
-                            <p class="type promo">Disponible</p>     
+                            <p class="type ">En promo</p>     
                                 <div>
                                     <div class="rating">★★★★☆</div>
                                     <button class="like-btn">♡</button>
@@ -368,7 +377,7 @@
                         <div class="description">
                             <h3><a href="">Burger</a></h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deserunt!</p>
-                                <p class="type">Disponible</p>
+                                <p class="type">New</p>
                                 <div>
                                     <div class="rating">★★★★☆</div>
                                     <button class="like-btn">♡</button>
@@ -399,7 +408,7 @@
                         <div class="description">
                             <h3><a href="">Iphone 15</a></h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deserunt!</p>
-                            <p class="type">Disponible</p>    
+                            <p class="type">New</p>    
                                 <div>
                                     <div class="rating">★★★★☆</div>
                                     <button class="like-btn">♡</button>
