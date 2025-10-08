@@ -1,0 +1,156 @@
+  .title {
+      color: var(--col-primary);
+  }
+
+  h2,
+  h3,
+  h1,
+  h5 {
+      color: #007bff;
+      text-align: center;
+      margin: 20px 0 10px 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+  }
+
+  .mini {
+      color: #333;
+      font-size: 12px;
+      text-align: center;
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  a {
+      color: #007bff;
+      text-decoration: none;
+      text-align: center;
+      font-size: 10px;
+      transition: color 0.2s;
+  }
+
+  a:hover {
+      color: #0358b4;
+      text-decoration: underline;
+  }
+
+  .lien_bottom {
+      text-align: center;
+  }
+
+  li {
+      color: #289fa7;
+      margin-left: 32px;
+      margin-bottom: 8px;
+      font-size: 15px;
+      line-height: 1.6;
+  }
+
+  div {
+      border-radius: 10px;
+      margin: 0;
+  }
+
+  .container_principal {
+      border-radius: 15px;
+      border: 2px var(--col-border) solid;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 900px;
+      margin: 40px auto 30px auto;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+      padding: 32px 28px;
+  }
+
+  #introduction {
+      margin-bottom: 40px;
+  }
+
+  #Livraison,
+  #retour,
+  #exceptions\ \&\ cas\ particuliers,
+  #Mentions\ légales\ \(si\ applicables\) {
+      border-top: 2px var(--col-border) solid;
+      padding: 24px 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  }
+
+  #container_principal h2 {
+      text-align: left;
+      color: #007bff;
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+  }
+
+  #container_principal p {
+      color: #444;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+  }
+
+  .container_top {
+      background-color: var(--col-white);
+      padding: 60px;
+      flex: 1;
+  }
+
+  .container_bottom {
+      align-items: center;
+      flex: 1;
+      display: flex;
+
+  }
+
+  .mini_div1,
+  .mini_div2 {
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0, 123, 255, 0.07);
+      padding: 32px 24px;
+      margin: 18px 0;
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+  }
+
+  .mini_div1:hover,
+  .mini_div2:hover {
+      box-shadow: 0 6px 24px rgba(0, 123, 255, 0.13);
+      transform: translateY(-2px) scale(1.01);
+  }
+
+
+
+  @media (max-width: 700px) {
+      #container_principal {
+          padding: 12px 4vw;
+          max-width: 98vw;
+      }
+
+      #introduction,
+      #Livraison,
+      #retour,
+      #exceptions\ \&\ cas\ particuliers,
+      #Contact\ \/ \Support,
+      #Mentions\ légales\ \(si\ applicables\) {
+          padding: 14px 6px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h5 {
+          font-size: 1.1rem;
+      }
+  }
+
+  div {
+      border-radius: 0;
+      margin: 0;
+
+  }

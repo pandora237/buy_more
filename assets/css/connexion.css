@@ -1,0 +1,141 @@
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--col-border);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+main form .form-group {
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--col-text);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--col-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--col-secondary);
+}
+
+.form-auth {
+    min-width: 350px;
+    background-color: var(--col-white);
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px var(--col-border) solid;
+}
+
+.form-auth button {
+    width: 100%;
+}
+
+
+.social-login {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--col-border);
+}
+
+.social-login p {
+    text-align: center;
+    color: var(--col-text);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.signup-link {
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 15px;
+    border-top: 1px solid var(--col-border);
+}
+
+.signup-link p {
+    color: var(--col-text);
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: var(--col-secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* .btn-primary:hover {
+    background-color: var(--col-tertiary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+} */
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--col-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+.page-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-intro h1 {
+    font-size: 1.8rem;
+    color: var(--col-secondary);
+    margin-bottom: 10px;
+}
+
+.page-intro p {
+    color: var(--col-text);
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
