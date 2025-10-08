@@ -19,7 +19,7 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: white;
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -42,12 +42,12 @@ header {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
     gap: 3rem;
     align-items: start;
 }
 
-/* Contact Info */
+/* Contact Info 
 .contact-info {
     background: white;
     padding: 2rem;
@@ -86,11 +86,11 @@ header {
 .info-content p {
     color: #666;
 }
-
+*/
 /* Contact Form */
 .contact-form {
     background: white;
-    padding: 2rem;
+    padding: 10rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -109,8 +109,8 @@ header {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.75rem;
-    border: 2px solid #e1e5e9;
+    padding: 1rem;
+    border: 10px solid #e1e5e9;
     border-radius: 5px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
@@ -140,43 +140,4 @@ header {
 
 .submit-btn:hover {
     transform: translateY(-2px);
-}
-
-/* Map Section */
-.map-section {
-    padding: 2rem 0;
-    background: white;
-    margin-top: 2rem;
-}
-
-.map-placeholder {
-    background: #f8f9fa;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    color: #666;
-    font-style: italic;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 4rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .header-content h1 {
-        font-size: 2rem;
-    }
 }
