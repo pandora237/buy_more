@@ -6,7 +6,7 @@
   h3,
   h1,
   h5 {
-      color: #007bff;
+      color: var(--col-secondary);
       text-align: center;
       margin: 20px 0 10px 0;
       font-weight: 600;
@@ -22,7 +22,7 @@
   }
 
   a {
-      color: #007bff;
+      color: var(--col-secondary);
       text-decoration: none;
       text-align: center;
       font-size: 10px;
@@ -30,7 +30,7 @@
   }
 
   a:hover {
-      color: #0358b4;
+      color: var(--col-secondary-hover);
       text-decoration: underline;
   }
 
@@ -39,7 +39,7 @@
   }
 
   li {
-      color: #289fa7;
+      color: var(--col-tertiary);
       margin-left: 32px;
       margin-bottom: 8px;
       font-size: 15px;
@@ -59,7 +59,7 @@
       gap: 24px;
       max-width: 900px;
       margin: 40px auto 30px auto;
-      background: #fff;
+      background: var(--col-white);
       box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
       padding: 32px 28px;
   }
@@ -80,7 +80,7 @@
 
   #container_principal h2 {
       text-align: left;
-      color: #007bff;
+      color: var(--col-secondary);
       margin-bottom: 12px;
       font-size: 1.3rem;
   }
