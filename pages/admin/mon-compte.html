@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes commandes - Buy More</title>
+    <title>Mon-compte - Buy More</title>
 
-    <link rel="stylesheet" href="../assets/css/index.css">
-    <link rel="stylesheet" href="../assets/css/commandes.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/index-admin.css">
+    <link rel="stylesheet" href="/assets/css/mon-compte.css">
 </head>
 
 <body>
@@ -61,7 +62,7 @@
                         </div>
                     </div>
                     <div class="logo">
-                        <a href="../index.html">
+                        <a href="../../index.html">
                             <img src="/assets/img/logo2.png" alt="logo" title="Buy More" width="100" height="70">
                         </a>
                     </div>
@@ -95,8 +96,8 @@
                         <ul class="profile-menu">
                             <li><a href="../pages/inscription.html">Inscription</a></li>
                             <li><a href="../pages/connexion.html">Connexion</a></li>
-                            <li><a href="../pages/mon-compte.html">Mon compte</a></li>
-                            <li><a href="#">Déconnexion</a></li>
+                            <li><a href="./mon-compte.html">Mon compte</a></li>
+                            <li class="deconnexion"><a href="#">Déconnexion</a></li>
                         </ul>
                     </div>
 
@@ -119,206 +120,60 @@
     </header>
 
     <main class="container">
-        <h1 class="title">Mes commandes </h1>
-        <section class="co-comme">
-            <div class="commande-card">
-                <div class="commande-header">
-                    <div>
-                        <h3>Commande #12345</h3>
-                        <p class="commande-date">15 janvier 2025</p>
-                    </div>
-                    <span class="statut livree">Livrée</span>
-                </div>
-
-                <div class="commande-items">
-                    <p>• Sweat à capuche noir x1</p>
-                    <p>• Jean slim bleu x2</p>
-                </div>
-
-                <div class="commande-footer">
-                    <p class="prix-total">Total : 45 000 FCFA</p>
-                    <div class="commande-actions">
-                        <button class="btn btn-secondary">Voir détails</button>
-                    </div>
-                </div>
+        <h1 class="title">Mon compte</h1>
+        <section class="content-compte">
+            <div>
+                <aside>
+                    <ul>
+                        <li>
+                            <a href="./mes-commandes.html"><i class="fa fa-shopping-cart"></i>
+                                <span class="item-aside">Mes commandes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-user"> </i>
+                                <span class="item-aside">Profil</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-heart"></i>
+                                <span class="item-aside">Favoris</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gear"></i>
+                                <span class="item-aside">Paramètres</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sign-out-alt"></i>
+                                <span class="item-aside">Déconnexion</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
             </div>
-            <div class="commande-card">
-                <div class="commande-header">
-                    <div>
-                        <h3>Commande #12344</h3>
-                        <p class="commande-date">10 janvier 2025</p>
+
+            <div class="content">
+                <div class="content-grid">
+                    <div class="cart-dash">
+                        <i class="fa fa-gear"></i>
+                        <h2>Paramètres du compte</h2>
                     </div>
-                    <span class="statut en-cours">En cours</span>
-                </div>
 
-                <div class="commande-items">
-                    <p>• T-shirt blanc x3</p>
-                </div>
-
-                <div class="commande-footer">
-                    <p class="prix-total">Total : 15 000 FCFA</p>
-                    <div class="commande-actions">
-                        <button class="btn btn-secondary">Voir détails</button>
+                    <div class="cart-dash">
+                        <i class="fa fa-box"></i>
+                        <h2>Historique des commandes</h2>
                     </div>
-                </div>
-            </div>
-            <div class="commande-card">
-                <div class="commande-header">
-                    <div>
-                        <h3>Commande #12343</h3>
-                        <p class="commande-date">5 janvier 2025</p>
+
+                    <div class="cart-dash">
+                        <i class="fa fa-heart"></i>
+                        <h2>Mes favoris</h2>
                     </div>
-                    <span class="statut annulee">Annulée</span>
-                </div>
 
-                <div class="commande-items">
-                    <p>• Chaussures sport x4</p>
-                </div>
-
-                <div class="commande-footer">
-                    <p class="prix-total">Total : 55 000 FCFA</p>
-                    <div class="commande-actions">
-                        <button class="btn btn-secondary">Voir détails</button>
-                    </div>
-                </div>
-            </div>
-            <div class="commande-card">
-                <div class="commande-header">
-                    <div>
-                        <h3>Commande #12343</h3>
-                        <p class="commande-date">5 janvier 2025</p>
-                    </div>
-                    <span class="statut annulee">Annulée</span>
-                </div>
-
-                <div class="commande-items">
-                    <p>• Chaussures sport x4</p>
-                </div>
-
-                <div class="commande-footer">
-                    <p class="prix-total">Total : 55 000 FCFA</p>
-                    <div class="commande-actions">
-                        <button class="btn btn-secondary">Voir détails</button>
-                    </div>
-                </div>
-            </div>
-            <div class="commande-card">
-                <div class="commande-header">
-                    <div>
-                        <h3>Commande #12343</h3>
-                        <p class="commande-date">5 janvier 2025</p>
-                    </div>
-                    <span class="statut annulee">Annulée</span>
-                </div>
-
-                <div class="commande-items">
-                    <p>• Chaussures sport x4</p>
-                </div>
-
-                <div class="commande-footer">
-                    <p class="prix-total">Total : 55 000 FCFA</p>
-                    <div class="commande-actions">
-                        <button class="btn btn-secondary">Voir détails</button>
-                    </div>
-                </div>
-            </div>
-            <div class="commande-card">
-                <div class="commande-header">
-                    <div>
-                        <h3>Commande #12343</h3>
-                        <p class="commande-date">5 janvier 2025</p>
-                    </div>
-                    <span class="statut annulee">Annulée</span>
-                </div>
-
-                <div class="commande-items">
-                    <p>• Chaussures sport x4</p>
-                </div>
-
-                <div class="commande-footer">
-                    <p class="prix-total">Total : 55 000 FCFA</p>
-                    <div class="commande-actions">
-                        <button class="btn btn-secondary">Voir détails</button>
-                    </div>
-                </div>
-            </div>
-            <div class="commande-card">
-                <div class="commande-header">
-                    <div>
-                        <h3>Commande #12343</h3>
-                        <p class="commande-date">5 janvier 2025</p>
-                    </div>
-                    <span class="statut annulee">Annulée</span>
-                </div>
-
-                <div class="commande-items">
-                    <p>• Chaussures sport x4</p>
-                </div>
-
-                <div class="commande-footer">
-                    <p class="prix-total">Total : 55 000 FCFA</p>
-                    <div class="commande-actions">
-                        <button class="btn btn-secondary">Voir détails</button>
-                    </div>
-                </div>
-            </div>
-            <div class="commande-card">
-                <div class="commande-header">
-                    <div>
-                        <h3>Commande #12343</h3>
-                        <p class="commande-date">5 janvier 2025</p>
-                    </div>
-                    <span class="statut annulee">Annulée</span>
-                </div>
-
-                <div class="commande-items">
-                    <p>• Chaussures sport x4</p>
-                </div>
-
-                <div class="commande-footer">
-                    <p class="prix-total">Total : 55 000 FCFA</p>
-                    <div class="commande-actions">
-                        <button class="btn btn-secondary">Voir détails</button>
-                    </div>
-                </div>
-            </div>
-            <div class="commande-card">
-                <div class="commande-header">
-                    <div>
-                        <h3>Commande #12343</h3>
-                        <p class="commande-date">5 janvier 2025</p>
-                    </div>
-                    <span class="statut annulee">Annulée</span>
-                </div>
-
-                <div class="commande-items">
-                    <p>• Chaussures sport x4</p>
-                </div>
-
-                <div class="commande-footer">
-                    <p class="prix-total">Total : 55 000 FCFA</p>
-                    <div class="commande-actions">
-                        <button class="btn btn-secondary">Voir détails</button>
-                    </div>
-                </div>
-            </div>
-            <div class="commande-card">
-                <div class="commande-header">
-                    <div>
-                        <h3>Commande #12343</h3>
-                        <p class="commande-date">5 janvier 2025</p>
-                    </div>
-                    <span class="statut annulee">Annulée</span>
-                </div>
-
-                <div class="commande-items">
-                    <p>• Chaussures sport x4</p>
-                </div>
-
-                <div class="commande-footer">
-                    <p class="prix-total">Total : 55 000 FCFA</p>
-                    <div class="commande-actions">
-                        <button class="btn btn-secondary">Voir détails</button>
+                    <div class="cart-dash">
+                        <i class="fa fa-shield-alt"></i>
+                        <h2>Sécurité</h2>
                     </div>
                 </div>
             </div>
@@ -443,6 +298,35 @@
                 <path d="m18 15-6-6-6 6"></path>
             </svg>
         </a>
+        <div class="chat-container ">
+            <div class="chat-box">
+                <div class="chat-header">
+                    <h3><i class="fa-solid fa-comments"></i> Mini Chat</h3>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+                <div class="chat-body">
+                    <div class="message bot">
+                        Bonjour ! Comment puis-je vous aider ?
+                    </div>
+                    <div class="message user">
+                        Je cherche vos offres récentes.
+                    </div>
+                    <div class="message bot">
+                        Nous avons des réductions sur les produits tech !
+                    </div>
+                </div>
+
+                <div class="chat-footer">
+                    <input type="text" placeholder="Écrire un message...">
+                    <button><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+
+            <button class="chat-toggle " id="chatToggle">
+                <i class="fa-solid fa-comments "></i>
+            </button>
+        </div>
     </footer>
 </body>
 

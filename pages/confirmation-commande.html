@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>buy more - Accueil</title>
-    <!-- style global -->
-    <link rel="stylesheet" href="/assets/css/index.css">
-    <!-- style home page -->
-    <link rel="stylesheet" href="/assets/css/home.css">
+    <title>Confirmation de commande - Buy More</title>
+
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/confirmation.css">
 </head>
 
 <body>
@@ -51,18 +50,18 @@
                                 </li>
                                 <li class="menu-item"><a href="#">Sports</a>
                                     <div class="img-menu">
-                                        <img src="/assets/img/electronique/disque dur 4t0.png"
+                                        <img src="/assets/img/electronique/casque_sans_fil_-_oraimo_boompop_2s_-_i.jpg"
                                             alt="category">
                                     </div>
                                 </li>
                             </ul>
                             <div class="img-menu-logo">
-                                <a href="#"> <img src="/assets/img/logo2.png" alt="category"></a>
+                                <img src="/assets/img/logo2.png" alt="category">
                             </div>
                         </div>
                     </div>
                     <div class="logo">
-                        <a href="#">
+                        <a href="../index.html">
                             <img src="/assets/img/logo2.png" alt="logo" title="Buy More" width="100" height="70">
                         </a>
                     </div>
@@ -94,14 +93,14 @@
                         </svg>
 
                         <ul class="profile-menu">
-                            <li><a href="/pages/inscription.html">Inscription</a></li>
-                            <li><a href="/pages/connexion.html">Connexion</a></li>
-                            <li><a href="/pages/admin/mon-compte.html">Mon compte</a></li>
-                            <li><a href="#">Déconnexion</a></li>
+                            <li><a href="../pages/inscription.html">Inscription</a></li>
+                            <li><a href="../pages/connexion.html">Connexion</a></li>
+                            <li><a href="./admin/mon-compte.html">Mon compte</a></li>
+                            <li class="deconnexion"><a href="#">Déconnexion</a></li>
                         </ul>
                     </div>
 
-                    <a href="/pages/panier.html">
+                    <a href="./panier.html">
                         <div class="cart">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#333"
                                 viewBox="0 0 24 24">
@@ -119,102 +118,96 @@
         </div>
     </header>
 
-
     <main class="container">
-        <section class="">
-            <div class="banner">
-                <div class="banner-content">
-                    <h1>Bienvenue sur Buy More</h1>
-                    <p>Découvrez nos meilleures offres et promotions du moment.</p>
-                    <a href="/pages/produit.html" class="btn btn-primary">Découvrir</a>
-                </div>
-                <div class="banner-image">
-                    <img src="/assets/img/category/cat1.png" alt="Q7B7-Available-Now-Glotelho-Banner">
+        <h1 class="title"> Confirmation de commande</h1>
+        <section class="confirmation-content">
+
+            <div class="success-message">
+                <div class="success-icon">✓</div>
+                <h2>Commande confirmée !</h2>
+                <p>Merci pour votre achat. Votre commande a été enregistrée avec succès.</p>
+            </div>
+
+
+            <div class="order-info">
+                <h3>Détails de la commande</h3>
+                <div class="order-details">
+                    <div class="detail-row">
+                        <span class="label">Numéro de commande :</span>
+                        <span class="value">#CMD-2025-001</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Date :</span>
+                        <span class="value">7 octobre 2025</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Statut :</span>
+                        <span class="statut en-cours">En cours de traitement</span>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section class="best-seller">
-            <h2 class="title">Nos Meilleures Ventes</h2>
-            <div class="product-grid">
-                <article class="product-card">
-                    <img src="/assets/img/electronique/casque_sans_fil_-_oraimo_boompop_2s_-_i.jpg" alt="Produit 1">
-                    <h3>Casque Bluetooth</h3>
-                    <p class="price">15 000 FCFA</p>
-                    <a href="/pages/produit.html" class="btn btn-secondary">Découvrir</a>
-                </article>
 
-                <article class="product-card">
-                    <img src="/assets/img/category/cat1.png" alt="">
-                    <h3>Montre Connectée</h3>
-                    <p class="price">12 500 FCFA</p>
-                    <a href="/pages/produit.html" class="btn btn-secondary">Découvrir</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="/assets/img/electronique/disque dur 4t0.png" alt=" ">
-                    <h3>Montre Connectée</h3>
-                    <p class="price">12 500 FCFA</p>
-                    <a href="/pages/produit.html" class="btn btn-secondary">Découvrir</a>
-                </article>
-
-            </div>
-            <a href="/pages/listeProduits.html" class="btn see-more">voir plus + </a>
-        </section>
-
-        <section class="best-product">
-            <h2 class="title">Produits Phares</h2>
-            <div class="product-highlight">
-                <div class="highlight-text">
-                    <h3>Ordinateur Portable Gaming</h3>
-                    <p>
-                        Performances puissantes pour vos jeux et votre productivité.
-                        Profitez d'une expérience fluide avec un design moderne.
-                    </p>
-                    <a href="/pages/product-detail.html" class="btn btn-primary">Voir le produit</a>
-                </div>
-                <div class="highlight-image">
-                    <img src="/assets/img/category/cat1.png" alt="Ordinateur portable gaming">
+            <div class="order-items">
+                <h3>Articles commandés</h3>
+                <div class="items-list">
+                    <div class="item">
+                        <span class="item-name">Sweat à capuche noir</span>
+                        <span class="item-quantity">x1</span>
+                        <span class="item-price">15 000 FCFA</span>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Jean slim bleu</span>
+                        <span class="item-quantity">x2</span>
+                        <span class="item-price">30 000 FCFA</span>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section class="pub-product">
-            <div class="pub-card">
-                <img src="/assets/img/banner/Q7B7-Available-Now-Glotelho-Banner-933px335px.webp"
-                    alt="Promo Accessoires">
-                <div class="pub-text">
-                    <h3>Promo Accessoires</h3>
-                    <p>-20% sur tous les accessoires jusqu'à dimanche !</p>
-                    <a href="/pages/accessoires.html" class="btn btn-secondary">Profiter de l'offre</a>
+
+            <div class="shipping-info">
+                <h3>Adresse de livraison</h3>
+                <div class="address">
+                    <p><strong>Andy Darwin</strong></p>
+                    <p>carrefour sorcier</p>
+                    <p>Yaoundé, Centre</p>
+                    <p>Cameroun</p>
+                    <p>Tél : +237 6XX XX XX XX</p>
                 </div>
             </div>
-        </section>
 
-        <section class="best-categories">
-            <h2 class="title">Catégories Populaires</h2>
-            <div class="category-grid">
-                <div class="category-card">
-                    <img src="/assets/img/banner/Q7B7-Available-Now-Glotelho-Banner-933px335px.webp" alt="Electronique">
-                    <h4>Électronique</h4>
+
+            <div class="price-summary">
+                <h3>Récapitulatif</h3>
+                <div class="summary-details">
+                    <div class="summary-row">
+                        <span>Sous-total</span>
+                        <span>45 000 FCFA</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Livraison</span>
+                        <span>Gratuite</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span><strong>Total</strong></span>
+                        <span><strong>45 000 FCFA</strong></span>
+                    </div>
                 </div>
-                <div class="category-card">
-                    <img src="/assets/img/category/cat1.png" alt="Alimentation">
-                    <h4>Alimentation</h4>
-                </div>
-                <div class="category-card">
-                    <img src="/assets/img/category/cat1.png" alt="Maison">
-                    <h4>Maison & Déco</h4>
-                </div>
-                <div class="category-card">
-                    <img src="/assets/img/category/cat1.png" alt="Mode">
-                    <h4>Mode & Accessoires</h4>
+                <div class="payment-method">
+                    <span class="label">Mode de paiement :</span>
+                    <span class="value">Orange Money</span>
                 </div>
             </div>
-            <a href="/pages/listeProduits.html" class="btn see-more">voir plus + </a>
+
+            <div class="action-buttons">
+                <button class="btn btn-secondary">Télécharger la facture</button>
+                <button class="btn btn-primary">Suivre ma commande</button>
+                <button class="btn btn-secondary"><a href="../index.html" class="btn btn-tertiary">Continuer mes
+                        achats</a></button>
+
+            </div>
         </section>
     </main>
-
 
     <footer>
         <div id="new-letter">

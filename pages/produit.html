@@ -99,8 +99,8 @@
                         <ul class="profile-menu">
                             <li><a href="../pages/inscription.html">Inscription</a></li>
                             <li><a href="../pages/connexion.html">Connexion</a></li>
-                            <li><a href="../pages/mon-compte.html">Mon compte</a></li>
-                            <li><a href="#">Déconnexion</a></li>
+                            <li><a href="./admin/mon-compte.html">Mon compte</a></li>
+                            <li class="deconnexion"><a href="#">Déconnexion</a></li>
                         </ul>
                     </div>
 
@@ -409,6 +409,35 @@
                 <path d="m18 15-6-6-6 6"></path>
             </svg>
         </a>
+        <div class="chat-container ">
+            <div class="chat-box">
+                <div class="chat-header">
+                    <h3><i class="fa-solid fa-comments"></i> Mini Chat</h3>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+                <div class="chat-body">
+                    <div class="message bot">
+                        Bonjour ! Comment puis-je vous aider ?
+                    </div>
+                    <div class="message user">
+                        Je cherche vos offres récentes.
+                    </div>
+                    <div class="message bot">
+                        Nous avons des réductions sur les produits tech !
+                    </div>
+                </div>
+
+                <div class="chat-footer">
+                    <input type="text" placeholder="Écrire un message...">
+                    <button><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+
+            <button class="chat-toggle " id="chatToggle">
+                <i class="fa-solid fa-comments "></i>
+            </button>
+        </div>
     </footer>
 
 </body>
