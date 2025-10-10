@@ -1,4 +1,4 @@
-export const db = {
+const db = {
     "categories": [
         { "id": 1, "title": "Informatique", "description": "Ordinateurs, portables, périphériques et composants.", "img": "https://placehold.co/600x400?text=Informatique" },
         { "id": 2, "title": "Téléphonie & Tablettes", "description": "Smartphones, tablettes et accessoires mobiles.", "img": "https://placehold.co/600x400?text=Téléphonie" },
