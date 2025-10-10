@@ -1,34 +1,6 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: white;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-    line-height: 1.6;
-}
-
-/* Container Styles */
-.container {
-    background-color: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 450px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+.content {
+    width: max-content;
+    padding: 50px;
 }
 
 /* Logo/Header Styles */
@@ -189,6 +161,7 @@ input[type="email"]::placeholder {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -216,8 +189,13 @@ input[type="email"]::placeholder {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Responsive Design */
@@ -225,19 +203,19 @@ input[type="email"]::placeholder {
     body {
         padding: 15px;
     }
-    
+
     .container {
         padding: 30px 20px;
     }
-    
+
     .logo h1 {
         font-size: 24px;
     }
-    
+
     input[type="email"] {
         padding: 12px;
     }
-    
+
     .submit-btn {
         padding: 12px;
     }
@@ -256,7 +234,7 @@ a:focus {
     .container {
         border: 2px solid #000;
     }
-    
+
     input[type="email"] {
         border: 2px solid #000;
     }
