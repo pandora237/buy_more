@@ -349,7 +349,7 @@
                     <h2>Liens utiles</h2>
                     <ul>
                         <li><a href="/pages/faq.html">FAQ</a></li>
-                        <li><a href="/pages/politique-confidentialite.html">Politique de confidentialité</a></li>
+                        <li><a href="/pages/politique_de_confidentialite.html">Politique de confidentialité</a></li>
                         <li><a href="/pages/conditions.html">Conditions d'utilisation</a></li>
                     </ul>
                 </div>
@@ -436,14 +436,16 @@
                 <path d="m18 15-6-6-6 6"></path>
             </svg>
         </a>
-        <div class="chat-container ">
-            <div class="chat-box">
+        <div class="chat-container " id="chat-container">
+            <div class="chat-box hide-chat" id="chat-box">
                 <div class="chat-header">
                     <h3><i class="fa-solid fa-comments"></i> Mini Chat</h3>
-                    <i class="fa-solid fa-xmark"></i>
+                    <div id="close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
                 </div>
 
-                <div class="chat-body">
+                <div class="chat-body" id="chat-body">
                     <div class="message bot">
                         Bonjour ! Comment puis-je vous aider ?
                     </div>
@@ -455,10 +457,10 @@
                     </div>
                 </div>
 
-                <div class="chat-footer">
-                    <input type="text" placeholder="Écrire un message...">
-                    <button><i class="fa-solid fa-paper-plane"></i></button>
-                </div>
+                <form class="chat-footer" id="form-chat-footer">
+                    <input type="text" placeholder="Écrire un message..." id="">
+                    <button type="submit" id=""><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
             </div>
 
             <button class="chat-toggle " id="chatToggle">

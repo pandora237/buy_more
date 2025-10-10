@@ -590,6 +590,8 @@ footer #go-top {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    max-height: 1000px;
+    transition: all 0.4s;
 }
 
 .chat-header {
@@ -754,4 +756,10 @@ footer #go-top {
 
 .user-info img {
     border-radius: 50%;
+}
+
+/* utility */
+.hide-chat {
+    opacity: 0;
+    max-height: 0px;
 }
