@@ -1,0 +1,332 @@
+/* Style général de la page */
+.confirmation-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Message de succès */
+.success-message {
+    text-align: center;
+    background: #d4edda;
+    border: 2px solid var(--col-success);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--col-success);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+.success-message h2 {
+    color: var(--col-success);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.success-message p {
+    color: var(--col-text);
+    font-size: 1rem;
+}
+
+/* Sections de contenu - Améliorées */
+.order-info,
+.order-items,
+.shipping-info,
+.price-summary {
+    background: white;
+    border: 1px solid var(--col-border);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-info:hover,
+.order-items:hover,
+.shipping-info:hover,
+.price-summary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* Titres avec icônes */
+.order-info h3::before {
+    content: "📋 ";
+    margin-right: 10px;
+}
+
+.order-items h3::before {
+    content: "🛍️ ";
+    margin-right: 10px;
+}
+
+.shipping-info h3::before {
+    content: "📍 ";
+    margin-right: 10px;
+}
+
+.price-summary h3::before {
+    content: "💰 ";
+    margin-right: 10px;
+}
+
+.order-info h3,
+.order-items h3,
+.shipping-info h3,
+.price-summary h3 {
+    color: var(--col-text);
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    border-bottom: 3px solid var(--col-primary);
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Détails de commande */
+.order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--col-border);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row .label {
+    color: var(--col-text);
+    opacity: 0.8;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.detail-row .value {
+    font-weight: 700;
+    color: var(--col-text);
+    font-size: 1.05rem;
+}
+
+/* Statuts */
+.statut {
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.statut.en-cours {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.statut.livree {
+    background: #d4edda;
+    color: var(--col-success);
+}
+
+.statut.annulee {
+    background: #f8d7da;
+    color: var(--col-danger);
+}
+
+/* Articles commandés */
+.items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 10px;
+    border-left: 4px solid var(--col-primary);
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    transform: translateX(5px);
+}
+
+.item-name {
+    flex: 1;
+    color: var(--col-text);
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.item-quantity {
+    background: var(--col-primary);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 20px;
+}
+
+.item-price {
+    font-weight: 700;
+    color: var(--col-primary);
+    font-size: 1.1rem;
+}
+
+/* Adresse de livraison */
+.address {
+    background: var(--col-background);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--col-secondary);
+    line-height: 1.8;
+    color: var(--col-text);
+}
+
+.address p {
+    margin: 5px 0;
+}
+
+.address p:first-child {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--col-text);
+    margin-bottom: 10px;
+}
+
+/* Récapitulatif des prix */
+.summary-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    font-size: 1rem;
+    border-bottom: 1px dashed var(--col-border);
+}
+
+.summary-row:last-child {
+    border-bottom: none;
+}
+
+.summary-row.total {
+    border-top: 3px solid var(--col-primary);
+    border-bottom: none;
+    padding-top: 20px;
+    margin-top: 15px;
+    font-size: 1.4rem;
+    color: var(--col-primary);
+}
+
+.payment-method {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background: linear-gradient(135deg, #fff3cd 0%, #ffffff 100%);
+    border-radius: 10px;
+    border: 2px solid #ffc107;
+    margin-top: 20px;
+}
+
+.payment-method::before {
+    content: "💳 ";
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.payment-method .label {
+    color: var(--col-text);
+    font-weight: 500;
+}
+
+.payment-method .value {
+    font-weight: 700;
+    color: var(--col-text);
+    font-size: 1.1rem;
+}
+
+/* Boutons d'action */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.action-buttons .btn {
+    flex: 1;
+    min-width: 200px;
+    padding: 18px 35px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.action-buttons .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .confirmation-content {
+        padding: 10px;
+    }
+
+    .order-info,
+    .order-items,
+    .shipping-info,
+    .price-summary {
+        padding: 20px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .item-quantity {
+        margin: 10px 0;
+    }
+}

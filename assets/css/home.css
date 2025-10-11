@@ -29,6 +29,17 @@
 
 
 /* best */
+.best-seller{
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+
+.link-see-more{
+    align-self: flex-end;
+    width: max-content !important;
+    display: block;
+}
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

@@ -4,17 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biscuits Maison - Étudiant Shop</title>
+    <title>Mes commandes - Buy More</title>
 
-    <link rel="stylesheet" href="../assets/css/index.css">
-    <link rel="stylesheet" href="../assets/css/produit.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="../../assets/css/index-admin.css">
+    <link rel="stylesheet" href="../../assets/css/commandes.css">
 </head>
 
 <body>
-    <!-- 
-<header></header>---------------------------------------------------- -->
     <header>
         <div id="anchor-top"></div>
         <div id="header-block">
@@ -148,175 +145,233 @@
             </div>
         </div>
     </header>
-    <div class="container">
-        <!-- Section Produit -->
-        <section class="product-detail">
-            <div class="product-gallery">
-                <div class="product-image">
-                    <img src="../assets/images/gros-plan-de-texture-des-aliments-nutritifs.jpg" alt="Biscuits Maison">
-                    <div class="promo-badge">-100 FCFA</div>
-                    <div class="guarantee-badge">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>12 mois</span>
-                        <span>GARANTIE</span>
-                    </div>
-                </div>
+
+    <main class="container">
+        <h1 class="title">Mes commandes </h1>
+        <div class="bredcrum">
+            <div class="item">
+                <a href="./mon-compte.html"><i class="fa fa-home fa-2x"></i></a>
             </div>
-
-            <div class="product-info">
-                <h1>Biscuits Maison par Étudiant</h1>
-
-                <div class="price-section">
-                    <span class="old-price">200 FCFA</span>
-                    <span class="current-price">100 FCFA</span>
-                </div>
-
-                <div class="product-description">
-                    <h3>Description</h3>
-                    <p>Délicieux biscuits faits avec amour. Idéal pour une pause étude. Vendu par un cadet de 3 GI.
-                        Ingrédients naturels et fait maison avec soin.</p>
-                </div>
-
-                <form class="quantity-form">
-                    <div class="quantity-selector">
-                        <label for="quantity">Quantité :</label>
-                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="99">
-                    </div>
-
-                    <div class="action-buttons">
-                        <button type="submit" class="btn btn-success">
-                            <i class="fas fa-shopping-cart"></i>
-                            Ajouter au Panier
-                        </button>
-                        <a href="https://wa.me/237" class="btn btn-secondary">
-                            <i class="fab fa-whatsapp"></i>
-                            Chat sur WhatsApp
-                        </a>
-                    </div>
-                </form>
-
-                <div class="product-meta">
-                    <div class="meta-item">
-                        <i class="fas fa-truck"></i>
-                        <span>Livraison disponible sur le campus</span>
-                    </div>
-                    <div class="meta-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Produit disponible en stock</span>
-                    </div>
-                    <div class="meta-item">
-                        <i class="fas fa-user-graduate"></i>
-                        <span>Vendu par un étudiant vérifié</span>
-                    </div>
-                </div>
+        </div>
+        <section class="content-compte">
+            <div>
+                <aside>
+                    <ul>
+                        <li>
+                            <a href="./mes-commandes.html"><i class="fa fa-shopping-cart"></i>
+                                <span class="item-aside">Mes commandes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-user"> </i>
+                                <span class="item-aside">Profil</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-heart"></i>
+                                <span class="item-aside">Favoris</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gear"></i>
+                                <span class="item-aside">Paramètres</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sign-out-alt"></i>
+                                <span class="item-aside">Déconnexion</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
             </div>
+            <section class="content">
+                <div class="co-comme">
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12345</h3>
+                                <p class="commande-date">15 janvier 2025</p>
+                            </div>
+                            <span class="badge success ">Livrée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Sweat à capuche noir x1</p>
+                            <p>• Jean slim bleu x2</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 45 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12344</h3>
+                                <p class="commande-date">10 janvier 2025</p>
+                            </div>
+                            <span class=" badge warning">En cours</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• T-shirt blanc x3</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 15 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
-
-        <!-- Section Avis -->
-        <section class="reviews-section">
-            <div class="reviews-header">
-                <h2>Avis des clients</h2>
-                <div class="reviews-stats">
-                    <div class="average-rating">
-                        <span class="rating-number">4.5</span>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="total-reviews">(12 avis)</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Liste des avis -->
-            <div class="reviews-list">
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <i class="fas fa-user-circle"></i>
-                            <span class="reviewer-name">Étudiant A</span>
-                        </div>
-                        <div class="review-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="review-text">Super bons ! Je recommande vivement. Parfait pour les pauses entre les cours.
-                    </p>
-                    <span class="review-date">Il y a 2 jours</span>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <i class="fas fa-user-circle"></i>
-                            <span class="reviewer-name">Étudiant B</span>
-                        </div>
-                        <div class="review-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="review-text">Bon rapport qualité-prix. Les biscuits sont savoureux et bien emballés.</p>
-                    <span class="review-date">Il y a 5 jours</span>
-                </div>
-            </div>
-
-            <!-- Formulaire d'ajout d'avis -->
-            <div class="add-review-section">
-                <h3>Laisser un avis</h3>
-                <form class="review-form" method="post" action="">
-                    <div class="form-group">
-                        <label for="reviewer-name">Votre nom</label>
-                        <input type="text" id="reviewer-name" name="reviewer-name" placeholder="Ex: Étudiant C"
-                            required>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Votre note</label>
-                        <div class="star-rating">
-                            <input type="radio" name="rating" id="star5" value="5">
-                            <label for="star5"><i class="fas fa-star"></i></label>
-
-                            <input type="radio" name="rating" id="star4" value="4">
-                            <label for="star4"><i class="fas fa-star"></i></label>
-
-                            <input type="radio" name="rating" id="star3" value="3">
-                            <label for="star3"><i class="fas fa-star"></i></label>
-
-                            <input type="radio" name="rating" id="star2" value="2">
-                            <label for="star2"><i class="fas fa-star"></i></label>
-
-                            <input type="radio" name="rating" id="star1" value="1">
-                            <label for="star1"><i class="fas fa-star"></i></label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="review-text">Votre avis</label>
-                        <textarea id="review-text" name="review-text" rows="4"
-                            placeholder="Partagez votre expérience avec ce produit..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i>
-                        Publier l'avis
-                    </button>
-                </form>
-            </div>
-        </section>
-    </div>
-
-    <!-- footerrrrrrrr----------------------------------------------------------------------------------------------------- -->
+    </main>
 
     <footer>
         <div id="new-letter">
@@ -468,7 +523,6 @@
             </button>
         </div>
     </footer>
-
 </body>
 
 </html>
