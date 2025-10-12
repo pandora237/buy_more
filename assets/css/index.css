@@ -19,6 +19,12 @@
     --col-border: #dee2e6;
     --col-footer: #101730;
     --col-newsletter-background: #1A2A40;
+    /* couleur pour la validation du formulaire  */
+ --color-first:#1ec36dd9;
+--color-second :#e9fbf2d9;
+--color-white : #fff;
+--color-error : #eb4245d9;
+--color-succes :#1afd69d9;
 
 
 }
