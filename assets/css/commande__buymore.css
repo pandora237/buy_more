@@ -1,0 +1,324 @@
+/* Commande / Checkout styles — utilise les variables globales de :root (assets/css/index.css) */
+
+/* Layout */
+.checkout {
+    background: var(--col-background);
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.checkout-grid {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* Stepper */
+.checkout-stepper {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.checkout-stepper .step {
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--col-text);
+    border: 1px solid var(--col-border);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.checkout-stepper .step.active {
+    background: linear-gradient(90deg, rgba(3, 88, 180, 0.12), rgba(26, 42, 64, 0.04));
+    border-color: var(--col-secondary);
+    color: var(--col-secondary);
+    box-shadow: 0 6px 18px rgba(3, 88, 180, 0.06);
+}
+
+/* Form column */
+.checkout-main {
+    background: var(--col-white);
+    padding: 1.6rem;
+    border-radius: 12px;
+    border: 1px solid var(--col-border);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+
+.checkout-main form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 1.25rem 0;
+}
+
+.checkout-main legend {
+    font-weight: 700;
+    color: var(--col-secondary);
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    display: block;
+}
+
+/* Inputs / labels */
+.checkout-main label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--col-text);
+    margin-bottom: 0.5rem;
+}
+
+.checkout-main input[type="text"],
+.checkout-main input[type="email"],
+.checkout-main input[type="tel"],
+.checkout-main input[type="number"],
+.checkout-main select,
+.checkout-main textarea {
+    width: 100%;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--col-border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--col-text);
+    font-size: 0.95rem;
+    outline: none;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.checkout-main input:focus,
+.checkout-main select:focus,
+.checkout-main textarea:focus {
+    border-color: var(--col-secondary);
+    box-shadow: 0 6px 18px rgba(3, 88, 180, 0.06);
+}
+
+/* Compact grid for form rows */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.form-row.full {
+    grid-template-columns: 1fr;
+}
+
+/* Delivery methods */
+.checkout-main .delivery-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px dashed transparent;
+    transition: background 0.12s, border-color 0.12s, transform 0.12s;
+    cursor: pointer;
+}
+
+.checkout-main .delivery-options input[type="radio"] {
+    accent-color: var(--col-secondary);
+}
+
+.checkout-main .delivery-options label:hover {
+    transform: translateY(-2px);
+}
+
+/* Coupon row */
+.coupon-row {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.coupon-row input {
+    flex: 1;
+}
+
+.coupon-row button {
+    padding: 0.6rem 0.9rem;
+    background: var(--col-secondary);
+    color: var(--col-text-light);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.coupon-row button:hover {
+    background: var(--col-secondary-hover);
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.actions .btn {
+    flex: 1;
+    justify-content: center;
+}
+
+.actions .btn.btn-tertiary {
+    background: transparent;
+    border: 1px solid var(--col-border);
+    color: var(--col-text);
+}
+
+.actions .btn.btn-primary {
+    background: var(--col-secondary);
+    color: var(--col-text-light);
+}
+
+/* Summary column */
+.checkout-summary {
+    position: relative;
+    align-self: start;
+    background: var(--col-white);
+    padding: 1.2rem;
+    border-radius: 12px;
+    border: 1px solid var(--col-border);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+    height: fit-content;
+}
+
+/* Sticky on large screens */
+@supports (position: sticky) {
+    .checkout-summary {
+        position: sticky;
+        top: 96px;
+    }
+}
+
+.checkout-summary h2 {
+    margin: 0 0 0.8rem 0;
+    color: var(--col-secondary);
+    font-size: 1.05rem;
+}
+
+#summary-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 40vh;
+    overflow: auto;
+    padding-right: 0.25rem;
+}
+
+.summary-item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(3, 88, 180, 0.02), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.summary-item img {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.45rem 0;
+    color: var(--col-text);
+    border-top: 1px dashed var(--col-border);
+}
+
+.summary-line.total {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--col-secondary);
+}
+
+/* Summary actions */
+.summary-actions {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.summary-actions .btn.btn-primary {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1rem;
+}
+
+.trust {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Small helpers */
+.note {
+    font-size: 0.85rem;
+    color: #6b6b6b;
+    margin-top: 0.35rem;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-summary {
+        order: 2;
+        margin-top: 1rem;
+        position: relative;
+        top: auto;
+    }
+
+    .checkout-main {
+        order: 1;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tiny screens: paddings and touch targets */
+@media (max-width: 420px) {
+    .checkout {
+        padding: 1rem 0.6rem;
+    }
+
+    .checkout-main,
+    .checkout-summary {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .coupon-row button,
+    .actions .btn {
+        padding: 0.7rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Accessibility: visible focus */
+.checkout-main input:focus-visible,
+.checkout-main select:focus-visible,
+.checkout-main button:focus-visible,
+.summary-actions .btn:focus-visible {
+    outline: 3px solid rgba(3, 88, 180, 0.12);
+    outline-offset: 2px;
+}
