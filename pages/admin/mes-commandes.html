@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>buy more - Accueil</title>
-    <!-- style global -->
-    <link rel="stylesheet" href="/assets/css/index.css">
-    <!-- style home page -->
-    <link rel="stylesheet" href="/assets/css/home.css">
+    <title>Mes commandes - Buy More</title>
+
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="../../assets/css/index-admin.css">
+    <link rel="stylesheet" href="../../assets/css/commandes.css">
 </head>
 
 <body>
@@ -51,18 +51,18 @@
                                 </li>
                                 <li class="menu-item"><a href="#">Sports</a>
                                     <div class="img-menu">
-                                        <img src="/assets/img/electronique/disque dur 4t0.png"
+                                        <img src="/assets/img/electronique/casque_sans_fil_-_oraimo_boompop_2s_-_i.jpg"
                                             alt="category">
                                     </div>
                                 </li>
                             </ul>
                             <div class="img-menu-logo">
-                                <a href="#"> <img src="/assets/img/logo2.png" alt="category"></a>
+                                <img src="/assets/img/logo2.png" alt="category">
                             </div>
                         </div>
                     </div>
                     <div class="logo">
-                        <a href="#">
+                        <a href="../../index.html">
                             <img src="/assets/img/logo2.png" alt="logo" title="Buy More" width="100" height="70">
                         </a>
                     </div>
@@ -94,14 +94,14 @@
                         </svg>
 
                         <ul class="profile-menu">
-                            <li><a href="/pages/inscription.html">Inscription</a></li>
-                            <li><a href="/pages/connexion.html">Connexion</a></li>
-                            <li><a href="/pages/admin/mon-compte.html">Mon compte</a></li>
-                            <li><a href="#">Déconnexion</a></li>
+                            <li><a href="../pages/inscription.html">Inscription</a></li>
+                            <li><a href="../pages/connexion.html">Connexion</a></li>
+                            <li><a href="./mon-compte.html">Mon compte</a></li>
+                            <li class="deconnexion"><a href="#">Déconnexion</a></li>
                         </ul>
                     </div>
 
-                    <a href="/pages/panier.html">
+                    <a href="./panier.html">
                         <div class="cart">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#333"
                                 viewBox="0 0 24 24">
@@ -119,102 +119,232 @@
         </div>
     </header>
 
-
     <main class="container">
-        <section class="">
-            <div class="banner">
-                <div class="banner-content">
-                    <h1>Bienvenue sur Buy More</h1>
-                    <p>Découvrez nos meilleures offres et promotions du moment.</p>
-                    <a href="/pages/produit.html" class="btn btn-primary">Découvrir</a>
-                </div>
-                <div class="banner-image">
-                    <img src="/assets/img/category/cat1.png" alt="Q7B7-Available-Now-Glotelho-Banner">
-                </div>
+        <h1 class="title">Mes commandes </h1>
+        <div class="bredcrum">
+            <div class="item">
+                <a href="./mon-compte.html"><i class="fa fa-home fa-2x"></i></a>
             </div>
-        </section>
-
-        <section class="best-seller">
-            <h2 class="title">Nos Meilleures Ventes</h2>
-            <div class="product-grid">
-                <article class="product-card">
-                    <img src="/assets/img/electronique/casque_sans_fil_-_oraimo_boompop_2s_-_i.jpg" alt="Produit 1">
-                    <h3>Casque Bluetooth</h3>
-                    <p class="price">15 000 FCFA</p>
-                    <a href="/pages/produit.html" class="btn btn-secondary">Découvrir</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="/assets/img/category/cat1.png" alt="">
-                    <h3>Montre Connectée</h3>
-                    <p class="price">12 500 FCFA</p>
-                    <a href="/pages/produit.html" class="btn btn-secondary">Découvrir</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="/assets/img/electronique/disque dur 4t0.png" alt=" ">
-                    <h3>Montre Connectée</h3>
-                    <p class="price">12 500 FCFA</p>
-                    <a href="/pages/produit.html" class="btn btn-secondary">Découvrir</a>
-                </article>
-
+        </div>
+        <section class="content-compte">
+            <div>
+                <aside>
+                    <ul>
+                        <li>
+                            <a href="./mes-commandes.html"><i class="fa fa-shopping-cart"></i>
+                                <span class="item-aside">Mes commandes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-user"> </i>
+                                <span class="item-aside">Profil</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-heart"></i>
+                                <span class="item-aside">Favoris</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gear"></i>
+                                <span class="item-aside">Paramètres</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sign-out-alt"></i>
+                                <span class="item-aside">Déconnexion</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
             </div>
-            <a href="/pages/listeProduits.html" class="btn see-more">voir plus + </a>
-        </section>
+            <section class="content">
+                <div class="co-comme">
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12345</h3>
+                                <p class="commande-date">15 janvier 2025</p>
+                            </div>
+                            <span class="badge success ">Livrée</span>
+                        </div>
 
-        <section class="best-product">
-            <h2 class="title">Produits Phares</h2>
-            <div class="product-highlight">
-                <div class="highlight-text">
-                    <h3>Ordinateur Portable Gaming</h3>
-                    <p>
-                        Performances puissantes pour vos jeux et votre productivité.
-                        Profitez d'une expérience fluide avec un design moderne.
-                    </p>
-                    <a href="/pages/product-detail.html" class="btn btn-primary">Voir le produit</a>
-                </div>
-                <div class="highlight-image">
-                    <img src="/assets/img/category/cat1.png" alt="Ordinateur portable gaming">
-                </div>
-            </div>
-        </section>
+                        <div class="commande-items">
+                            <p>• Sweat à capuche noir x1</p>
+                            <p>• Jean slim bleu x2</p>
+                        </div>
 
-        <section class="pub-product">
-            <div class="pub-card">
-                <img src="/assets/img/banner/Q7B7-Available-Now-Glotelho-Banner-933px335px.webp"
-                    alt="Promo Accessoires">
-                <div class="pub-text">
-                    <h3>Promo Accessoires</h3>
-                    <p>-20% sur tous les accessoires jusqu'à dimanche !</p>
-                    <a href="/pages/accessoires.html" class="btn btn-secondary">Profiter de l'offre</a>
-                </div>
-            </div>
-        </section>
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 45 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12344</h3>
+                                <p class="commande-date">10 janvier 2025</p>
+                            </div>
+                            <span class=" badge warning">En cours</span>
+                        </div>
 
-        <section class="best-categories">
-            <h2 class="title">Catégories Populaires</h2>
-            <div class="category-grid">
-                <div class="category-card">
-                    <img src="/assets/img/banner/Q7B7-Available-Now-Glotelho-Banner-933px335px.webp" alt="Electronique">
-                    <h4>Électronique</h4>
+                        <div class="commande-items">
+                            <p>• T-shirt blanc x3</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 15 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commande-card">
+                        <div class="commande-header">
+                            <div>
+                                <h3>Commande #12343</h3>
+                                <p class="commande-date">5 janvier 2025</p>
+                            </div>
+                            <span class="badge danger">Annulée</span>
+                        </div>
+
+                        <div class="commande-items">
+                            <p>• Chaussures sport x4</p>
+                        </div>
+
+                        <div class="commande-footer">
+                            <p class="prix-total">Total : 55 000 FCFA</p>
+                            <div class="commande-actions">
+                                <button class="btn btn-secondary">Voir détails</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="category-card">
-                    <img src="/assets/img/category/cat1.png" alt="Alimentation">
-                    <h4>Alimentation</h4>
-                </div>
-                <div class="category-card">
-                    <img src="/assets/img/category/cat1.png" alt="Maison">
-                    <h4>Maison & Déco</h4>
-                </div>
-                <div class="category-card">
-                    <img src="/assets/img/category/cat1.png" alt="Mode">
-                    <h4>Mode & Accessoires</h4>
-                </div>
-            </div>
-            <a href="/pages/listeProduits.html" class="btn see-more">voir plus + </a>
+            </section>
         </section>
     </main>
-
 
     <footer>
         <div id="new-letter">

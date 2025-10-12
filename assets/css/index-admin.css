@@ -1,0 +1,94 @@
+main {
+    padding-bottom: 150px !important;
+    padding-top: 50px !important;
+}
+
+h1.title {
+    font-size: 28px;
+    color: #222;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+.content-compte {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Sidebar */
+aside {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    padding: 20px 15px;
+    height: max-content;
+    position: sticky;
+    top: 10px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside ul li {
+    margin-bottom: 15px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+aside ul li a i {
+    margin-right: 10px;
+    color: var(--col-primary);
+    width: 20px;
+    text-align: center;
+}
+
+aside ul li a:hover {
+    background-color: #e9f3ff;
+}
+
+/*  */
+.bredcrum {
+    width: 100%;
+    background-color: var(--col-white);
+    display: flex;
+}
+
+.bredcrum a {
+    color: var(--col-primary);
+}
+
+.bredcrum.item {
+    text-decoration: underline;
+}
+
+/* Content */
+.content {
+    width: 100%;
+}
+
+.content-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+
+@media (max-width: 768px) {
+    aside .item-aside {
+        display: none;
+    }
+}
