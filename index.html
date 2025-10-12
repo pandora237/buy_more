@@ -6,19 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>buy more - Accueil</title>
     <!-- style global -->
-    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/index.css ">
     <!-- style home page -->
     <link rel="stylesheet" href="/assets/css/home.css">
+
+    <!-- js global -->
+    <script src="/assets/js/db.js" defer></script>
+    <script src="/assets/js/index.js" defer></script>
 </head>
 
 <body>
     <header>
         <div id="anchor-top"></div>
-        <div class="">
+        <div id="header-block">
+        </div>
+        <div class="header-menu">
             <nav class="main-nav">
                 <div class="content-menu">
-                    <div class="menu-nav">
-                        <button class="Menu">
+                    <!-- <div class="menu-nav">
+                   <button class="Menu">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
                                 stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
                                 <line x1="4" y1="7" x2="28" y2="7" />
@@ -59,11 +65,11 @@
                             <div class="img-menu-logo">
                                 <a href="#"> <img src="/assets/img/logo2.png" alt="category"></a>
                             </div>
-                        </div>
-                    </div>
+                        </div>  
+                </div> -->
                     <div class="logo">
                         <a href="#">
-                            <img src="/assets/img/logo2.png" alt="logo" title="Buy More" width="100" height="70">
+                            <img src="/assets/img/logo2.png" alt="logo" title="Buy More" height="50">
                         </a>
                     </div>
                 </div>
@@ -116,6 +122,31 @@
                     </a>
                 </div>
             </nav>
+            <div id="menu" class=" ">
+                <div class="menu-items">
+                    <ul class="">
+                        <li class="menu-item">
+                            <a href="#">
+                                <span><i class="fa fa-paper-plane"></i></span><span>Electronique</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span><i class="fa fa-paper-plane"></i></span><span>Alimentation</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span><i class="fa fa-paper-plane"></i></span><span>Mode</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span><i class="fa fa-paper-plane"></i></span><span>Maison</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -247,7 +278,7 @@
                     <h2>Liens utiles</h2>
                     <ul>
                         <li><a href="/pages/faq.html">FAQ</a></li>
-                        <li><a href="/pages/politique-confidentialite.html">Politique de confidentialité</a></li>
+                        <li><a href="/pages/politique_de_confidentialite.html">Politique de confidentialité</a></li>
                         <li><a href="/pages/conditions.html">Conditions d'utilisation</a></li>
                     </ul>
                 </div>
@@ -334,14 +365,16 @@
                 <path d="m18 15-6-6-6 6"></path>
             </svg>
         </a>
-        <div class="chat-container ">
-            <div class="chat-box">
+        <div class="chat-container " id="chat-container">
+            <div class="chat-box hide-chat" id="chat-box">
                 <div class="chat-header">
                     <h3><i class="fa-solid fa-comments"></i> Mini Chat</h3>
-                    <i class="fa-solid fa-xmark"></i>
+                    <div id="close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
                 </div>
 
-                <div class="chat-body">
+                <div class="chat-body" id="chat-body">
                     <div class="message bot">
                         Bonjour ! Comment puis-je vous aider ?
                     </div>
@@ -353,10 +386,10 @@
                     </div>
                 </div>
 
-                <div class="chat-footer">
-                    <input type="text" placeholder="Écrire un message...">
-                    <button><i class="fa-solid fa-paper-plane"></i></button>
-                </div>
+                <form class="chat-footer" id="form-chat-footer">
+                    <input type="text" placeholder="Écrire un message..." id="">
+                    <button type="submit" id=""><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
             </div>
 
             <button class="chat-toggle " id="chatToggle">

@@ -7,61 +7,69 @@
   <title>Shopping Cart</title>
   <link rel="stylesheet" href="../assets/css/index.css">
   <link rel="stylesheet" href="../assets/css/panier.css">
+
+  <!-- js global -->
+  <script src="/assets/js/db.js" defer></script>
+  <script src="/assets/js/index.js" defer></script>
+  <script src="/assets/js/panier.js" defer></script>
 </head>
 
 <body>
 
   <header>
     <div id="anchor-top"></div>
-    <div class="">
+    <div id="header-block">
+    </div>
+    <div class="header-menu">
       <nav class="main-nav">
         <div class="content-menu">
-          <div class="menu-nav">
-            <button class="Menu">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor"
-                stroke-width="2.5" stroke-linecap="round">
-                <line x1="4" y1="7" x2="28" y2="7" />
-                <line x1="4" y1="16" x2="28" y2="16" />
-                <line x1="4" y1="25" x2="28" y2="25" />
-              </svg>
-            </button>
-            <div class="menu-items">
-              <ul class="">
-                <li class="menu-item">
-                  <a href="#">Electronique</a>
-                  <div class="img-menu">
-                    <img src="/assets/img/category/cat1.png" alt="category">
-                  </div>
-                </li>
-                <li class="menu-item"><a href="#">Alimentation</a>
-                  <div class="img-menu">
-                    <img src="/assets/img/category/cat1.png" alt="category">
-                  </div>
-                </li>
-                <li class="menu-item"><a href="#">Mode</a>
-                  <div class="img-menu">
-                    <img src="/assets/img/electronique/disque dur 4t0.png" alt="category">
-                  </div>
-                </li>
-                <li class="menu-item"><a href="#">Maison</a>
-                  <div class="img-menu">
-                    <img src="/assets/img/category/cat1.png" alt="category">
-                  </div>
-                </li>
-                <li class="menu-item"><a href="#">Sports</a>
-                  <div class="img-menu">
-                    <img src="/assets/img/electronique/casque_sans_fil_-_oraimo_boompop_2s_-_i.jpg" alt="category">
-                  </div>
-                </li>
-              </ul>
-              <div class="img-menu-logo">
-                <img src="/assets/img/logo2.png" alt="category">
-              </div>
-            </div>
-          </div>
+          <!-- <div class="menu-nav">
+                   <button class="Menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                                <line x1="4" y1="7" x2="28" y2="7" />
+                                <line x1="4" y1="16" x2="28" y2="16" />
+                                <line x1="4" y1="25" x2="28" y2="25" />
+                            </svg>
+                        </button>
+                        <div class="menu-items">
+                            <ul class="">
+                                <li class="menu-item">
+                                    <a href="#">Electronique</a>
+                                    <div class="img-menu">
+                                        <img src="/assets/img/category/cat1.png" alt="category">
+                                    </div>
+                                </li>
+                                <li class="menu-item"><a href="#">Alimentation</a>
+                                    <div class="img-menu">
+                                        <img src="/assets/img/category/cat1.png" alt="category">
+                                    </div>
+                                </li>
+                                <li class="menu-item"><a href="#">Mode</a>
+                                    <div class="img-menu">
+                                        <img src="/assets/img/electronique/disque dur 4t0.png" alt="category">
+                                    </div>
+                                </li>
+                                <li class="menu-item"><a href="#">Maison</a>
+                                    <div class="img-menu">
+                                        <img src="/assets/img/category/cat1.png" alt="category">
+                                    </div>
+                                </li>
+                                <li class="menu-item"><a href="#">Sports</a>
+                                    <div class="img-menu">
+                                        <img src="/assets/img/electronique/disque dur 4t0.png"
+                                            alt="category">
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="img-menu-logo">
+                                <a href="#"> <img src="/assets/img/logo2.png" alt="category"></a>
+                            </div>
+                        </div>  
+                </div> -->
           <div class="logo">
-            <a href="../index.html">
-              <img src="/assets/img/logo2.png" alt="logo" title="Buy More" width="100" height="70">
+            <a href="/index.html">
+              <img src="/assets/img/logo2.png" alt="logo" title="Buy More" height="50">
             </a>
           </div>
         </div>
@@ -90,14 +98,14 @@
             </svg>
 
             <ul class="profile-menu">
-              <li><a href="../pages/inscription.html">Inscription</a></li>
-              <li><a href="../pages/connexion.html">Connexion</a></li>
-              <li><a href="./admin/mon-compte.html">Mon compte</a></li>
-              <li class="deconnexion"><a href="#">Déconnexion</a></li>
+              <li><a href="/pages/inscription.html">Inscription</a></li>
+              <li><a href="/pages/connexion.html">Connexion</a></li>
+              <li><a href="/pages/admin/mon-compte.html">Mon compte</a></li>
+              <li><a href="#">Déconnexion</a></li>
             </ul>
           </div>
 
-          <a href="./panier.html">
+          <a href="/pages/panier.html">
             <div class="cart">
               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#333" viewBox="0 0 24 24">
                 <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 
@@ -111,200 +119,123 @@
           </a>
         </div>
       </nav>
+      <div id="menu" class=" ">
+        <div class="menu-items">
+          <ul class="">
+            <li class="menu-item">
+              <a href="#">
+                <span><i class="fa fa-paper-plane"></i></span><span>Electronique</span></a>
+            </li>
+            <li class="menu-item">
+              <a href="#">
+                <span><i class="fa fa-paper-plane"></i></span><span>Alimentation</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#">
+                <span><i class="fa fa-paper-plane"></i></span><span>Mode</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#">
+                <span><i class="fa fa-paper-plane"></i></span><span>Maison</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="cart-container">
-      <!-- LEFT: PRODUCTS -->
-      <div class="products">
-        <h2>Your cart</h2>
-
-        <div class="cart-item">
-          <div class="cart-left">
-            <img src="../assets/images/iphone15pro.jpeg" alt="iPhone">
-            <div class="details">
-              <h3>iPhone 14 128GB - Midnight - Unlocked</h3>
-              <span class="tag">Good</span>
-              <p class="shipping">Get it by Oct 2 - Oct 3 · Free</p>
-            </div>
+  <div class="wrapper">
+    <div class="items">
+      <div class="title">
+        <h3>Panier</h3>
+      </div>
+      <div class="product">
+        <img src="../assets/images/ecouteur-sans-fil-noir-avec-etui-de-chargement.jpg" alt="ongles by stl">
+        <div class="details">
+          <h2>Ongles classe by STL</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ab vitae esse quod fuga voluptatum
+            nesciunt aliquam. Dicta, veniam harum.</p>
+          <div class="size">
+            <h3>Couleur: Rouge bordeaux</h3>
           </div>
-          <div class="cart-right">
-            <div class="price-info">
-              <div class="price">$328.00 <span class="save">Save $301.00</span></div>
-              <div class="old-price">$629.00 new</div>
-            </div>
-            <div class="actions">
-              <select>
-                <option>1</option>
-                <option selected>2</option>
-                <option>3</option>
-              </select>
-              <button>Remove</button>
-            </div>
+          <div class="qty">
+            <h4>Qty:<input type="number" value="1" min="1"></h4>
+            <button>🗑 Delete</button>
+            <button>Buy</button>
           </div>
         </div>
-
-        <div class="cart-item">
-          <div class="cart-left">
-            <img src="../assets/images/iphone15pro.jpeg" alt="Case">
-            <div class="details">
-              <h3>iPhone 14 Case - Transparent</h3>
-              <span class="tag">Good</span>
-              <p class="shipping">Get it by Oct 6 - Oct 7 · Free</p>
-            </div>
-          </div>
-          <div class="cart-right">
-            <div class="price-info">
-              <div class="price">$19.99</div>
-            </div>
-            <div class="actions">
-              <select>
-                <option selected>1</option>
-                <option>2</option>
-              </select>
-              <button>Remove</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="cart-item">
-          <div class="cart-left">
-            <img src="../assets/images/iphone15pro.jpeg" alt="iPhone 13">
-            <div class="details">
-              <h3>iPhone 13 128GB - Midnight - Unlocked</h3>
-              <span class="tag">Fair</span>
-              <p class="shipping">Get it by Oct 3 - Oct 6 · Free</p>
-            </div>
-          </div>
-          <div class="cart-right">
-            <div class="price-info">
-              <div class="price">$283.99 <span class="save">Save $345.01</span></div>
-              <div class="old-price">$629.00 new</div>
-            </div>
-            <div class="actions">
-              <select>
-                <option>1</option>
-                <option selected>2</option>
-                <option>3</option>
-              </select>
-              <button>Remove</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="cart-item">
-          <div class="cart-left">
-            <img src="../assets/images/iphone15pro.jpeg" alt="Screen Protector">
-            <div class="details">
-              <h3>iPhone 13 case and 2 protective screens - Silicone - Black</h3>
-              <p class="shipping">Get it by Oct 5 - Oct 8 · Free</p>
-            </div>
-          </div>
-          <div class="cart-right">
-            <div class="price-info">
-              <div class="price">$20.99</div>
-            </div>
-            <div class="actions">
-              <select>
-                <option selected>1</option>
-                <option>2</option>
-              </select>
-              <button>Remove</button>
-            </div>
-          </div>
+        <div class="price">
+          <p>5000FCFA</p>
         </div>
       </div>
-
-      <!-- RIGHT: SUMMARY -->
-      <div class="summary-section">
-        <h2>Summary</h2>
-        <div class="summary-box">
-          <div class="summary-item">
-            <div class="img-wrapper">
-              <img src="../assets/images/iphone15pro.jpeg" alt="iPhone" class="summary-img">
-              <span class="quantity-badge">2</span>
-            </div>
-            <div class="summary-details">
-              <h4>iPhone 14 128GB - Midnight - Unlocked</h4>
-              <p class="summary-shipping">Shipping</p>
-            </div>
-            <div class="summary-price">
-              <div>$328.00</div>
-              <div style="margin-top: 3px;">Free</div>
-            </div>
+      <div class="product">
+        <img src="../assets/img/electronique/disque dur 4t0.png" alt="ongles by stl">
+        <div class="details">
+          <h2>Ongles classe by STL</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ab vitae esse quod fuga voluptatum
+            nesciunt aliquam. Dicta, veniam harum.</p>
+          <div class="size">
+            <h3>Couleur: Rouge bordeaux</h3>
           </div>
-
-          <div class="summary-item">
-            <div class="img-wrapper">
-              <img src="../assets/images/iphone15pro.jpeg" alt="Case" class="summary-img">
-              <span class="quantity-badge">1</span>
-            </div>
-            <div class="summary-details">
-              <h4>iPhone 14 case - Recycled plastic - Transparent</h4>
-              <p class="summary-shipping">Shipping</p>
-            </div>
-            <div class="summary-price">
-              <div>$19.99</div>
-              <div style="margin-top: 3px;">Free</div>
-            </div>
-          </div>
-
-          <div class="summary-item">
-            <div class="img-wrapper">
-              <img src="../assets/images/iphone15pro.jpeg" alt="iPhone 13" class="summary-img">
-              <span class="quantity-badge">2</span>
-            </div>
-            <div class="summary-details">
-              <h4>iPhone 13 128GB - Midnight - Unlocked</h4>
-              <p class="summary-shipping">Shipping</p>
-            </div>
-            <div class="summary-price">
-              <div>$283.99</div>
-              <div style="margin-top: 3px;">Free</div>
-            </div>
-          </div>
-
-          <div class="summary-item">
-            <div class="img-wrapper">
-              <img src="../assets/images/iphone15pro.jpeg" alt="Screen" class="summary-img">
-              <span class="quantity-badge">1</span>
-            </div>
-            <div class="summary-details">
-              <h4>iPhone 13 case and 2 protective screens - Silicone - Black</h4>
-              <p class="summary-shipping">Shipping</p>
-            </div>
-            <div class="summary-price">
-              <div>$20.99</div>
-              <div style="margin-top: 3px;">Free</div>
-            </div>
-          </div>
-
-          <div class="summary-totals">
-            <div class="total-row">
-              <span>Subtotal</span>
-              <span>$1,284.95</span>
-            </div>
-            <div class="total-row">
-              <span><a href="#">Quality Assurance Fee</a></span>
-              <span>$8.99</span>
-            </div>
-
-            <div class="final-total">
-              <span class="total-label">Total</span>
-              <span class="total-amount">$1,293.94</span>
-            </div>
-
-            <button class="checkout-btn" onclick="window.location.href='livraison.html'">Go to shipping</button>
-
-            <p class="terms-text">By confirming this order you accept our <a href="#">Terms of Service Agreement</a> and
-              our <a href="#">Data Protection Policy</a></p>
-
+          <div class="qty">
+            <h4>Qty:<input type="number" value="1" min="1"></h4>
+            <button>🗑 Delete</button>
+            <button>Buy</button>
           </div>
         </div>
+        <div class="price">
+          <p>5000FCFA</p>
+        </div>
       </div>
-    </section>
-  </main>
+      <div class="product">
+        <img src="../assets/img/electronique/casque_sans_fil_-_oraimo_boompop_2s_-_i.jpg" alt="ongles by stl">
+        <div class="details">
+          <h2>Ongles classe by STL</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ab vitae esse quod fuga voluptatum
+            nesciunt aliquam. Dicta, veniam harum.</p>
+          <div class="size">
+            <h3>Couleur: Rouge bordeaux</h3>
+          </div>
+          <div class="qty">
+            <h4>Qty:<input type="number" value="1" min="1"></h4>
+            <button>🗑 Delete</button>
+            <button>Buy</button>
+          </div>
+        </div>
+        <div class="price">
+          <p>5000FCFA</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="../assets/images/des-ecouteurs-sans-fil-avec-un-eclairage-au-neon-de-style-cyberpunk.jpg"
+          alt="ongles by stl">
+        <div class="details">
+          <h2>Ongles classe by STL</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ab vitae esse quod fuga voluptatum
+            nesciunt aliquam. Dicta, veniam harum.</p>
+          <div class="size">
+            <h3>Couleur: Rouge bordeaux</h3>
+          </div>
+          <div class="qty">
+            <h4>Qty:<input type="number" value="1" min="1"></h4>
+            <button>🗑 Delete</button>
+            <button>Buy</button>
+          </div>
+        </div>
+        <div class="price">
+          <p>5000FCFA</p>
+        </div>
+      </div>
+      <div class="total">
+        <h3>Prix Total</h3>
+        <h3>20000 FCFA</h3>
+        <a href="/pages/livraison.html"><button class="commander" type="button">Commander le panier</button></a>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <div id="new-letter">
@@ -337,7 +268,7 @@
           <h2>Liens utiles</h2>
           <ul>
             <li><a href="/pages/faq.html">FAQ</a></li>
-            <li><a href="/pages/politique-confidentialite.html">Politique de confidentialité</a></li>
+            <li><a href="/pages/politique_de_confidentialite.html">Politique de confidentialité</a></li>
             <li><a href="/pages/conditions.html">Conditions d'utilisation</a></li>
           </ul>
         </div>
@@ -419,14 +350,16 @@
         <path d="m18 15-6-6-6 6"></path>
       </svg>
     </a>
-    <div class="chat-container ">
-      <div class="chat-box">
+    <div class="chat-container " id="chat-container">
+      <div class="chat-box hide-chat" id="chat-box">
         <div class="chat-header">
           <h3><i class="fa-solid fa-comments"></i> Mini Chat</h3>
-          <i class="fa-solid fa-xmark"></i>
+          <div id="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
         </div>
 
-        <div class="chat-body">
+        <div class="chat-body" id="chat-body">
           <div class="message bot">
             Bonjour ! Comment puis-je vous aider ?
           </div>
@@ -438,10 +371,10 @@
           </div>
         </div>
 
-        <div class="chat-footer">
-          <input type="text" placeholder="Écrire un message...">
-          <button><i class="fa-solid fa-paper-plane"></i></button>
-        </div>
+        <form class="chat-footer" id="form-chat-footer">
+          <input type="text" placeholder="Écrire un message..." id="">
+          <button type="submit" id=""><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
       </div>
 
       <button class="chat-toggle " id="chatToggle">
