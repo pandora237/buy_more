@@ -1,5 +1,5 @@
 .banner {
-    background: linear-gradient(to right, var(--col-secondary), var(--col-primary));
+    background: linear-gradient(30deg, var(--col-primary),var(--col-secondary),var(--col-primary));
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,12 +21,33 @@
 .banner-content p {
     margin: 15px 0;
 }
-
-.banner-image img {
-    max-width: 300px;
+.banner-image{
+    width: 300px;
+    max-width: 100%;
+    overflow: hidden;
     border-radius: 12px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    animation: scroll 16s linear infinite;
 }
 
+.banner-image img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 12px;
+    height: auto;
+    flex: 0 0 auto; 
+}@media (max-width: 420px) {
+  .banner-image { width: 100%; }
+  .banner-image img { width: calc(100% - 16px); } /* laisse la marge si gap */
+}
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-400%); }
+}
 
 /* best */
 .best-seller{
