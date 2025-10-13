@@ -8,7 +8,7 @@
     --col-text: #212529;
     --col-text-light: #ffffff;
     --col-primary: #1A2A40;
-    --col-primary-hover:  ;
+    --col-primary-hover:#007bff  ;
     --col-secondary: #0358b4;
     --col-secondary-hover: #007bff;
     --col-tertiary: #289fa7;
@@ -299,7 +299,7 @@ header {
 }
 
 .search-bar button:hover {
-    background: var(--col-primary-hover);
+    background: var(--col-secondary);
 }
 
 .nav-right {
