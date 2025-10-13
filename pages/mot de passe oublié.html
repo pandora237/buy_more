@@ -17,50 +17,7 @@
         <div class="header-menu">
             <nav class="main-nav">
                 <div class="content-menu">
-                    <!-- <div class="menu-nav">
-                   <button class="Menu">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                                <line x1="4" y1="7" x2="28" y2="7" />
-                                <line x1="4" y1="16" x2="28" y2="16" />
-                                <line x1="4" y1="25" x2="28" y2="25" />
-                            </svg>
-                        </button>
-                        <div class="menu-items">
-                            <ul class="">
-                                <li class="menu-item">
-                                    <a href="#">Electronique</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/category/cat1.png" alt="category">
-                                    </div>
-                                </li>
-                                <li class="menu-item"><a href="#">Alimentation</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/category/cat1.png" alt="category">
-                                    </div>
-                                </li>
-                                <li class="menu-item"><a href="#">Mode</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/electronique/disque dur 4t0.png" alt="category">
-                                    </div>
-                                </li>
-                                <li class="menu-item"><a href="#">Maison</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/category/cat1.png" alt="category">
-                                    </div>
-                                </li>
-                                <li class="menu-item"><a href="#">Sports</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/electronique/disque dur 4t0.png"
-                                            alt="category">
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="img-menu-logo">
-                                <a href="#"> <img src="/assets/img/logo2.png" alt="category"></a>
-                            </div>
-                        </div>  
-                </div> -->
+            
                     <div class="logo">
                         <a href="/index.html">
                             <img src="/assets/img/logo2.png" alt="logo" title="Buy More" height="50">
@@ -156,10 +113,15 @@
 
             <div id="message" class="message"></div>
 
+<!--form et validation  ######################################################################-->
+
             <form id="FormulaireMotDePasseOublie">
                 <div class="form-group">
                     <label for="email">Adresse e-mail</label>
-                    <input type="email" id="email" name="email" required placeholder="Entrez votre adresse e-mail">
+                    <input type="email" id="email" name="email" placeholder="Entrez votre adresse e-mail">
+                     <i class="fas fa-check-circle"></i>
+                   <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
 
                 <button type="submit" class="submit-btn">Envoyer les instructions de réinitialisation</button>
@@ -311,7 +273,7 @@
                 </div>
 
                 <form class="chat-footer" id="form-chat-footer">
-                    <input type="text" placeholder="Écrire un message..." id="">
+                    <input type="text" placeholder="Écrire un message..." >
                     <button type="submit" id=""><i class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </div>
@@ -324,6 +286,7 @@
     <script src="../assets/js/db.js"></script>
     <script src="../assets/js/index.js"></script>
     <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/mot de passe oublier.js"></script>
 </body>
 
 </html>

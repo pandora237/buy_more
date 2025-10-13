@@ -29,9 +29,15 @@ main form .form-group {
     margin-bottom: 15px;
 }
 
+
+
+
 .form-group {
     margin-bottom: 12px;
+    padding-bottom:22px ;
+    position: relative; 
 }
+
 
 .form-group label {
     display: block;
@@ -61,7 +67,7 @@ main form .form-group {
 
 .form-group input {
     width: 100%;
-    padding: 12px 15px;
+    padding: 12px 40px 12px 15px; /* ← Padding à droite pour l'icône */
     border: 2px solid var(--col-border);
     border-radius: 8px;
     font-size: 1rem;
@@ -72,6 +78,48 @@ main form .form-group {
 .form-group input:focus {
     outline: none;
     border-color: var(--col-secondary);
+}
+
+/* style pour la validation du form */
+
+
+
+.form-group i{
+     position:absolute; /*pour superposer */
+    top:38px;
+    right: 10px;
+    visibility: hidden;
+    /* visibility: hidden;  pour cacher les icons  */
+   
+}
+.form-group small{
+     bottom: 0; 
+    position: absolute;
+    /* bottom: 0; */
+    left: 0;
+    visibility: hidden; 
+
+}
+
+.form-group.success input{
+    border-color: var(--color-succes);
+}
+.form-group.error input{
+    border-color: var(--color-error);
+}
+.form-group.success i.fa-check-circle{
+    color:var(--color-succes); 
+    visibility: visible;
+}
+
+.form-group.error i.fa-exclamation-circle{
+   color: var(--color-error);
+    visibility: visible;
+}
+
+.form-group.error small{
+    color: var(--color-error);
+     visibility:  visible;
 }
 
 .form-auth {

@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - Buy More</title>
 
@@ -19,50 +21,7 @@
     <div class="header-menu">
       <nav class="main-nav">
         <div class="content-menu">
-          <!-- <div class="menu-nav">
-                   <button class="Menu">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                                <line x1="4" y1="7" x2="28" y2="7" />
-                                <line x1="4" y1="16" x2="28" y2="16" />
-                                <line x1="4" y1="25" x2="28" y2="25" />
-                            </svg>
-                        </button>
-                        <div class="menu-items">
-                            <ul class="">
-                                <li class="menu-item">
-                                    <a href="#">Electronique</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/category/cat1.png" alt="category">
-                                    </div>
-                                </li>
-                                <li class="menu-item"><a href="#">Alimentation</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/category/cat1.png" alt="category">
-                                    </div>
-                                </li>
-                                <li class="menu-item"><a href="#">Mode</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/electronique/disque dur 4t0.png" alt="category">
-                                    </div>
-                                </li>
-                                <li class="menu-item"><a href="#">Maison</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/category/cat1.png" alt="category">
-                                    </div>
-                                </li>
-                                <li class="menu-item"><a href="#">Sports</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/electronique/disque dur 4t0.png"
-                                            alt="category">
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="img-menu-logo">
-                                <a href="#"> <img src="/assets/img/logo2.png" alt="category"></a>
-                            </div>
-                        </div>  
-                </div> -->
+        
           <div class="logo">
             <a href="/index.html">
               <img src="/assets/img/logo2.png" alt="logo" title="Buy More" height="50">
@@ -145,7 +104,12 @@
 
     <main class="container">
 
-        <form id="formConnexion" class="form-auth">
+
+<!--  Formulaire et Validation   #####################################################
+ #######################################################################################-->
+
+
+        <form id="formConnexion" action="" class="form-auth">
             <div class="page-intro">
                 <h1>Salut toi !</h1>
                 <p>Entre ton adresse e-mail pour te connecter et profiter</p>
@@ -153,7 +117,11 @@
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="Email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
+
             <div class="form-group">
                 <label for="password">Mot de passe</label>
                 <div style="position: relative;">
@@ -169,8 +137,12 @@
             </svg>
         </span>
                 </div>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
             <div id="messageErreur" style="margin: 15px 0; font-weight: bold; font-size: 14px;"></div>
+
             <button type="submit" class="btn btn-secondary">Se connecter</button>
             <a href="mot de passe oublié.html" class="forgot-password">Mot de passe oublié ?</a>
         </form>
@@ -336,7 +308,7 @@
                 </div>
 
                 <form class="chat-footer" id="form-chat-footer">
-                    <input type="text" placeholder="Écrire un message..." id="">
+                    <input type="text" placeholder="Écrire un message...">
                     <button type="submit" id=""><i class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </div>
@@ -350,6 +322,8 @@
     <script src="../assets/js/index.js"></script>
     <script src="../assets/js/connexion.js"></script>
     <script src="../assets/js/auth.js"></script>
+        <script src="../assets/js/connexion.js"></script>
+
 </body>
 
 </html>
