@@ -1,231 +1,344 @@
- .form-container,
- .summary-section {
-   background: #fff;
-   padding: 20px;
-   border-radius: 10px;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   flex: 1;
-   min-width: 350px;
- }
+.Menu {
+  background: none;
+  border: 2px solid var(--col-primary);
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+}
 
- /* Barre de progression */
- .progressbar {
-   display: flex;
-   justify-content: space-between;
-   margin-bottom: 30px;
-   position: relative;
- }
+.Menu:hover {
+  background-color: var(--col-primary);
+}
 
- .progressbar::before {
-   content: "";
-   position: absolute;
-   top: 50%;
-   left: 0;
-   width: 100%;
-   height: 4px;
-   background: #ddd;
-   transform: translateY(-50%);
-   z-index: 0;
- }
+.Menu:hover svg {
+  stroke: var(--col-text-light);
+}
 
- .progress-step {
-   position: relative;
-   z-index: 1;
-   background: #ddd;
-   color: #666;
-   width: 35px;
-   height: 35px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 50%;
-   font-weight: bold;
-   transition: 0.3s;
- }
+.Menu svg {
+  stroke: var(--col-primary);
+  transition: stroke 0.3s ease;
+}
 
- .progress-step.active {
-   background: #007bff;
-   color: #fff;
- }
+.checkout-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+}
 
- .progress-labels {
-   display: flex;
-   justify-content: space-between;
-   margin-top: 8px;
-   font-size: 0.9rem;
-   color: #555;
- }
+.form-container,
+.summary-section {
+  background: var(--col-white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 350px;
+}
 
- h2 {
-   text-align: center;
-   margin-bottom: 20px;
-   color: #333;
- }
+.progressbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+}
 
- form {
-   display: flex;
-   flex-direction: column;
-   gap: 15px;
- }
+.progressbar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--col-border);
+  transform: translateY(-50%);
+  z-index: 0;
+}
 
- label {
-   font-weight: bold;
-   margin-bottom: 5px;
-   display: block;
- }
+.progress-step {
+  position: relative;
+  z-index: 1;
+  background: var(--col-border);
+  color: #666;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
 
- input,
- select {
-   padding: 10px;
-   border: 1px solid #ccc;
-   border-radius: 6px;
-   font-size: 1rem;
-   width: 100%;
-   box-sizing: border-box;
- }
+.progress-step.active {
+  background: var(--col-secondary);
+  color: var(--col-text-light);
+}
 
- .buttons {
-   display: flex;
-   justify-content: space-between;
-   gap: 10px;
-   margin-top: 20px;
- }
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
 
- button {
-   flex: 1;
-   padding: 12px;
-   font-size: 1rem;
-   border: none;
-   border-radius: 6px;
-   cursor: pointer;
-   transition: 0.3s;
- }
+.form-container h2,
+.summary-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--col-text);
+}
 
- .back {
-   background: #ccc;
-   color: #000;
- }
+.summary-section h2 {
+  text-align: left;
+}
 
- .back:hover {
-   background: #bbb;
- }
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
- .next {
-   background: #007bff;
-   color: white;
- }
+.form-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: var(--col-text);
+}
 
- .next:hover {
-   background: #0056b3;
- }
+.form-container input,
+.form-container select {
+  padding: 10px;
+  border: 1px solid var(--col-border);
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  transition: border-color 0.3s ease;
+}
 
- /* Summary Section */
- .summary-section h2 {
-   text-align: left;
-   margin-bottom: 15px;
- }
+.form-container input:focus,
+.form-container select:focus {
+  outline: none;
+  border-color: var(--col-secondary);
+}
 
- .summary-box {
-   display: flex;
-   flex-direction: column;
-   gap: 15px;
- }
+.form-container .buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
 
- .summary-item {
-   display: flex;
-   justify-content: space-between;
-   gap: 10px;
-   align-items: center;
-   border-bottom: 1px solid #eee;
-   padding-bottom: 10px;
- }
+.form-container .buttons button {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: var(--font-family);
+}
 
- .img-wrapper {
-   position: relative;
- }
+.form-container .buttons .back {
+  background: #ccc;
+  color: var(--col-text);
+}
 
- .summary-img {
-   width: 60px;
-   height: 60px;
-   object-fit: cover;
-   border-radius: 6px;
- }
+.form-container .buttons .back:hover {
+  background: #bbb;
+  transform: translateY(-1px);
+}
 
- .quantity-badge {
-   position: absolute;
-   top: -8px;
-   right: -8px;
-   background: red;
-   color: white;
-   font-size: 0.8rem;
-   padding: 3px 6px;
-   border-radius: 50%;
- }
+.form-container .buttons .next {
+  background: var(--col-secondary);
+  color: var(--col-text-light);
+}
 
- .summary-details h4 {
-   margin: 0;
-   font-size: 0.95rem;
-   color: #333;
- }
+.form-container .buttons .next:hover {
+  background: var(--col-secondary-hover);
+  transform: translateY(-1px);
+}
 
- .summary-shipping {
-   margin: 2px 0 0;
-   font-size: 0.8rem;
-   color: #777;
- }
+.form-container .buttons .next:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
 
- .summary-price {
-   text-align: right;
-   font-size: 0.9rem;
-   font-weight: bold;
- }
+/* Section résumé */
+.summary-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
- .summary-totals {
-   margin-top: 15px;
-   border-top: 2px solid #eee;
-   padding-top: 15px;
- }
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
 
- .total-row,
- .final-total {
-   display: flex;
-   justify-content: space-between;
-   margin: 5px 0;
- }
+.img-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
 
- .final-total {
-   font-size: 1.2rem;
-   font-weight: bold;
-   color: #007bff;
- }
+.summary-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
 
- .checkout-btn {
-   width: 100%;
-   margin-top: 15px;
-   padding: 12px;
-   background: #007bff;
-   color: white;
-   border: none;
-   border-radius: 6px;
-   font-size: 1rem;
-   cursor: pointer;
- }
+.quantity-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--col-danger);
+  color: var(--col-text-light);
+  font-size: 0.8rem;
+  padding: 3px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
 
- .checkout-btn:hover {
-   background: #0056b3;
- }
+.summary-details {
+  flex: 1;
+}
 
- .terms-text {
-   margin-top: 10px;
-   font-size: 0.8rem;
-   color: #666;
-   text-align: center;
- }
+.summary-details h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--col-text);
+}
 
- .terms-text a {
-   color: #007bff;
-   text-decoration: none;
- }
+.summary-shipping {
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  color: #777;
+}
 
- /* Responsive */
- @media (max-width: 768px) {}
+.summary-price {
+  text-align: right;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--col-text);
+}
+
+/* Totaux */
+.summary-totals {
+  margin-top: 15px;
+  border-top: 2px solid #eee;
+  padding-top: 15px;
+}
+
+.total-row,
+.final-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  color: var(--col-text);
+}
+
+.final-total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--col-secondary);
+  margin-top: 10px;
+}
+
+/* Bouton de paiement */
+.checkout-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: var(--col-primary);
+  color: var(--col-text-light);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: var(--font-family);
+}
+
+.checkout-btn:hover {
+  background: var(--col-primary-hover);
+  transform: translateY(-1px);
+}
+
+.checkout-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.terms-text {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+}
+
+.terms-text a {
+  color: var(--col-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.terms-text a:hover {
+  color: var(--col-secondary-hover);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .checkout-wrapper {
+    flex-direction: column;
+  }
+
+  .form-container,
+  .summary-section {
+    min-width: 100%;
+  }
+
+  .form-container .buttons {
+    flex-direction: column;
+  }
+
+  .form-container .buttons button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container,
+  .summary-section {
+    padding: 15px;
+  }
+
+  .progress-step {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  .progress-labels {
+    font-size: 0.75rem;
+  }
+}
