@@ -40,6 +40,24 @@ main form .form-group {
     font-weight: 500;
     font-size: 0.9rem;
 }
+#passwordCriteria {
+    padding: 10px;
+    background-color: var(--col-background);
+    border-radius: 5px;
+}
+
+#passwordCriteria div {
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.critere-invalide {
+    color: var(--col-danger);
+}
+
+.critere-valide {
+    color: var(--col-success);
+}
 
 .form-group input {
     width: 100%;
