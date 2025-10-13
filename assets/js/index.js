@@ -76,6 +76,16 @@ function getCartUser() {
 }
 
 
-//fake
+//fake cart
 saveCartUser(db?.paniers[0])
 
+
+function updateCountCartUser() {
+    const cart = getCartUser()
+    const products = cart?.produits ?? []
+    const span_cart_count = document.querySelector('.cart-count')
+
+    span_cart_count.innerText = products.length
+}
+
+updateCountCartUser()
