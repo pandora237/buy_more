@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
-        console.log("🚀 Formulaire soumis");
+
 
         // Récupérer et nettoyer les valeurs
         const nom = champNom.value.trim();
