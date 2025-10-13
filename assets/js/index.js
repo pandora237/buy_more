@@ -63,10 +63,10 @@ updateMessBox()
 
 
 
-
-// foction utils
 const USER_CART_KEY = 'USER_CART'
+const USER_ORDERS_KEY = 'USER_ORDERS'
 
+// fonction utils 
 function saveCartUser(cart) {
     localStorage.setItem(USER_CART_KEY, JSON.stringify(cart))
 }
@@ -78,6 +78,20 @@ function getCartUser() {
 
 //fake cart
 saveCartUser(db?.paniers[0])
+
+
+// commande
+function saveOrderUser(order) {
+    localStorage.setItem(USER_ORDERS_KEY, JSON.stringify(order))
+}
+
+function getOrderUser() {
+    return JSON.parse(localStorage.getItem(USER_ORDERS_KEY))
+}
+
+
+//fake order
+saveOrderUser(db?.commandes ?? [])
 
 
 function updateCountCartUser() {

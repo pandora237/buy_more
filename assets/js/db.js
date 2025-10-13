@@ -210,8 +210,8 @@ const db = {
     ],
 
     "commandes": [
-        { "id": 1001, "id_panier": 1, "date": "2025-10-05T10:12:00Z", "status": "paid", "total": 604000, "devise": "XAF" },
-        { "id": 1002, "id_panier": 2, "date": "2025-10-07T15:30:00Z", "status": "pending", "total": 230000, "devise": "XAF" },
-        { "id": 1003, "id_panier": 3, "date": "2025-10-08T08:45:00Z", "status": "processing", "total": 520000, "devise": "XAF" }
+        { "id": 1001, "id_prod": "[1,5,3]", "date": "2025-10-05T10:12:00Z", "status": "paid", "total": 604000, "devise": "XAF" },
+        { "id": 1002, "id_prod": "[2,4,3]", "date": "2025-10-07T15:30:00Z", "status": "pending", "total": 230000, "devise": "XAF" },
+        { "id": 1003, "id_prod": "[3]", "date": "2025-10-08T08:45:00Z", "status": "cancel", "total": 520000, "devise": "XAF" }
     ]
 }
