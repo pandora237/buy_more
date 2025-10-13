@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/listeProduits.css">
     <title>Listing des Produits</title>
+    <script src="/assets/js/db.js" defer></script>
+    <script src="/assets/js/listeProduits.js" defer></script>
 
 </head>
 
@@ -201,10 +203,10 @@
                                 <label for="categorie">Catégorie :</label>
                                 <select id="categorie" name="categorie">
                                     <option value="">Toutes</option>
-                                    <option value="gastronomie">Gastronomie</option>
+                                    <!--<option value="gastronomie">Gastronomie</option>
                                     <option value="electronique">Électronique</option>
                                     <option value="vetement">Manuels d'etudes</option>
-                                    <option value="materiel">Materiel d'etudes</option>
+                                    <option value="materiel">Materiel d'etudes</option>-->
                                 </select>
                             </div>
 
@@ -216,8 +218,10 @@
 
                             <div class="filter-group">
                                     <div class="slider-container">
-                                       <label><span>min :</span><input type="range" min="0" max="100" value="0" id="minRange"></label> 
-                                        <label>max :<input type="range" min="0" max="100" value="0" id="maxRange"></label> 
+                                       <label><span></span><input type="range" min="0" max="100" value="0" id="minRange" list="values"></label> 
+                                        <datalist id="values">
+                                            
+                                        </datalist>
                                         <!--<p>Valeur min: <span id="minVal">25</span> / Valeur max: <span id="maxVal">75</span></p>-->
                                     </div>
                             </div>
@@ -253,7 +257,7 @@
             </div>
             <div class="content-product">
                 <div class="box">
-                    
+                        <!--
                         <div class="image"><a href=""><img src="/assets/img/listeProduits/img0.jpeg" alt="Livre 1"></a></div>
                         <div class="content">
                             <div class="description">
@@ -832,7 +836,7 @@
                         </div>
                         <a href="produit.html" class="btn btn-secondary">Decouvrir</a>
                     </div>
-                </div>
+                </div>-->
 
             </div>
         </section>
