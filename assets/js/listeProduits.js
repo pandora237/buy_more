@@ -16,27 +16,30 @@ function range(produits){
     let minRange = document.getElementById("minRange")
     minRange.min = produitMin.prix
     minRange.max = produitMax.prix
-
+    minRange.value = produitMax.prix
     let liste = document.getElementById("values")
-    let optionMin = document.createElement("option")
-    let optionMax = document.createElement("option")
     
 
-    optionMin.value = minRange.min
-    optionMin.label = minRange.min
-
-    optionMax.value = minRange.max
-    optionMax.label = minRange.max
-
-    liste.append(optionMin,optionMax)
-    console.log(liste)
+    liste.innerHTML = `
+        <option value="${minRange.min}" label="${minRange.min}F"></option>
+        <option value="${minRange.max }" label="${minRange.max}F"></option>
+    `
+    
     let value = document.querySelector(".slider-container span")
-
+    value.innerText = `prix-max : ${minRange.value}F`;
+    listingProduits(filterPrice(produits,minRange.value))
     minRange.addEventListener("input", (event) => {
-        value.textContent = event.target.value;
+        value.innerText = `prix-max : ${event.target.value}F`;
     });
-}
+    minRange.addEventListener("change", () => {
+        listingProduits(filterPrice(produits,minRange.value))
+    });
 
+    
+}
+function filterPrice(produits, value){
+    return produits.filter(p => p.prix <= value )
+}
 
 listeCategoriesFitre()
 
@@ -71,7 +74,7 @@ function listingProduits(produits){
                         
                     </div>
         `
-        
+       
         
         
     }) 
@@ -81,13 +84,15 @@ function listingProduits(produits){
     const maxStars = 5;
     produits.forEach(produit => {
         const starsFront = document.querySelector(`#produit-${produit.id} .stars-front`);
-        console.log(starsFront)
+        
         starsFront.style.width = `${(produit.rate / maxStars) * 100}%`;
     });
+
+     
 }
 
 listingProduits(produits)
-
+range(produits)
 let categorie = document.getElementById("categorie")
 
 categorie.addEventListener("change", () => {
@@ -99,14 +104,13 @@ categorie.addEventListener("change", () => {
 
         let idCategorie = Number(categorie.value)
         let id_produits_Categorie = db.produit_categorie.filter(p => p.id_cat === idCategorie)
-        console.log(id_produits_Categorie)
+        
         let i=0
-        console.log(typeof db.products[0].id)
+        
         let produits = db.products.filter(p => id_produits_Categorie.some( item => 
             item.id_cat === idCategorie && item.id_prod === p.id 
             
             ))
-        console.log(produits)
         listingProduits(produits)
         range(produits)
     }
@@ -114,6 +118,4 @@ categorie.addEventListener("change", () => {
 
 
 
-let minRange = document.getElementById("minRange")
-let maxRange = document.getElementById("maxRange")
 

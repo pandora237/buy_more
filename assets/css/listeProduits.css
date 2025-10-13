@@ -62,7 +62,7 @@
     position: sticky;
     top: 92px;
     background-color: var(--col-white);
-    padding: 5px;
+    padding: 30px;
     border: 2px solid var(--col-border);
     max-width: 200px;
 }
@@ -76,7 +76,7 @@
 .items-filter {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 20px;
 }
 
 .filter-group {
@@ -195,17 +195,7 @@ input[class="visibleCheckbox"] {
     display: none;
 }
 
-.chevron {
-    display: inline-block;
-}
 
-input[type="checkbox"]:checked+.menu-label .chevron {
-    transform: rotate(90deg);
-}
-
-input[type="checkbox"]:checked~.submenu {
-    display: flex;
-}
 
 .rate{
     display:flex;
@@ -255,7 +245,7 @@ input[type="checkbox"]:checked~.submenu {
   position: relative;
   display: inline-block;
   line-height: 1;
-  font-size:35px;
+  font-size:25px;
 }
 
 .stars-back {
@@ -278,8 +268,27 @@ input[type="checkbox"]:checked~.submenu {
 
 datalist {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  writing-mode: vertical-lr;
-  width: 200px;
+  flex-direction: row;
+  justify-content: center;
+  writing-mode: horizontal-tb;
+  gap:85px;
+  width: 100%;
+}
+
+.main input[type="range"]{
+   width:100%;
+}
+
+.description p{
+    display: -webkit-box;          
+  -webkit-box-orient: vertical;  
+  -webkit-line-clamp: 2;         
+  overflow: hidden;         
+  padding-left: 10px;
+  padding-right:10px     
+}
+
+.slider-container span{
+    color:var(--col-secondary);
+    font-weight:bold;
 }
