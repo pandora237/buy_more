@@ -19,50 +19,7 @@
     <div class="header-menu">
       <nav class="main-nav">
         <div class="content-menu">
-          <!-- <div class="menu-nav">
-                   <button class="Menu">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                                <line x1="4" y1="7" x2="28" y2="7" />
-                                <line x1="4" y1="16" x2="28" y2="16" />
-                                <line x1="4" y1="25" x2="28" y2="25" />
-                            </svg>
-                        </button>
-                        <div class="menu-items">
-                            <ul class="">
-                                <li class="menu-item">
-                                    <a href="#">Electronique</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/category/cat1.png" alt="category">
-                                    </div>
-                                </li>
-                                <li class="menu-item"><a href="#">Alimentation</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/category/cat1.png" alt="category">
-                                    </div>
-                                </li>
-                                <li class="menu-item"><a href="#">Mode</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/electronique/disque dur 4t0.png" alt="category">
-                                    </div>
-                                </li>
-                                <li class="menu-item"><a href="#">Maison</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/category/cat1.png" alt="category">
-                                    </div>
-                                </li>
-                                <li class="menu-item"><a href="#">Sports</a>
-                                    <div class="img-menu">
-                                        <img src="/assets/img/electronique/disque dur 4t0.png"
-                                            alt="category">
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="img-menu-logo">
-                                <a href="#"> <img src="/assets/img/logo2.png" alt="category"></a>
-                            </div>
-                        </div>  
-                </div> -->
+       
           <div class="logo">
             <a href="/index.html">
               <img src="/assets/img/logo2.png" alt="logo" title="Buy More" height="50">
@@ -144,6 +101,9 @@
   </header>
     <main class="container">
 
+        <!-- Validation de formulaire #########################################################################################################################################################
+         ################################################################################-->
+
         <form id="formInscription" class="form-auth">
             <div class="page-intro">
                 <h1>Salut toi !</h1>
@@ -152,18 +112,30 @@
             <div class="form-group">
                 <label for="nom">Nom</label>
                 <input type="text" name="nom" id="nom" placeholder="Entrez votre nom">
+                 <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
             <div class="form-group">
                 <label for="prenom">Prénom</label>
                 <input type="text" name="prenom" id="prenom" placeholder="Entrez votre prénom">
+                 <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="Email">
+                 <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
             <div class="form-group">
                 <label for="telephone">Téléphone</label>
                 <input type="tel" name="Téléphone" id="telephone" placeholder="+237 6XX XX XX XX" value="+237 ">
+                 <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
 
             <div class="form-group">
@@ -171,6 +143,9 @@
                 <div style="position: relative;">
                     <input type="password" name="password" id="password" placeholder="Créez un mot de passe" style="padding-right: 40px;">
                     <span id="togglePassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                         <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
 
             <svg id="iconOeilFerme" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>

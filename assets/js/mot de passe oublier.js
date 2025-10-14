@@ -8,9 +8,6 @@ form.addEventListener('submit' , e=>{e.preventDefault();
     form_verify();
 })
 
-
-
-
 function form_verify(){
     const emailValue = email.value.trim();
     let isValid = true; 

@@ -1,3 +1,6 @@
+
+
+
 function listeCategoriesFitre(){
     let selectFiltre = document.getElementById("categorie")
 
@@ -116,4 +119,15 @@ categorie.addEventListener("change", () => {
 
 let minRange = document.getElementById("minRange")
 let maxRange = document.getElementById("maxRange")
+
+
+
+
+
+
+
+
+
+
+
 
