@@ -1,4 +1,4 @@
- const db = {
+const db = {
     "categories": [
         { "id": 1, "title": "Informatique", "description": "Ordinateurs, portables, périphériques et composants.", "img": "https://placehold.co/600x400?text=Informatique" },
         { "id": 2, "title": "Téléphonie & Tablettes", "description": "Smartphones, tablettes et accessoires mobiles.", "img": "https://placehold.co/600x400?text=Téléphonie" },
@@ -210,8 +210,8 @@
     ],
 
     "commandes": [
-        { "id": 1001, "id_prod": "[1,5,3]", "date": "2025-10-05T10:12:00Z", "status": "paid", "total": 604000, "devise": "XAF" },
-        { "id": 1002, "id_prod": "[2,4,3]", "date": "2025-10-07T15:30:00Z", "status": "pending", "total": 230000, "devise": "XAF" },
-        { "id": 1003, "id_prod": "[3]", "date": "2025-10-08T08:45:00Z", "status": "cancel", "total": 520000, "devise": "XAF" }
+        { "id": 1001, id_panier: 1, "id_prod": "[1,5,3]", "date": "2025-10-05T10:12:00Z", "status": "paid", "total": 604000, "devise": "XAF" },
+        { "id": 1002, id_panier: 4, "id_prod": "[2,4,3]", "date": "2025-10-07T15:30:00Z", "status": "pending", "total": 230000, "devise": "XAF" },
+        { "id": 1003, id_panier: 1, "id_prod": "[3]", "date": "2025-10-08T08:45:00Z", "status": "cancel", "total": 520000, "devise": "XAF" }
     ]
 }

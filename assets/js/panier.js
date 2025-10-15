@@ -4,7 +4,7 @@ let products = cart?.produits ?? []
 
 const containerCart = document.querySelector('#wrapper');
 const contentCart = containerCart?.querySelector('.content-product')
-const totaltCart = containerCart?.querySelector('.total')
+const totaltCart = containerCart?.querySelector('#total')
 
 
 
@@ -32,8 +32,10 @@ function displayCart() {
                 <a href="/index.html"><button class="commander btn btn-primary" style="margin-top: 20px;">Continuer mes achats</button></a>
             </div>
         `;
+        totaltCart.classList.add('hide')
         return;
     }
+    totaltCart.classList.remove('hide')
 
     // Afficher chaque produit
     contentCart.innerHTML = ''
