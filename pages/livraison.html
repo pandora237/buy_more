@@ -156,35 +156,58 @@
       </div>
 
       <h2>Informations de Livraison</h2>
-      <form>
+
+
+<!-- validation du formulaire de livraison -->
+
+
+      <form class="form-livraison">
         <div>
           <label for="name">Nom complet</label>
           <input type="text" id="name" placeholder="Entrez votre nom" required>
+            <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
         </div>
 
         <div>
           <label for="phone">Téléphone</label>
           <input type="tel" id="phone" placeholder="Ex: +237 699 00 00 00" required>
+            <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
         </div>
 
         <div>
           <label for="address">Adresse</label>
           <input type="text" id="address" placeholder="Votre adresse de livraison" required>
+            <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
         </div>
 
         <div>
           <label for="country">Pays</label>
           <input type="text" id="country" placeholder="Ex: Cameroun" required>
+            <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
         </div>
 
         <div>
           <label for="city">Ville</label>
           <input type="text" id="city" placeholder="Ex: Douala" required>
+            <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
         </div>
 
         <div>
           <label for="street">Quartier / Rue</label>
           <input type="text" id="street" placeholder="Ex: Bonapriso" required>
+            <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
         </div>
 
         <div>
@@ -196,9 +219,13 @@
           </select>
         </div>
 
-        <div class="buttons">
+        <!-- <div class="buttons">
           <button type="button" class="back" onclick="window.location.href='panier.html'">← Retour au Panier</button>
-          <button type="submit" class="next" onclick="window.location.href='paiement.html'">Vers Paiement →</button>
+          <button type="submit" class="next" onclick="window.location.href='paiement.html'">Vers Paiement →</button> -->
+
+   <div class="buttons">
+          <button type="button" class="back" >←Retour au Panier</button>
+          <button type="submit" class="next">Vers Paiement →</button>
         </div>
       </form>
     </div>
@@ -438,6 +465,7 @@
   <script src="../assets/js/db.js"></script>
   <script src="../assets/js/index.js"></script>
   <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/paiement/LivraisonPaiement.js" defer ></script>
 </body>
 
 </html>

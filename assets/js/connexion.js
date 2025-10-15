@@ -174,7 +174,9 @@ document.addEventListener("DOMContentLoaded", function() {
             window.location.href = "../index.html";
         }, 1000);
     });
-});//recuperation des elements 
+});
+
+//recuperation des elements 
 
 const form = document.querySelector('.form-auth');
 const email = document.querySelector('#email');
