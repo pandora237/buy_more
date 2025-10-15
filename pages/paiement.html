@@ -156,7 +156,7 @@
       </div>
 
       <h2>Paiement</h2>
-      <form class="paiement-form">
+      <form class="paiement-form" id="paiement-form">
         <div>
           <label for="card-name">Nom du titulaire</label>
           <input type="text" id="card-name" placeholder="Ex: FOSSO Stephane" required>
@@ -175,7 +175,7 @@
         </div>
         <div>
           <label for="mobile-pay">Paiement mobile</label>
-          <select id="mobile-pay">
+          <select id="mobile-pay" name="paiement-method">
             <option value="">Choisir une option</option>
             <option value="mobile-money">Mobile Money</option>
             <option value="orange-money">Orange Money</option>
@@ -184,7 +184,7 @@
         </div>
         <div>
           <label for="phone-otp">Numéro de téléphone pour confirmation</label>
-          <input type="tel" id="phone-otp" placeholder="Ex: +237 653 48 27 17">
+          <input type="tel" id="phone-otp" name="phone-pay" placeholder="Ex: +237 653 48 27 17">
         </div>
 
 

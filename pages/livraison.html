@@ -159,42 +159,42 @@
       <form>
         <div>
           <label for="name">Nom complet</label>
-          <input type="text" id="name" placeholder="Entrez votre nom" required>
+          <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
         </div>
 
         <div>
           <label for="phone">Téléphone</label>
-          <input type="tel" id="phone" placeholder="Ex: +237 699 00 00 00" required>
+          <input type="tel" id="phone" name="name" placeholder="Ex: +237 699 00 00 00" required>
         </div>
 
         <div>
           <label for="address">Adresse</label>
-          <input type="text" id="address" placeholder="Votre adresse de livraison" required>
+          <input type="text" id="address" name="address" placeholder="Votre adresse de livraison" required>
         </div>
 
         <div>
           <label for="country">Pays</label>
-          <input type="text" id="country" placeholder="Ex: Cameroun" required>
+          <input type="text" id="country" name="country" placeholder="Ex: Cameroun" required>
         </div>
 
         <div>
           <label for="city">Ville</label>
-          <input type="text" id="city" placeholder="Ex: Douala" required>
+          <input type="text" id="city" name="city" placeholder="Ex: Douala" required>
         </div>
 
         <div>
-          <label for="street">Quartier / Rue</label>
-          <input type="text" id="street" placeholder="Ex: Bonapriso" required>
+          <label for="street">Quartier </label>
+          <input type="text" id="street" name="street" placeholder="Ex: Bonapriso" required>
         </div>
 
-        <div>
+        <!-- <div>
           <label for="delivery">Méthode de livraison</label>
           <select id="delivery" required>
             <option value="">Choisir une option</option>
             <option value="standard">Standard (3-5 jours)</option>
             <option value="express">Express (1-2 jours)</option>
           </select>
-        </div>
+        </div> -->
 
         <div class="buttons">
           <button type="button" class="back" onclick="window.location.href='panier.html'">← Retour au Panier</button>
@@ -300,7 +300,7 @@
             meilleures promotions et nos nouveautés.
           </p>
         </div>
-        <form action="">
+        <form action="" id="form-step-1">
           <input type="text" class="search" placeholder="Entrez votre adresse email">
           <button type="submit" class="btn btn-primary">s'abonner</button>
         </form>
