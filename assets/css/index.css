@@ -411,44 +411,48 @@ header {
 
 
 
-.form-group i{
-     position:absolute; /*pour superposer */
-    top:38px;
+.form-group i {
+    position: absolute;
+    /*pour superposer */
+    top: 38px;
     right: 10px;
     visibility: hidden;
     /* visibility: hidden;  pour cacher les icons  */
-   
+
 }
-.form-group small{
-     bottom: 0; 
+
+.form-group small {
+    bottom: 0;
     position: absolute;
     /* bottom: 0; */
     left: 0;
-    visibility: hidden; 
-        font-size: 0.85rem;     
+    visibility: hidden;
+    font-size: 0.85rem;
 
 
 }
 
-.form-group.success input{
+.form-group.success input {
     border-color: var(--color-succes);
 }
-.form-group.error input{
+
+.form-group.error input {
     border-color: var(--color-error);
 }
-.form-group.success i.fa-check-circle{
-    color:var(--color-succes); 
+
+.form-group.success i.fa-check-circle {
+    color: var(--color-succes);
     visibility: visible;
 }
 
-.form-group.error i.fa-exclamation-circle{
-   color: var(--color-error);
-    visibility: visible;
-}
-
-.form-group.error small{
+.form-group.error i.fa-exclamation-circle {
     color: var(--color-error);
-     visibility:  visible;
+    visibility: visible;
+}
+
+.form-group.error small {
+    color: var(--color-error);
+    visibility: visible;
 }
 
 
@@ -844,5 +848,69 @@ footer #go-top {
 }
 
 .hide {
+    display: none;
+}
+
+
+/* popup */
+.popup-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+    z-index: 9999;
+    padding: 24px;
+}
+
+.popup-content {
+    width: 100%;
+    max-width: 350px;
+    background: var(--col-white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    gap: 15px;
+}
+
+.popup-content h1 {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.3;
+    color: #0f172a;
+    font-weight: 600;
+    padding: 0 6px;
+}
+
+.popup-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+@keyframes popupIn {
+    0% {
+        opacity: 0;
+        transform: translateY(14px) scale(.98);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-6px) scale(1.02);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.popup-overlay.hidden {
     display: none;
 }

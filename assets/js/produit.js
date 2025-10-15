@@ -24,7 +24,7 @@ function addToCart(qty) {
     let isCart = false
     products.forEach(p => {
         if (p.id_prod == produit.id) {
-            p.qty += qty
+            p.qty = parseInt(p.qty) + parseInt(qty)
             isCart = true
         }
     })

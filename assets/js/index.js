@@ -79,6 +79,7 @@ function clearKey(key) {
 
 function saveCartUser(cart) {
     localStorage.setItem(USER_CART_KEY, JSON.stringify(cart))
+    updateCountCartUser()
 }
 
 function getCartUser() {
@@ -183,59 +184,5 @@ initHeader()
 //  
 
 const KEY_STEP_ORDER = 'KEY_STEP_ORDER'
-const form = document.querySelector('#form-step-1')
 
-form.addEventListener('submit', e => {
-    e.preventDefault()
-    const formdata = new FormData(e.target)
-    const datas = {
-        name: formdata.get('name'),
-        phone: formdata.get('phone'),
-        address: formdata.get('address'),
-        country: formdata.get('country'),
-        city: formdata.get('city'),
-    }
-    localStorage.setItem(KEY_STEP_ORDER, datas.stringify())
-})
-
-function setStepOrder() {
-    let datas = localStorage.get(KEY_STEP_ORDER)
-    if (!datas) {
-        window.location.href = '/pages/livraison.html'
-    }
-    datas = JSON.parse(datas)
-
-    const form = document.querySelector('#paiement-form')
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        const formdata = new FormData(e.target)
-        const allStep = {
-            ...datas,
-            paiementMethod: formdata.get('paiement-method'),
-            phonePay: formdata.get('phone-pay')
-        }
-    })
-
-}
-
-function buildOrder(datasStep) {
-    const cart = getCartUser()
-    const products = cart?.produits
-    const date = new Date()
-    const order = {
-        id: date.toDateString(),
-        id_panier: cart.id,
-        id_prod: products.map(p => p.id),
-        date: date,
-        status: "paid",
-        total: products.reduce((a, b) => a + b),
-        devise: "XAF",
-        otherInfo: datasStep
-    }
-    saveOrderUser([...getOrderUser(), order])
-}
-
-function endOrder() {
-
-}
 
