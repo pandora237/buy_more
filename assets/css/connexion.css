@@ -36,6 +36,7 @@ main form .form-group {
     margin-bottom: 12px;
     padding-bottom:22px ;
     position: relative; 
+
 }
 
 
@@ -98,6 +99,8 @@ main form .form-group {
     /* bottom: 0; */
     left: 0;
     visibility: hidden; 
+        font-size: 0.85rem;      /* ← AJOUTEZ ÇA (optionnel mais mieux) */
+
 
 }
 

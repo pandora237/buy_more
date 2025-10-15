@@ -1,3 +1,6 @@
+
+
+
 function listeCategoriesFitre(){
     let selectFiltre = document.getElementById("categorie")
 
@@ -115,6 +118,17 @@ categorie.addEventListener("change", () => {
         range(produits)
     }
 })
+
+
+
+
+
+
+
+
+
+
+
 
 
 

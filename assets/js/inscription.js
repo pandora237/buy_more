@@ -1,4 +1,207 @@
 
+// validation de formulaire 
+
+//recuperation des elements 
+
+const form = document.querySelector('.form-auth');
+const email = document.querySelector('#email');
+const password = document.querySelector('#password')
+const nom = document.querySelector('#nom');
+const prenom = document.querySelector('#prenom');
+const telephone = document.querySelector('#telephone');
+const confirmPassword = document.querySelector('#confirmPassword');
+
+
+
+
+
+//gestions des evenements 
+// preventDefault pour empecher le comportement par defaut du formulaire car il faut dabrd valider les chams avant d'envoyer
+form.addEventListener('submit' , e=>{e.preventDefault(); 
+
+    form_verify();
+})
+
+//fonction
+
+function form_verify(){
+    //obtenir toutes les valeurs des inputs
+    //la fonction trim() pour enlever les espaces 
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim(); 
+    const nomValue = nom.value.trim();
+    const prenomValue = prenom.value.trim();
+    const telephoneValue = telephone.value.trim();
+    const confirmPasswordValue = confirmPassword.value.trim();
+    let isValid = true; 
+
+//verification d'adresse mail
+
+if (emailValue === "") {
+    let message = " email ne doit pas etre vide "
+    setError(email,message)
+            isValid = false;
+
+    }
+ else if (!emailValue.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/))  {
+         let message = "format d'email invalide"
+          setError(email,message)
+                isValid = false;
+    }
+    else{
+        setSucess(email)
+    }
+
+
+    ////////////////////////////// validation du nom
+    if (nomValue === ""){
+        let message = "Le nom ne doit pas  etre vide"
+        setError(nom , message);
+        isValid = false;
+   }
+   else  if (nomValue.value <2){
+        let message = "Le nom doit contenir au moins 2 caractere";
+        setError(nom , message);
+        isValid = false;
+   }
+    else if (!nomValue.match(/^[a-zA-ZÀ-ÿ\s'-]+$/)) {    
+         let message = "Le nom ne doit contenir que des lettres";
+        setError(nom, message);
+        isValid = false;
+   }
+    else {
+        setSucess(nom);
+    }
+
+
+
+/////validation du prenom 
+
+if (prenomValue === "") {
+        let message = "Le prénom ne doit pas être vide";
+        setError(prenom, message);
+        isValid = false;
+    } 
+    else if (prenomValue.length < 2) {
+        let message = "Le prénom doit contenir au moins 2 caractères";
+        setError(prenom, message);
+        isValid = false;
+    }
+    else if (!prenomValue.match(/^[a-zA-ZÀ-ÿ\s'-]+$/)) {
+        let message = "Le prénom ne doit contenir que des lettres";
+        setError(prenom, message);
+        isValid = false;
+    } 
+    else {
+        setSucess(prenom);
+    }
+
+
+
+   ///////// ///validation du telephone //////////////////////
+
+    if (telephoneValue === "") {
+        let message = "Le numéro de téléphone ne doit pas être vide";
+        setError(telephone, message);
+        isValid = false;
+    } 
+    else if (!telephoneValue.match(/^[0-9+\s()-]+$/)) {
+        let message = "Format de téléphone invalide";
+        setError(telephone, message);
+        isValid = false;
+    }
+    else if (telephoneValue.replace(/[^0-9]/g, '').length < 9) {
+        let message = "Le numéro doit contenir au moins 9 chiffres";
+        setError(telephone, message);
+        isValid = false;
+    }
+    else {
+        setSucess(telephone);
+    }
+    
+// // ========== VALIDATION CONFIRMATION MOT DE PASSE ==========
+//     if (confirmPasswordValue === "") {
+//         let message = "Veuillez confirmer votre mot de passe";
+//         setError(confirmPassword, message);
+//         isValid = false;
+//     } 
+//     else if (confirmPasswordValue !== passwordValue) {
+//         let message = "Les mots de passe ne correspondent pas";
+//         setError(confirmPassword, message);
+//         isValid = false;
+//     } 
+//     else {
+//         setSucess(confirmPassword);
+//     }
+
+
+    //verification du mot de passe
+    // if (passwordValue ==="") {
+    //     let message = " le mot de passe ne doit pas etre vide "
+    // setError(password,message)
+    //       isValid = false;
+    // }
+    // else if (!passwordValue.match(/^[a-zA-Z0-9._%+!-]/)) {
+    //    let message = "le mot de passe contient des caractères invalides"  
+
+    //       setError(password,message)
+    //             isValid = false;
+    // }
+    // else if (passwordValue.length < 8 ) {
+    //          let message = " le  mot de passe doit avoir aumoins 8 caractere"
+    //         setError(password , message);
+    //       isValid = false;
+
+    //     }
+    //  else   {
+    //     setSucess(password);
+    //  }
+         // Si tout est valide, 
+    // if (isValid) {
+    //     console.log('Formulaire valide ! Envoi en cours...');
+    //     form.submit(); // ← Envoi du formulaire
+    // }
+
+
+
+}
+
+// function pour nom d'utilisateur
+
+  function  setError(elem, messageError){
+    const formControl = elem.parentElement;
+    const small = formControl.querySelector('small');
+//ajout du message d'erreur
+    small.innerText = messageError
+
+    //ajout de la classe d'erreur qui est dans le css 
+    formControl.className = "form-group error";
+
+  }
+
+  function setSucess(elem){
+       const formControl = elem.parentElement
+       formControl.className = 'form-group success'
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function afficherMessage(message, type) {
