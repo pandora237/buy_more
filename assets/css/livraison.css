@@ -306,8 +306,25 @@
   text-decoration: underline;
 }
 
+
+section.content{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;  
+}
+section.content .summary-main{
+  background-color: var(--col-white);
+  border-radius: 15px;
+  padding: 10px;
+  position: sticky;
+  top: 100px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+  .summary-block{
+    width: 100%;
+  }
   .checkout-wrapper {
     flex-direction: column;
   }
