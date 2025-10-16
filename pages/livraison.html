@@ -167,47 +167,40 @@
         <form class="form-livraison" id="form-step-1">
           <div>
             <label for="name">Nom complet</label>
-            <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
+            <input class="go-to-validate" type="text" id="name" name="name" placeholder="Entrez votre nom" required/>
+            <div class="description-form"></div>
           </div>
 
           <div>
             <label for="phone">Téléphone</label>
-            <input type="tel" id="phone" name="phone" placeholder="Ex: +237 699 00 00 00" required>
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
+            <input class="go-to-validate" data-type="phone" type="tel" id="phone" name="phone"
+              placeholder="Ex: +237 699 00 00 00" required>
+            <div class="description-form"></div>
           </div>
 
           <div>
             <label for="address">Adresse</label>
-            <input type="text" id="address" name="address" placeholder="Votre adresse de livraison" required>
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
+            <input class="go-to-validate" type="text" id="address" name="address"
+              placeholder="Votre adresse de livraison" required/>
+            <div class="description-form"></div>
           </div>
 
           <div>
             <label for="country">Pays</label>
-            <input type="text" id="country" name="country" placeholder="Ex: Cameroun" required>
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
+            <input class="go-to-validate" type="text" id="country" name="country" placeholder="Ex: Cameroun" required>
+            <div class="description-form"></div>
           </div>
 
           <div>
             <label for="city">Ville</label>
-            <input type="text" id="city" name="city" placeholder="Ex: Douala" required>
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
+            <input class="go-to-validate" type="text" id="city" name="city" placeholder="Ex: Douala" required>
+            <div class="description-form"></div>
           </div>
 
           <div>
             <label for="street">Quartier </label>
-            <input type="text" id="street" name="street" placeholder="Ex: Bonapriso" required>
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
+            <input class="go-to-validate" type="text" id="street" name="street" placeholder="Ex: Bonapriso" required>
+            <div class="description-form"></div>
           </div>
 
           <!-- <div>

@@ -1,5 +1,8 @@
 const popupOverlay = document.querySelector('#popup-overlay')
 const summaryTotalBlock = document.querySelector('#summary-box')
+const inputs = document.querySelectorAll('input.go-to-validate')
+const selects = document.querySelectorAll('select.go-to-validate')
+
 
 if (summaryTotalBlock) {
     summaryTotalBlock.innerHTML = ''
@@ -31,11 +34,13 @@ function setStepOrder() {
             paiementMethod: formdata.get('paiement-method'),
             phonePay: formdata.get('phone-pay')
         }
-        buildOrder(allStep)
-        localStorage.removeItem(KEY_STEP_ORDER)
-        cart.produits = []
-        saveCartUser(cart)
-        endOrder()
+        if (isSubmittable(inputs) && isSubmittable(selects)) {
+            buildOrder(allStep)
+            localStorage.removeItem(KEY_STEP_ORDER)
+            cart.produits = []
+            saveCartUser(cart)
+            endOrder()
+        }
     })
 }
 
@@ -79,6 +84,15 @@ function endOrder() {
         window.location.href = '/pages/admin/mes-commandes.html'
     }, 2000)
 }
+
+inputs?.forEach(input => {
+    input.addEventListener('keyup', e => HtmlValidate(e.target))
+})
+
+selects?.forEach(select => {
+    select.addEventListener('change', e => HtmlValidate(e.target))
+})
+
 
 
 setStepOrder()

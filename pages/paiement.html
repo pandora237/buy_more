@@ -191,15 +191,18 @@
         </div> -->
           <div>
             <label for="mobile-pay">Paiement mobile</label>
-            <select id="mobile-pay" name="paiement-method">
-              <option value="">Choisir une option</option>
+            <select class="go-to-validate" id="mobile-pay" name="paiement-method">
+              <option value="">Choisir une option ... </option>
               <option value="mobile-money">Mobile Money</option>
               <option value="orange-money">Orange Money</option>
             </select>
+            <div class="description-form"></div>
           </div>
           <div>
             <label for="phone-otp">Numéro de téléphone pour confirmation</label>
-            <input type="tel" id="phone-otp" placeholder="Ex: +237 653 48 27 17">
+            <input class="go-to-validate" data-type="phone" type="tel" id="phone-otp"
+              placeholder="Ex: +237 653 48 27 17" />
+            <div class="description-form"></div>
           </div>
 
 

@@ -894,6 +894,27 @@ footer #go-top {
     gap: 5px;
 }
 
+/* validation */
+.description-form {
+    color: var(--col-success);
+    max-height: 0px;
+    overflow: hidden;
+    font-size: small;
+    transition: all 0.8s;
+}
+
+input.valid {}
+
+.error-validation input,
+.error-validation select {
+    border: 1px solid var(--col-danger) !important;
+}
+
+.error-validation .description-form {
+    max-height: 200px;
+    color: var(--col-danger);
+}
+
 @keyframes popupIn {
     0% {
         opacity: 0;
