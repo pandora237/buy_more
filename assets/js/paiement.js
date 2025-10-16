@@ -1,4 +1,18 @@
 const popupOverlay = document.querySelector('#popup-overlay')
+const summaryTotalBlock = document.querySelector('#summary-box')
+
+if (summaryTotalBlock) {
+    summaryTotalBlock.innerHTML = ''
+    const cart = getCartUser()
+    const total = cart?.produits?.reduce((summ, p) => summ + p.prix, 0)
+    const html = `
+        <div class="final-total">
+            <span class="total-label">Total</span>
+            <span class="total-amount">${total} FCFA</span>
+        </div>
+    `
+    summaryTotalBlock.innerHTML = html
+}
 
 function setStepOrder() {
     const cart = getCartUser()

@@ -1,5 +1,7 @@
 
 const form = document.querySelector('#form-step-1')
+const summaryTotalBlock = document.querySelector('#summary-box')
+
 
 form.addEventListener('submit', e => {
     e.preventDefault()
@@ -15,6 +17,19 @@ form.addEventListener('submit', e => {
     localStorage.setItem(KEY_STEP_ORDER, JSON.stringify(datas))
     window.location.href = '/pages/paiement.html'
 })
+
+if (summaryTotalBlock) {
+    summaryTotalBlock.innerHTML = ''
+    const cart = getCartUser()
+    const total = cart?.produits?.reduce((summ, p) => summ + p.prix, 0)
+    const html = `
+        <div class="final-total">
+            <span class="total-label">Total</span>
+            <span class="total-amount">${total} FCFA</span>
+        </div>
+    `
+    summaryTotalBlock.innerHTML = html
+}
 
 
 
