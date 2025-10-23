@@ -252,6 +252,8 @@
   justify-content: space-between;
   margin: 5px 0;
   color: var(--col-text);
+  border-top: var(--col-border) 1px solid;
+  padding-top: 10px;
 }
 
 .final-total {
@@ -260,6 +262,26 @@
   color: var(--col-secondary);
   margin-top: 10px;
 }
+
+.summary-block{
+    width: 40%;
+  }
+.paiement-pub{
+  min-height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+.paiement-pub img{
+  max-width: 50%;
+  display: block; 
+  }
+
 
 /* Bouton de paiement */
 .checkout-btn {
@@ -315,7 +337,7 @@ section.content{
 section.content .summary-main{
   background-color: var(--col-white);
   border-radius: 15px;
-  padding: 10px;
+  padding: 20px;
   position: sticky;
   top: 100px;
 }

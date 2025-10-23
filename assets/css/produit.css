@@ -119,6 +119,9 @@ body {
 
 .product-gallery {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-image {

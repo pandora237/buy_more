@@ -755,3 +755,141 @@ footer #go-top {
 .user-info img {
     border-radius: 50%;
 }
+
+/* product block 1 */
+.box-product .rating {
+    font-size: 15px;
+    color: gold;
+    margin-top: 10px;
+}
+
+.box-product h1 {
+    color: var(--col-secondary);
+}
+
+.box-product img {
+    margin-top: 22px;
+    margin-bottom: 10px;
+    width: 13rem;
+    height: 13rem;
+    cursor: pointer;
+}
+
+.box-product {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    padding-bottom: 20px;
+    position: relative;
+    text-align: center;
+    max-width: 400px;
+}
+
+.box-product .box:hover {
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+
+.box-product .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+}
+
+.box-product .price {
+    color: var(--col-primary);
+    font-size: 1.2rem;
+    /*background-color: var(--col-white);*/
+    font-weight: 600;
+    /*box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);*/
+    margin-top: 10px;
+    /*position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;*/
+}
+
+
+.box-product button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.box-product .like-btn {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: gray;
+    margin: 2px 20px
+}
+
+/*.position-btn{
+    position:absolute;
+    bottom:20px;
+
+}*/
+
+.box-product .type {
+    padding: 5px 10px;
+    background-color: var(--col-success);
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+/* product block 2 */
+
+
+.product-card {
+    background: var(--col-white);
+    border: 1px solid var(--col-gray);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    color: var(--col-primary);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-card .descript {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
