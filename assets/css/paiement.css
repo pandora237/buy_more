@@ -282,7 +282,7 @@ section.content{
 section.content .summary-main{
   background-color: var(--col-white);
   border-radius: 15px;
-  padding: 10px;
+  padding: 20px;
   position: sticky;
   top: 100px;
 } 
