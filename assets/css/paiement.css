@@ -216,6 +216,8 @@
    display: flex;
    justify-content: space-between;
    margin: 5px 0;
+    border-top: var(--col-border) 1px solid;
+  padding-top: 10px;
  }
 
  .final-total {
@@ -223,6 +225,26 @@
    font-weight: bold;
    color: var(--col-secondary);
  }
+ 
+.summary-block{
+    width: 40%;
+  }
+.paiement-pub{
+  min-height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+.paiement-pub img{
+  max-width: 50%;
+  display: block; 
+  }
+
 
  .checkout-btn {
    width: 100%;
