@@ -4,7 +4,7 @@
 }
 
 .main .content-product {
-    
+
     display: grid;
     width: 100%;
     gap: 50px;
@@ -16,8 +16,8 @@
 }
 
 .main img {
-    margin-top:-15px;
-    margin-bottom:-5px;
+    margin-top:22px;
+    margin-bottom: 10px;
     width: 13rem;
     height: 13rem;
     cursor: pointer;
@@ -88,13 +88,13 @@
 
 .filter-group label {
     margin-bottom: 5px;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
-.filter-group .slider-container label { 
+.filter-group .slider-container label {
     display: grid;
     grid-template-columns: 50px auto;
-    gap: 5px; 
+    gap: 5px;
 }
 
 .filter-group input[type="number"],
@@ -113,26 +113,6 @@
     margin-bottom:50px;
 }*/
 
-.main .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-
-}
-
-.main .price {
-    color: var(--col-primary);
-    font-size: 1.2rem;
-    /*background-color: var(--col-white);*/
-    font-weight: 600;
-    /*box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);*/
-    margin-top: 10px;
-    /*position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1;*/
-}
 
 
 .main .menu {
@@ -161,17 +141,7 @@ input[class="visibleCheckbox"] {
     font-weight: bold;
     margin-bottom: 8px;
 }
-
-
-
-.main button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-weight: bold;
-    font-size: 20px;
-}
-
+ 
 .main h3 {
     font-size: 20px;
     margin-bottom: 20px;
