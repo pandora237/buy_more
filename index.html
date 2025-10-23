@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="/assets/css/index.css ">
     <!-- style home page -->
     <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/libs/swipper/css/swiper-bundle.min.css" />
 
     <!-- js global -->
     <script src="/assets/js/db.js" defer></script>
     <script src="/assets/js/index.js" defer></script>
+
 </head>
 
 <body>
@@ -125,7 +127,7 @@
             </nav>
             <div id="menu" class=" ">
                 <div class="menu-items">
-                    <ul class="">
+                    <ul class="" id="menu-item-content">
                         <li class="menu-item">
                             <a href="#">
                                 <span><i class="fa-solid fa-tv"></i></span>
@@ -159,37 +161,65 @@
 
 
     <main class="container">
+
         <section class="">
-            <div class="banner">
-                <div class="banner-content">
-                    <h1>Bienvenue sur Buy More</h1>
-                    <p>Découvrez nos meilleures offres et promotions du moment.</p>
-                    <div class="rate-content">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
+            <div class="swiper">
+                <div class="swiper-wrapper" id="swiper-wrapper-banner">
+                    <div class=" swiper-slide">
+                        <div class="banner">
+                            <div class="banner-content ">
+                                <h1>Bienvenue sur Buy More</h1>
+                                <p>Découvrez nos meilleures offres et promotions.</p>
+                                <div class="rate-content">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <a href="/pages/produit.html" class="btn btn-primary">Découvrir</a>
+                            </div>
+                            <div class="banner-image">
+                                <div class="slider">
+                                    <img src="/assets/img/other/iphone15pro.jpeg" alt="Iphone 15 Pro">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="/pages/produit.html" class="btn btn-primary">Découvrir</a>
-                </div>
-                <div class="banner-image">
-                    <div class="slider">
-                        <img src="/assets/img/category/cat1.png" alt="Q7B7-Available-Now-Glotelho-Banner">
-                        <img src="/assets/img/electronique/casque_sans_fil_-_oraimo_boompop_2s_-_i.jpg"
-                            alt="casque_sans_fil_-_oraimo_boompop_2s">
-                        <img src="/assets/images/iphone15pro.jpeg" alt="Iphone 15 Pro">
-                        <img src="/assets/images/ecouteur-sans-fil-noir-avec-etui-de-chargement.jpg"
-                            alt="ecouteur-sans-fil-noir-avec-etui-de-chargement">
-                        <img src="/assets/img/category/cat1.png" alt="Q7B7-Available-Now-Glotelho-Banner">
+                    <div class=" swiper-slide">
+                        <div class="banner">
+                            <div class="banner-content ">
+                                <h1>Bienvenue sur Buy More</h1>
+                                <p>Découvrez nos meilleures offres et promotions du moment.</p>
+                                <div class="rate-content">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <a href="/pages/produit.html" class="btn btn-primary">Découvrir</a>
+                            </div>
+                            <div class="banner-image">
+                                <div class="slider">
+                                    <img src="/assets/img/electronique/casque_sans_fil_-_oraimo_boompop_2s_-_i.jpg"
+                                        alt="casque_sans_fil_-_oraimo_boompop_2s">
+                                    <img src="/assets/images/iphone15pro.jpeg" alt="Iphone 15 Pro">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="swiper-pagination" aria-hidden="true"></div>
+                <!-- <div class="swiper-button-prev" aria-label="Précédent"></div>
+                <div class="swiper-button-next" aria-label="Suivant"></div> -->
             </div>
         </section>
 
-        <section class="best-seller">
+        <section class="best-seller" id="best-seller">
             <h2 class="title">Nos Meilleures Ventes</h2>
-            <div class="product-grid">
+            <div class="product-grid" id="best-seller-content">
                 <article class="product-card">
                     <img src="/assets/img/electronique/casque_sans_fil_-_oraimo_boompop_2s_-_i.jpg" alt="Produit 1">
                     <h3>Casque Bluetooth</h3>
@@ -242,7 +272,7 @@
             <a href="/pages/listeProduits.html" class="btn see-more">voir plus + </a>
         </section>
 
-        <section class="pub-product">
+        <section class="pub-product" id="pub-product">
             <div class="pub-card">
                 <img src="/assets/img/banner/Q7B7-Available-Now-Glotelho-Banner-933px335px.webp"
                     alt="Promo Accessoires">
@@ -257,7 +287,7 @@
 
         <section class="best-product">
             <h2 class="title">Produits Phares</h2>
-            <div class="product-content product-grid">
+            <div class="product-content product-grid" id="best-product-content">
                 <div class="box-product">
                     <div class="image"><a href=""><img src="/assets/img/listeProduits/img1.jpeg" alt="Livre 1"></a>
                     </div>
@@ -303,7 +333,7 @@
                         <a href="/pages/produit.html" class="btn btn-secondary position-btn">Decouvrir</a>
                     </div>
 
-                </div> 
+                </div>
                 <div class="box-product">
                     <div class="image"><a href=""><img src="/assets/img/listeProduits/img1.jpeg" alt="Livre 1"></a>
                     </div>
@@ -349,7 +379,7 @@
                         <a href="/pages/produit.html" class="btn btn-secondary position-btn">Decouvrir</a>
                     </div>
 
-                </div> 
+                </div>
                 <div class="box-product">
                     <div class="image"><a href=""><img src="/assets/img/listeProduits/img1.jpeg" alt="Livre 1"></a>
                     </div>
@@ -395,7 +425,7 @@
                         <a href="/pages/produit.html" class="btn btn-secondary position-btn">Decouvrir</a>
                     </div>
 
-                </div> 
+                </div>
                 <div class="box-product">
                     <div class="image"><a href=""><img src="/assets/img/listeProduits/img1.jpeg" alt="Livre 1"></a>
                     </div>
@@ -441,7 +471,7 @@
                         <a href="/pages/produit.html" class="btn btn-secondary position-btn">Decouvrir</a>
                     </div>
 
-                </div> 
+                </div>
                 <div class="box-product">
                     <div class="image"><a href=""><img src="/assets/img/listeProduits/img1.jpeg" alt="Livre 1"></a>
                     </div>
@@ -487,7 +517,7 @@
                         <a href="/pages/produit.html" class="btn btn-secondary position-btn">Decouvrir</a>
                     </div>
 
-                </div> 
+                </div>
                 <div class="box-product">
                     <div class="image"><a href=""><img src="/assets/img/listeProduits/img1.jpeg" alt="Livre 1"></a>
                     </div>
@@ -533,7 +563,7 @@
                         <a href="/pages/produit.html" class="btn btn-secondary position-btn">Decouvrir</a>
                     </div>
 
-                </div> 
+                </div>
                 <div class="box-product">
                     <div class="image"><a href=""><img src="/assets/img/listeProduits/img1.jpeg" alt="Livre 1"></a>
                     </div>
@@ -579,7 +609,7 @@
                         <a href="/pages/produit.html" class="btn btn-secondary position-btn">Decouvrir</a>
                     </div>
 
-                </div> 
+                </div>
                 <div class="box-product">
                     <div class="image"><a href=""><img src="/assets/img/listeProduits/img1.jpeg" alt="Livre 1"></a>
                     </div>
@@ -625,7 +655,7 @@
                         <a href="/pages/produit.html" class="btn btn-secondary position-btn">Decouvrir</a>
                     </div>
 
-                </div> 
+                </div>
                 <div class="box-product">
                     <div class="image"><a href=""><img src="/assets/img/listeProduits/img1.jpeg" alt="Livre 1"></a>
                     </div>
@@ -671,14 +701,14 @@
                         <a href="/pages/produit.html" class="btn btn-secondary position-btn">Decouvrir</a>
                     </div>
 
-                </div> 
+                </div>
             </div>
             <a href="/pages/listeProduits.html" class="btn see-more">voir plus + </a>
         </section>
 
         <section class="best-categories">
             <h2 class="title">Catégories Populaires</h2>
-            <div class="category-grid">
+            <div class="category-grid" id="category-grid-content">
                 <a href="/pages/listeProduits.html" class="category-card">
                     <img src="/assets/img/banner/Q7B7-Available-Now-Glotelho-Banner-933px335px.webp" alt="Electronique">
                     <h4>Électronique</h4>
@@ -723,7 +753,7 @@
                     <h2>Qui sommes-nous ?</h2>
                     <ul>
                         <li><a href="/pages/apropos.html">À propos</a></li>
-                        <li><a href="/pages/equipe.html">Notre équipe</a></li> 
+                        <li><a href="/pages/equipe.html">Notre équipe</a></li>
                     </ul>
                 </div>
 
@@ -851,5 +881,7 @@
         </div>
     </footer>
 </body>
+<script src="/assets/libs/swipper/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/home.js" defer></script>
 
 </html>

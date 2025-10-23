@@ -70,7 +70,25 @@ const USER_ORDERS_KEY = 'USER_ORDERS'
 const USER_APP = 'USER_APP'
 
 
-// fonction utils 
+// fonction utils  
+function sliceText(text, size) {
+    if (text.length > size) {
+        return text.slice(0, size) + '...'
+    }
+    return text
+}
+
+function isNew(date) {
+    const dateAjout = new Date(date);
+    const maintenant = new Date();
+
+    const diffMs = maintenant - dateAjout;
+
+    const diffJours = diffMs / (1000 * 60 * 60 * 24);
+
+    return diffJours <= 120;
+}
+
 function clearKey(key) {
     if (!key)
         return
@@ -132,6 +150,27 @@ function logoutUser() {
 const containerProfileHtml = document.querySelector('.profile')
 const listProfileHtml = containerProfileHtml.querySelector('.profile-menu')
 const cartHtml = document.querySelector('.cart')
+const menuContentItmsHtml = document.querySelector('#menu-item-content')
+
+function updateMenu() {
+    const categories = db?.categories
+    if (menuContentItmsHtml) {
+        menuContentItmsHtml.innerHTML = ''
+        categories?.forEach(c => {
+            const html = `
+            <li class="menu-item">
+                <a href="/pages/listeProduits.html?id_cat=${c.id}">
+                    <span><i class="fa-solid fa-${c.icon}"></i></span>
+                    <span>${c.title}</span>
+                </a>
+            </li>
+        `
+            menuContentItmsHtml.innerHTML += html
+        });
+    }
+}
+
+updateMenu()
 
 function updateCountCartUser() {
     const cart = getCartUser()
@@ -272,5 +311,8 @@ function isSubmittable(inputs) {
     }
     return false
 }
+
+
+
 
 

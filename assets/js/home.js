@@ -1,276 +1,177 @@
-console.log(db)
 
-// start message 
-const containerChat = document.querySelector('#chat-container')
-const bodyChat = containerChat.querySelector('#chat-body')
-const boxChat = containerChat.querySelector('#chat-box')
-const formChat = containerChat.querySelector('#form-chat-footer')
-const chatToggle = containerChat.querySelector('#chatToggle')
-const closeChat = containerChat.querySelector('#close-btn')
+const homeDatas = {
+    banner: db?.products.sort(() => Math.random() - 0.5).slice(0, 3) ?? [],
+    pub: db?.products[0],
+    bestSeller: db?.products?.slice(0, 3) ?? [],
+    bestProducts: db?.products?.sort((p1, p2) => p2.rate - p1.rate).slice(0, 12) ?? [],
+    categories: db?.categories
+}
+console.log(homeDatas)
 
-const messages = [
-    {
-        isBot: true,
-        content: "Bonjour ! Comment puis-je vous aider ?"
-    }
-]
+const htmlBanerItems = document.querySelector('#swiper-wrapper-banner')
+const htmlBestSellerContent = document.querySelector('#best-seller-content')
+const htmlPubProduct = document.querySelector('#pub-product')
+const htmlBestProduct = document.querySelector('#best-product-content')
+const htmlCategoryContent = document.querySelector('#category-grid-content')
+
+function initBanner() {
+    htmlBanerItems.innerHTML = ''
+    const html = ''
+    homeDatas?.banner.forEach((p, index) => {
+        let rateHtml = ''
+        for (let i = 1; i <= 5; i++) {
+            rateHtml += `<i class="fa-${i < p.rate ? 'solid' : 'regular'} fa-star"></i>`
+        }
+        const _html = `
+                    <div class=" swiper-slide">
+                        <div class="banner ${index % 2 == 0 ? '' : 'second'}">
+                            <div class="banner-content ">
+                                <h1>Bienvenue sur Buy More</h1>
+                                <h2>${p.nom}</h2>
+                                <p>Découvrez nos meilleures offres et promotions du moment.</p>
+                                <p>${sliceText(p.description, 300)}</p>
+                                <div class="rate-content">
+                                    ${rateHtml}
+                                </div>
+                                <a href="/pages/produit.html?id=${p.id}" class="btn btn-primary">Découvrir</a>
+                            </div>
+                            <div class="banner-image">
+                                <div class="slider">
+                                    <img src="${p.img}"
+                                        alt="casque_sans_fil_-_oraimo_boompop_2s">
+                                    <img src="/assets/images/iphone15pro.jpeg" alt="Iphone 15 Pro">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        `
+        htmlBanerItems.innerHTML += _html
+    });
+}
 
 
+function initBestSellerProduct() {
+    htmlBestSellerContent.innerHTML = ''
+    const html = ''
+    const products = homeDatas?.bestSeller
 
-function updateMessBox() {
-    bodyChat.innerHTML = ''
-    messages.forEach(mess => {
-        const div = document.createElement('div')
-        div.classList.add('message')
-        div.classList.add(mess.isBot ? "bot" : "user")
-        div.innerText = mess.content ?? ''
-
-        bodyChat.appendChild(div)
+    products.forEach((product, i) => {
+        let rateHtml = ''
+        for (let i = 1; i <= 5; i++) {
+            rateHtml += `<i class="fa-${i < product.rate ? 'solid' : 'regular'} fa-star"></i>`
+        }
+        const _html = `
+                <article class="product-card">
+                    <img src="${product.img}" alt="${product.nom}">
+                    <h3>${product.nom}</h3>
+                    <p class="descript">${sliceText(product.description, 70)}</p>
+                    <div class="rate-content">
+                       ${rateHtml}
+                    </div>
+                    <p class="price">${product.prix}FCFA</p>
+                    <a href="/pages/produit.html?id=${product.id}" class="btn btn-secondary">Découvrir</a>
+                </article> 
+        `
+        htmlBestSellerContent.innerHTML += _html
     })
 }
 
-formChat.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const form = e.target
-    const input = form.querySelector('input')
-    const val = input.value.trim()
-    if (val) {
-        messages.push({
-            isBot: false,
-            content: val
-        })
-        updateMessBox()
+function initPubProduct() {
+    htmlPubProduct.innerHTML = ''
+    const html = ''
+    const product = homeDatas?.pub
+    let rateHtml = ''
+    for (let i = 1; i <= 5; i++) {
+        rateHtml += `<i class="fa-${i < product.rate ? 'solid' : 'regular'} fa-star"></i>`
     }
-    form.reset()
-})
-
-closeChat.addEventListener('click', (e) => {
-    if (!boxChat.classList.contains('hide-chat')) {
-        boxChat.classList.add('hide-chat')
-    }
-})
-
-chatToggle.addEventListener('click', (e) => {
-    // if (!boxChat.classList.contains('hide-chat')) {
-    //     boxChat.classList.add('hide-chat')
-    // }
-    if (boxChat.classList.contains('hide-chat')) {
-        boxChat.classList.remove('hide-chat')
-    }
-})
-
-updateMessBox()
-
-// end messages
-
-
-
-const USER_CART_KEY = 'USER_CART'
-const USER_ORDERS_KEY = 'USER_ORDERS'
-const USER_APP = 'USER_APP'
-
-
-// fonction utils 
-function clearKey(key) {
-    if (!key)
-        return
-    localStorage.removeItem(key)
+    const _html = `
+            <div class="pub-card">
+                <img src="${product.img}"
+                    alt="Promo ${product.nom}">
+                <div class="pub-text">
+                    <h3>Promo ${product.nom}</h3>
+                    <p>-${product?.reduction} sur le ${product.nom} jusqu'à dimanche !</p>
+                    <a href="/pages/produit.html?id=${product.id}" class="btn btn-secondary">Profiter de l'offre</a>
+                </div>
+            </div>
+        `
+    htmlPubProduct.innerHTML += _html
 }
 
-function saveCartUser(cart) {
-    localStorage.setItem(USER_CART_KEY, JSON.stringify(cart))
-    updateCountCartUser()
-}
-
-function getCartUser() {
-    return JSON.parse(localStorage.getItem(USER_CART_KEY))
-}
-
-function saveUser(user) {
-    localStorage.setItem(USER_APP, JSON.stringify(user))
-}
-
-function getUser() {
-    return JSON.parse(localStorage.getItem(USER_APP))
-}
-
-// commande
-function saveOrderUser(order) {
-    localStorage.setItem(USER_ORDERS_KEY, JSON.stringify(order))
-}
-
-function getOrderUser() {
-    return JSON.parse(localStorage.getItem(USER_ORDERS_KEY)) ?? []
-}
-
-function logginUser(user) {
-    const session = {
-        id: user.id,
-        nom: user.nom,
-        prenom: user.prenom,
-        email: user.email,
-        dateConnexion: new Date().toISOString()
-    };
-    const cart = db?.paniers.find(p => p.id_user == user.id)
-    const order = db?.commandes.filter(c => c.id_panier == cart.id)
-
-    saveUser(session)
-    saveCartUser(cart)
-    saveOrderUser(order)
-}
-
-function logoutUser() {
-    clearKey(USER_APP)
-    clearKey(USER_CART_KEY)
-    clearKey(USER_ORDERS_KEY)
-    window.location.href = '/pages/connexion.html'
-}
-
-
-// start header
-
-const containerProfileHtml = document.querySelector('.profile')
-const listProfileHtml = containerProfileHtml.querySelector('.profile-menu')
-const cartHtml = document.querySelector('.cart')
-
-function updateCountCartUser() {
-    const cart = getCartUser()
-    const products = cart?.produits ?? []
-    const span_cart_count = document.querySelector('.cart-count')
-
-    span_cart_count.innerText = products.length
-}
-
-updateCountCartUser()
-
-function initHeader() {
-    const inscription = listProfileHtml.querySelector('.inscription')
-    const connexion = listProfileHtml.querySelector('.connexion')
-    const monCompte = listProfileHtml.querySelector('.mon-compte')
-    const deconnexion = listProfileHtml.querySelector('.deconnexion')
-
-    const user = getUser()
-    if (user) {
-        // user loggin
-        inscription?.classList.add('hide')
-        connexion?.classList.add('hide')
-
-        monCompte?.classList.remove('hide')
-        deconnexion?.classList.remove('hide')
-
-        cartHtml.querySelector('.cart-count')?.classList.remove('hide')
-        containerProfileHtml?.classList.add('active')
-    } else {
-        inscription.classList.remove('hide')
-        connexion.classList.remove('hide')
-
-        monCompte.classList.add('hide')
-        deconnexion.classList.add('hide')
-
-        cartHtml.querySelector('.cart-count')?.classList.add('hide')
-        containerProfileHtml.classList.remove('active')
-    }
-
-    deconnexion?.addEventListener('click', () => {
-        logoutUser()
-    })
-}
-
-initHeader()
-
-const KEY_STEP_ORDER = 'KEY_STEP_ORDER'
-
-// validation
-function validation(val, type) {
-    switch (type) {
-        case 'email': {
-            const regex = /^[\w.-]+@[\w.-]+\.\w{2,}$/;
-            if (!regex.test(val)) {
-                return {
-                    isValid: false,
-                    messages: 'Adresse e-mail invalide.'
-                };
-            }
-            return {
-                isValid: true,
-                messages: 'Adresse e-mail valide.'
-            };
+function initBestProduct() {
+    htmlBestProduct.innerHTML = ''
+    const html = ''
+    const products = homeDatas?.bestProducts
+    products.forEach((p, index) => {
+        let rateHtml = ''
+        for (let i = 1; i <= 5; i++) {
+            rateHtml += `<i class="fa-${i < p.rate ? 'solid' : 'regular'} fa-star"></i>`
         }
-
-        case 'phone': {
-            const regex = /^(?:\+?\d{1,3})?[ .-]?\d{6,14}$/;
-            if (!regex.test(val)) {
-                return {
-                    isValid: false,
-                    messages: 'Numéro de téléphone invalide.'
-                };
-            }
-            return {
-                isValid: true,
-                messages: 'Numéro de téléphone valide.'
-            };
-        }
-
-        case 'password': {
-            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-            if (!regex.test(val)) {
-                return {
-                    isValid: false,
-                    messages: 'Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule, un chiffre et un symbole.'
-                };
-            }
-            return {
-                isValid: true,
-                messages: 'Mot de passe valide.'
-            };
-        }
-
-        default: {
-            if (!val || val.length < 2) {
-                return {
-                    isValid: false,
-                    messages: 'Ce champ doit contenir au moins 2 caractères.'
-                };
-            }
-            return {
-                isValid: true,
-                messages: 'Valeur valide.'
-            };
-        }
-    }
+        const _html = `
+                    <div class="box-product">
+                    <div class="image"><a href="/pages/produit.html?id=${p.id}"><img src="${p.img}" alt="Livre 1"></a>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <h3><a href="/pages/produit.html?id=${p.id}">${p.nom}</a></h3>
+                            <p>${sliceText(p.description, 50)}</p>
+                            ${isNew(p.date_add) ? '<p class="type">New</p>' : ''}
+                            <div>
+            <div class="rating"><i class="fa-solid fa-star"></i>
+                ${rateHtml}
+            </div>
+            <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+        </div>
+        <p class="price">${p.prix} FCFA</p>
+                        </div >
+        <a href="/pages/produit.html?id=${p.id}" class="btn btn-secondary position-btn">Decouvrir</a>
+                    </div >
+                </div >
+        `
+        htmlBestProduct.innerHTML += _html
+    });
 }
 
-function HtmlValidate(input) {
-    const parentDiv = input.parentElement
-    const description = parentDiv.querySelector('.description-form')
-    const dataType = input.getAttribute('data-type')
-    const val = input.value
-    const resultat = validation(val, dataType)
-
-    if (input.tagName.toLowerCase() == 'select') {
-        resultat.messages = 'choix invalide.'
-    }
-    description.innerHTML = resultat.messages
-    if (resultat.isValid) {
-        parentDiv.classList.remove('error-validation')
-        return true
-    }
-    parentDiv.classList.add('error-validation')
-    return false
+function initCategories() {
+    htmlCategoryContent.innerHTML = ''
+    const html = ''
+    const cats = homeDatas?.categories
+    cats.forEach((c, index) => {
+        const _html = `
+                 <a href="/pages/listeProduits.html?id_cat=${c.id}" class="category-card">
+                    <img src="${c.img}" alt="${c.title}">
+                    <h4>${c.title}</h4>
+                </a>
+        `
+        htmlCategoryContent.innerHTML += _html
+    });
 }
 
-function isSubmittable(inputs) {
-    let isValid = true
-    inputs?.forEach(input => {
-        if (!HtmlValidate(input)) {
-            isValid = false
-            return
-        }
-    })
-    if (isValid) {
-        return true
-    }
-    return false
-}
 
+
+initBanner()
+initBestSellerProduct()
+initPubProduct()
+initBestProduct()
+initCategories()
+
+
+const mySwiper = new Swiper('.swiper', {
+    loop: true,
+    effect: 'fade',
+    fadeEffect: { crossFade: true },
+    speed: 800,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
