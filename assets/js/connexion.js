@@ -1,5 +1,7 @@
 
 const userDB = db?.users ?? []
+const urlParams = new URLSearchParams(window.location.search);
+const redirectUrl = urlParams.get('redirect');
 
 
 // FONCTION : AFFICHER MESSAGE
@@ -46,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Vérifier si déjà connecté
     const sessionExistante = localStorage.getItem("sessionUtilisateur");
     if (sessionExistante) {
-        console.log("⚠ Utilisateur déjà connecté, redirection...");
+        console.log(" Utilisateur déjà connecté, redirection...");
         window.location.href = "../index.html";
         return;
     }
@@ -120,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
         creerSession(utilisateur);
 
         setTimeout(function () {
-            window.location.href = "../index.html";
+            window.location.href = redirectUrl ?? "../index.html";
         }, 1000);
     });
 });

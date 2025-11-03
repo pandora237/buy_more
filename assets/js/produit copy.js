@@ -1,4 +1,3 @@
-
 const urlParams = new URLSearchParams(window.location.search);
 const id_product = urlParams.get('id');
 const produit = db.products.find(p => p.id == id_product)
@@ -9,7 +8,6 @@ if (!produit) {
 }
 
 const ContainerProduct = document.querySelector('#product-detail')
-const containerDescript = document.querySelector('#description')
 const popupOverlay = document.querySelector('#popup-overlay')
 
 function addToCart(qty) {
@@ -65,70 +63,71 @@ function popupAdd() {
 
 function initProduct() {
     ContainerProduct.innerHTML = ''
-
-    let _html = ''
-    const imgs = [produit.img, ...produit?.img_collection ?? []]
-    imgs.forEach((img, i) => {
-        _html += `<img class="thumbnail ${i == 0 ? 'active' : ''}" src="${img}" alt="Thumbnail ${img}"  onclick="changeImage(this)" >`
-    });
     const content = `
-        <div class="product-gallery">
-            <div class="main-image">
-                <img id="mainImage" src="${produit.img}" alt="${produit.nom}">
-            </div>
-            <div class="thumbnail-container">
-               ${_html}
+     <div class="product-gallery">
+        <div class="product-image">
+            <img src="${produit.img}" alt="Biscuits Maison">
+            <div class="promo-badge">-100 FCFA</div>
+            <div class="guarantee-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>12 mois</span>
+                <span>GARANTIE</span>
             </div>
         </div>
+    </div>
 
-        <div class="product-info">
-            <h1>${produit.nom}</h1>
-            <p class="brand">Marque: <strong>Apple</strong></p>
-            <div class="rating">
-                <span class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </span>
-                <span class="reviews">(128 avis)</span>
-            </div>
-            <p class="price">${produit.prix}FCFA</p>
-            <p class="availability">Disponible en stock</p>
+    <div class="product-info">
+        <h1>${produit.nom}</h1>
 
-            <div class="product-options"> 
+        <div class="price-section">
+            <span class="old-price">200 FCFA</span>
+            <span class="current-price">${produit.prix} FCFA</span>
+        </div>
 
-                <label for="quantity">Quantité:</label>
+        <div class="product-description">
+            <h3>Description</h3>
+            <p>${produit.description}</p>
+        </div>
+
+        <form class="quantity-form" id="quantity-form">
+            <div class="quantity-selector">
+                <label for="quantity">Quantité :</label>
                 <input type="number" id="quantity" name="quantity" value="1" min="1" max="${produit.qty}">
             </div>
 
             <div class="action-buttons">
-                <button type="submit" class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i> Ajouter au panier</button>
-                <a href="https://wa.me/23781050506" class="btn btn-buy-now">
-                            <i class="fab fa-whatsapp"></i>
-                            Chat sur WhatsApp
-                        </a>
-                <button class="btn-wishlist"><i class="far fa-heart"></i> Ajouter aux favoris</button>
+                <button type="submit"  type="name"  class="btn btn-success" value="${produit.id}">
+                    <i class="fas fa-shopping-cart"></i>
+                    Ajouter au Panier
+                </button>
+                <a href="https://wa.me/237" class="btn btn-secondary">
+                    <i class="fab fa-whatsapp"></i>
+                    Chat sur WhatsApp
+                </a>
+            </div>
+        </form>
+
+        <div class="product-meta">
+            <div class="meta-item">
+                <i class="fas fa-truck"></i>
+                <span>Livraison disponible sur le campus</span>
+            </div>
+            <div class="meta-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Produit disponible en stock</span>
+            </div>
+            <div class="meta-item">
+                <i class="fas fa-user-graduate"></i>
+                <span>Vendu par un étudiant vérifié</span>
             </div>
         </div>
+    </div>
     `
     ContainerProduct.innerHTML = content
 
-    if (containerDescript) {
-        containerDescript.innerHTML = `
-        <h2>Description du produit</h2>
-        <p>${produit?.description || ''}</p>
-    `;
-    }
-
-    const form = document.querySelector('#product-detail')
+    const form = document.querySelector('#quantity-form')
     form?.addEventListener('submit', (e) => {
         e.preventDefault()
-        const user = getUser()
-        if (!user) {
-            window.location.href = `/pages/connexion.html?redirect=${window.location.href}`
-        }
         const formData = new FormData(e.target)
         const quantity = formData.get('quantity')
         addToCart(quantity)
@@ -148,41 +147,44 @@ initProduct()
 
 
 
-
-// Fonction pour changer d'onglet 
-const tabButtons = document.querySelectorAll('.tab-button');
-
-tabButtons.forEach(tab => {
-    tab.addEventListener('click', e => {
-        openTab(e);
-    });
-});
-
-function openTab(e) {
-    const targetId = e.currentTarget.dataset.id;
-
-    tabButtons.forEach(btn => btn.classList.remove('active'));
-    const tabContents = document.querySelectorAll('.tab-content');
-    tabContents.forEach(content => content.classList.remove('active'));
-
-    e.currentTarget.classList.add('active');
-
-    const targetContent = document.getElementById(targetId);
-    if (targetContent) {
-        targetContent.classList.add('active');
+// Fonction pour changer d'onglet
+function openTab(evt, tabName) {
+    // Cacher tous les contenus d'onglets
+    const tabContents = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active");
     }
+
+    // Retirer la classe active de tous les boutons
+    const tabButtons = document.getElementsByClassName("tab-button");
+    for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active");
+    }
+
+    // Afficher le contenu de l'onglet actuel
+    document.getElementById(tabName).classList.add("active");
+
+    // Ajouter la classe active au bouton cliqué
+    evt.currentTarget.classList.add("active");
 }
 
+// Fonction pour changer l'image principale
 function changeImage(element) {
     const mainImage = document.getElementById('mainImage');
     if (mainImage) {
+        // Changer l'image principale avec la source de la miniature
         mainImage.src = element.src.replace('/100', '/500');
 
+        // Retirer la classe active de toutes les miniatures
         const thumbnails = document.getElementsByClassName("thumbnail");
         for (let i = 0; i < thumbnails.length; i++) {
             thumbnails[i].classList.remove("active");
         }
 
+        // Ajouter la classe active à la miniature cliquée
         element.classList.add("active");
     }
 }
+
+// Empêcher les erreurs si les éléments n'existent pas
+console.log('Tabs.js chargé avec succès');

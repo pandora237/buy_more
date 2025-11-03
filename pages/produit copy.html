@@ -157,144 +157,173 @@
             </div>
         </div>
     </header>
-    <main>
-        <div class="container">
-            <div class="product-page">
-                <nav class="breadcrumb">
-                    <a href="#">Accueil</a>
-                    <span>/</span>
-                    <a href="#">Électronique</a>
-                    <span>/</span>
-                    <a href="#">Smartphones</a>
-                    <span>/</span>
-                    <span>iPhone 14 Pro Max</span>
-                </nav>
-
-                <form class="product-detail" id="product-detail">
-                    <div class="product-gallery">
-                        <div class="main-image">
-                            <img id="mainImage" src="../assets/img/other/img11.jpeg" alt="iPhone 14 Pro Max">
-                        </div>
-                        <div class="thumbnail-container">
-                            <img class="thumbnail active" src="../assets/img/other/img11.jpeg" alt="Thumbnail 1"
-                                onclick="changeImage(this)">
-                            <img class="thumbnail" src="../assets/img/other/img11.jpeg" alt="Thumbnail 2"
-                                onclick="changeImage(this)">
-                        </div>
-                    </div>
-
-                    <div class="product-info">
-                        <h1>iPhone 14 Pro Max</h1>
-                        <p class="brand">Marque: <strong>Apple</strong></p>
-                        <div class="rating">
-                            <span class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </span>
-                            <span class="reviews">(128 avis)</span>
-                        </div>
-                        <p class="price">1 299 000 FCFA</p>
-                        <p class="availability">Disponible en stock</p>
-
-                        <div class="product-options">
-                            <label for="color">Couleur:</label>
-                            <select id="color">
-                                <option>Noir</option>
-                                <option>Argent</option>
-                                <option>Or</option>
-                            </select>
-
-                            <label for="storage">Capacité:</label>
-                            <select id="storage">
-                                <option>128 Go</option>
-                                <option>256 Go</option>
-                                <option>512 Go</option>
-                            </select>
-
-                            <label for="quantity">Quantité:</label>
-                            <input type="number" id="quantity" name="quantity" value="1" min="1" max="99">
-                        </div>
-
-                        <div class="action-buttons">
-                            <button type="submit" class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i> Ajouter
-                                au panier</button>
-                            <a href="https://wa.me/23781050506" class="btn btn-buy-now">
-                                <i class="fab fa-whatsapp"></i>
-                                Chat sur WhatsApp
-                            </a>
-                            <button class="btn-wishlist"><i class="far fa-heart"></i> Ajouter aux favoris</button>
-                        </div>
-                    </div>
-                </form>
-
-                <div class="tabs">
-                    <button class="tab-button active" data-id='description'>Description</button>
-                    <button class="tab-button" data-id='specifications'>Spécifications</button>
-                    <button class="tab-button" data-id='reviews'>Avis</button>
-                </div>
-
-                <div id="description" class="tab-content active">
-                    <h2>Description du produit</h2>
-                    <p>
-                        L'iPhone 14 Pro Max est le smartphone le plus avancé d'Apple, offrant des performances
-                        exceptionnelles avec sa puce A16 Bionic.
-                        Il dispose d'un écran Super Retina XDR de 6,7 pouces, d'un système photo professionnel avec un
-                        capteur principal de 48 MP,
-                        et de la technologie Dynamic Island pour une interaction fluide avec vos notifications.
-                    </p>
-                </div>
-
-                <div id="specifications" class="tab-content">
-                    <h2>Spécifications techniques</h2>
-                    <ul>
-                        <li><strong>Écran:</strong> Super Retina XDR 6,7 pouces</li>
-                        <li><strong>Processeur:</strong> Puce A16 Bionic</li>
-                        <li><strong>Caméra:</strong> Triple caméra 48MP + 12MP + 12MP</li>
-                        <li><strong>Batterie:</strong> Jusqu'à 29 heures de lecture vidéo</li>
-                        <li><strong>Système d'exploitation:</strong> iOS 16</li>
-                    </ul>
-                </div>
-
-                <div id="reviews" class="tab-content">
-                    <h2>Avis des clients</h2>
-                    <div class="review">
-                        <div class="review-header">
-                            <span class="reviewer-name"><i class="fas fa-user-circle"></i> Jean Dupont</span>
-                            <span class="review-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </span>
-                        </div>
-                        <p class="review-text">Excellent produit ! La qualité de l'écran et des photos est
-                            impressionnante.</p>
-                        <p class="review-date">Publié le 12 octobre 2024</p>
-                    </div>
-
-                    <div class="review">
-                        <div class="review-header">
-                            <span class="reviewer-name"><i class="fas fa-user-circle"></i> Marie Martin</span>
-                            <span class="review-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </span>
-                        </div>
-                        <p class="review-text">Très bon téléphone, mais un peu cher. La batterie tient toute la journée.
-                        </p>
-                        <p class="review-date">Publié le 5 octobre 2024</p>
+    <div class="container">
+        <!-- Section Produit -->
+        <section class="product-detail" id="product-detail">
+            <div class="product-gallery">
+                <div class="product-image">
+                    <img src="../assets/img/other/gros-plan-de-texture-des-aliments-nutritifs.jpg" alt="Biscuits Maison">
+                    <div class="promo-badge">-100 FCFA</div>
+                    <div class="guarantee-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>12 mois</span>
+                        <span>GARANTIE</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+
+            <div class="product-info">
+                <h1>Biscuits Maison par Étudiant</h1>
+
+                <div class="price-section">
+                    <span class="old-price">200 FCFA</span>
+                    <span class="current-price">100 FCFA</span>
+                </div>
+
+                <div class="product-description">
+                    <h3>Description</h3>
+                    <p>Délicieux biscuits faits avec amour. Idéal pour une pause étude. Vendu par un cadet de 3 GI.
+                        Ingrédients naturels et fait maison avec soin.</p>
+                </div>
+
+                <form class="quantity-form">
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantité :</label>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="99">
+                    </div>
+
+                    <div class="action-buttons">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-shopping-cart"></i>
+                            Ajouter au Panier
+                        </button>
+                        <a href="https://wa.me/237" class="btn btn-secondary">
+                            <i class="fab fa-whatsapp"></i>
+                            Chat sur WhatsApp
+                        </a>
+                    </div>
+                </form>
+
+                <div class="product-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-truck"></i>
+                        <span>Livraison disponible sur le campus</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Produit disponible en stock</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Vendu par un étudiant vérifié</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Avis -->
+        <section class="reviews-section">
+            <div class="reviews-header">
+                <h2>Avis des clients</h2>
+                <div class="reviews-stats">
+                    <div class="average-rating">
+                        <span class="rating-number">4.5</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="total-reviews">(12 avis)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Liste des avis -->
+            <div class="reviews-list">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <i class="fas fa-user-circle"></i>
+                            <span class="reviewer-name">Étudiant A</span>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-text">Super bons ! Je recommande vivement. Parfait pour les pauses entre les cours.
+                    </p>
+                    <span class="review-date">Il y a 2 jours</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <i class="fas fa-user-circle"></i>
+                            <span class="reviewer-name">Étudiant B</span>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-text">Bon rapport qualité-prix. Les biscuits sont savoureux et bien emballés.</p>
+                    <span class="review-date">Il y a 5 jours</span>
+                </div>
+            </div>
+
+            <!-- Formulaire d'ajout d'avis -->
+            <div class="add-review-section">
+                <h3>Laisser un avis</h3>
+                <form class="review-form" method="post" action="">
+                    <div class="form-group">
+                        <label for="reviewer-name">Votre nom</label>
+                        <input type="text" id="reviewer-name" name="reviewer-name" placeholder="Ex: Étudiant C"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Votre note</label>
+                        <div class="star-rating">
+                            <input type="radio" name="rating" id="star5" value="5">
+                            <label for="star5"><i class="fas fa-star"></i></label>
+
+                            <input type="radio" name="rating" id="star4" value="4">
+                            <label for="star4"><i class="fas fa-star"></i></label>
+
+                            <input type="radio" name="rating" id="star3" value="3">
+                            <label for="star3"><i class="fas fa-star"></i></label>
+
+                            <input type="radio" name="rating" id="star2" value="2">
+                            <label for="star2"><i class="fas fa-star"></i></label>
+
+                            <input type="radio" name="rating" id="star1" value="1">
+                            <label for="star1"><i class="fas fa-star"></i></label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="review-text">Votre avis</label>
+                        <textarea id="review-text" name="review-text" rows="4"
+                            placeholder="Partagez votre expérience avec ce produit..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Publier l'avis
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
 
     <!-- footerrrrrrrr----------------------------------------------------------------------------------------------------- -->
 
@@ -320,7 +349,7 @@
                     <h2>Qui sommes-nous ?</h2>
                     <ul>
                         <li><a href="/pages/apropos.html">À propos</a></li>
-                        <li><a href="/pages/equipe.html">Notre équipe</a></li>
+                        <li><a href="/pages/equipe.html">Notre équipe</a></li> 
                     </ul>
                 </div>
 
