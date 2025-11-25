@@ -96,31 +96,39 @@ function listingProduits(produits){
 
 listingProduits(produits)
 range(produits)
+
+function filtrerProduitsParCategorie() {
+    if(categorie.value === ""){
+        let produits = db.products;
+        listingProduits(produits);
+        range(produits);
+    } else {
+        let idCategorie = Number(categorie.value);
+        let id_produits_Categorie = db.produit_categorie.filter(
+            p => p.id_cat === idCategorie
+        );
+
+        let produits = db.products.filter(p =>
+            id_produits_Categorie.some(item =>
+                item.id_cat === idCategorie && item.id_prod === p.id
+            )
+        );
+
+        listingProduits(produits);
+        range(produits);
+    }
+}
+
+
 let categorie = document.getElementById("categorie")
 
-categorie.addEventListener("change", () => {
-    if(categorie.value === ""){
-        let produits = db.products
-        listingProduits(produits)
-        range(produits)
-    }else{
-
-        let idCategorie = Number(categorie.value)
-        let id_produits_Categorie = db.produit_categorie.filter(p => p.id_cat === idCategorie)
-        
-        let i=0
-        
-        let produits = db.products.filter(p => id_produits_Categorie.some( item => 
-            item.id_cat === idCategorie && item.id_prod === p.id 
-            
-            ))
-        listingProduits(produits)
-        range(produits)
-    }
-})
+const params = new URLSearchParams(window.location.search);
+const idCat = params.get('id_cat');
+categorie.value = idCat ;
 
 
-
+categorie.addEventListener("change", filtrerProduitsParCategorie);
+filtrerProduitsParCategorie(); 
 
 
 
