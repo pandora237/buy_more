@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon-compte - Buy More</title>
+    <title>Mon compte</title>
 
-    <link rel="stylesheet" href="/assets/css/index.css">
-    <link rel="stylesheet" href="/assets/css/index-admin.css">
-    <link rel="stylesheet" href="/assets/css/mon-compte.css">
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="../../assets/css/index-admin.css">
+    <link rel="stylesheet" href="../../assets/css/mon-compte.css">
+
+    <!-- js global -->
+    <script src="../../assets/js/db.js" defer></script>
+    <script src="../../assets/js/index.js" defer></script>
+    <script src="../../assets/js/commandes.js" defer></script>
+    
 </head>
-
-<body>
-    <header>
+<body><header>
         <div id="anchor-top"></div>
         <div id="header-block">
         </div>
@@ -113,16 +116,16 @@
                    L20.9 6H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 16.37 
                    5.48 18 7 18h12v-2H7l1.1-2h9.45c.75 0 1.41-.41 
                    1.75-1.05z" />
-              </svg>
-              <span class="cart-count hide">3</span>
-            </div>
-          </a>
-        </div>
-      </nav>
-      <div id="menu" class=" ">
-        <div class="menu-items">
-          <div class="menu-items">
+                            </svg>
+                            <span class="cart-count hide">3</span>
+                        </div>
+                    </a>
+                </div>
+            </nav>
+            <div id="menu" class=" ">
+                <div class="menu-items">
                     <ul class="" id="menu-item-content">
+                        <li class="menu-item">
                             <a href="#">
                                 <span><i class="fa-solid fa-tv"></i></span>
                                 <span>Électronique</span>
@@ -147,73 +150,89 @@
                             </a>
                         </li>
                     </ul>
-        </div>
-      </div>
-    </div>
-  </header>
-
-    <main class="container">
-        <h1 class="title">Mon compte</h1>
-        <section class="content-compte">
-            <div>
-                <aside>
-                    <ul>
-                        <li>
-                            <a href="./mes-commandes.html"><i class="fa fa-shopping-cart"></i>
-                                <span class="item-aside">Mes commandes</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-user"> </i>
-                                <span class="item-aside">Profil</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-heart"></i>
-                                <span class="item-aside">Favoris</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-gear"></i>
-                                <span class="item-aside">Paramètres</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-sign-out-alt"></i>
-                                <span class="item-aside">Déconnexion</span>
-                            </a>
-                        </li>
-                    </ul>
-                </aside>
-            </div>
-
-            <div class="content">
-                <div class="content-grid">
-                    <div class="cart-dash">
-                        <i class="fa fa-gear"></i>
-                        <h2>Paramètres du compte</h2>
-                    </div>
-
-                    <div class="cart-dash">
-                        <i class="fa fa-box"></i>
-                        <h2>Historique des commandes</h2>
-                    </div>
-
-                    <div class="cart-dash">
-                        <i class="fa fa-heart"></i>
-                        <h2>Mes favoris</h2>
-                    </div>
-
-                    <div class="cart-dash">
-                        <i class="fa fa-shield-alt"></i>
-                        <h2>Sécurité</h2>
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </header>
+    
+    <main class="container">
+       
+
+        <div class="account-grid">
+            <aside class="sidebars">
+                <div class="profile-section">
+                    <div class="avatar">JD</div>
+                    <div class="profile-name">Jean Dupont</div>
+                    <div class="profile-email">jean.dupont@email.com</div>
+                </div>
+
+                <nav>
+                    <div class="menu-item active">
+                        <span class="menu-icon"></span>
+                        <span>Informations</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-icon"></span>
+                        <span>Mes commandes</span>
+                    </div>
+
+                    <div class="menu-item">
+                        <span class="menu-icon"></span>
+                        <span>Paramètres</span>
+                    </div>
+            
+                  <div class="menu-item">
+                        <span class="menu-icon"></span>
+                        <span class="deconnexion">Déconnexion</span>
+                    </div>
+                </nav>
+            </aside>
+
+
+            <div class="content">
+                <div class="header">
+                    <h1>Mon Compte</h1>
+                    <p>Gérez vos informations personnelles et vos commandes</p>
+                </div>
+                <h2>Informations personnelles</h2>
+                <div class="info">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-label">Nom complet</div>
+                            <div class="info-value">Jean Tchomgo</div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-label">Email</div>
+                            <div class="info-value">jean.tchomgo@email.com</div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-label">Téléphone</div>
+                            <div class="info-value">+237 6 12 34 56 78</div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-label">Date d'inscription</div>
+                            <div class="info-value">15 Mars 2024</div>
+                        </div>
+                    </div>
+
+                    
+                    <button class="btn">Modifier mes informations</button>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
+    <script>
+        const menuItems = document.querySelectorAll('.menu-item');
+        
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                menuItems.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+     <footer>
         <div id="new-letter">
             <div class="container new-letter-content">
                 <div>
@@ -363,5 +382,4 @@
         </div>
     </footer>
 </body>
-
 </html>
