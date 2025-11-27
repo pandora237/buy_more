@@ -72,9 +72,9 @@
   margin:0 0 14px;
 }
 
-form{ margin-top:8px; }
+main form{ margin-top:8px; }
 
-label{
+main label{
   display:block;
   font-size:13px;
   margin-bottom:6px;
@@ -82,7 +82,7 @@ label{
   color:#444;
 }
 
-input[type="text"], input[type="email"], textarea{
+main input[type="text"],main input[type="email"],main textarea{
   width:100%;
   padding:12px 14px;
   border-radius:6px;
@@ -93,12 +93,12 @@ input[type="text"], input[type="email"], textarea{
   transition:box-shadow .15s, border-color .15s;
 }
 
-input:focus, textarea:focus{
+main input:focus, textarea:focus{
   box-shadow: 0 6px 18px rgba(124,31,31,0.06);
   border-color: rgba(124,31,31,0.35);
 }
 
-textarea{
+main textarea{
   min-height:170px;
   resize:vertical;
 }
