@@ -162,7 +162,7 @@ section {
 }
 
 .btn-success:hover {
-   opacity: 0.8;
+    opacity: 0.8;
 }
 
 .btn-warning {
@@ -505,11 +505,17 @@ header {
     }
 }
 
+
 @media (max-width: 450px) {
+    .container {
+        padding-top: 80px !important;
+    }
+
     .menu-items {
         overflow-x: auto;
         max-width: 100%;
     }
+
 }
 
 /* end header */

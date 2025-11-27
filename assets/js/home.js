@@ -30,7 +30,7 @@ function initBanner() {
                                 <h1>Bienvenue sur Buy More</h1>
                                 <h2>${p.nom}</h2>
                                 <p>Découvrez nos meilleures offres et promotions du moment.</p>
-                                <p>${sliceText(p.description, 300)}</p>
+                                <p>${sliceText(p.description, 50)}</p>
                                 <div class="rate-content">
                                     ${rateHtml}
                                 </div>
@@ -39,8 +39,7 @@ function initBanner() {
                             <div class="banner-image">
                                 <div class="slider">
                                     <img src="${p.img}"
-                                        alt="casque_sans_fil_-_oraimo_boompop_2s">
-                                    <img src="/assets/img/other/iphone15pro.jpeg" alt="Iphone 15 Pro">
+                                        alt="casque_sans_fil_-_oraimo_boompop_2s"> 
                                 </div>
                             </div>
                         </div>

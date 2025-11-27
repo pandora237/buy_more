@@ -29,17 +29,20 @@
 }
 
 .banner-image {
-    width: 300px;
+    max-width: 300px;
     max-width: 100%;
     overflow: hidden;
     border-radius: 12px;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: auto;
+    max-height: 100%;
 }
 
 .slider {
     display: flex;
     animation: scroll 16s linear infinite;
+    align-items: center;
+    justify-content: center;
 }
 
 .rate-content {
@@ -54,6 +57,7 @@
     border-radius: 12px;
     height: auto;
     flex: 0 0 auto;
+    max-height: 100%;
 }
 
 @media (max-width: 420px) {
@@ -61,8 +65,24 @@
         width: 100%;
     }
 
+    .banner-content p {
+        font-size: small;
+    }
+
     .banner-image img {
         width: calc(100% - 16px);
+    }
+
+    .banner-content h1 {
+        font-size: 1.2rem;
+    }
+
+    .banner-content h2 {
+        font-size: 1rem;
+    }
+
+    .banner {
+        padding: 10px;
     }
 }
 
