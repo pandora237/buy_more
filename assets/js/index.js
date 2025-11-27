@@ -2,8 +2,6 @@
 console.log(db)
 
 
-
-
 // start message 
 const containerChat = document.querySelector('#chat-container')
 const bodyChat = containerChat.querySelector('#chat-body')
@@ -71,7 +69,7 @@ function secureAdminPages() {
     const currentUser = getUser()
     const pathnameTab = window.location.pathname?.split('/');
     const key_admin = pathnameTab.length > 1 ? pathnameTab[1] : ''
-    if (!(key_admin == 'admin' && !currentUser)) {
+    if (!currentUser) {
         window.location.href = `/pages/connexion.html?redirect=${window.location.href}`
     }
 }

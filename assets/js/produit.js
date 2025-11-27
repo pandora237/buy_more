@@ -1,3 +1,4 @@
+import { stopPageLoage } from "./helpers.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const id_product = urlParams.get('id');
@@ -186,3 +187,7 @@ function changeImage(element) {
         element.classList.add("active");
     }
 }
+window.changeImage = changeImage
+
+
+stopPageLoage()

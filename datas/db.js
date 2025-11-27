@@ -219,12 +219,12 @@ const db = {
     ],
 
     "users": [
-        { "id": 1, "nom": "Ngue", "prenom": "Paul", "username": "p.ngue", "role": "client", "email": "paul.ngue@example.com", "password": "$2b$10$fakehashedpassword1" },
-        { "id": 2, "nom": "Abena", "prenom": "Sophie", "username": "s.abena", "role": "client", "email": "sophie.abena@example.com", "password": "$2b$10$fakehashedpassword2" },
-        { "id": 3, "nom": "Tchaptchet", "prenom": "Marc", "username": "m.tch", "role": "client", "email": "marc.tch@example.com", "password": "$2b$10$fakehashedpassword3" },
-        { "id": 4, "nom": "Admin", "prenom": "Super", "username": "admin", "role": "admin", "email": "admin@demo.com", "password": "$2b$10$fakehashedadmin" },
-        { "id": 5, "nom": "Koulla", "prenom": "Lina", "username": "l.koulla", "role": "client", "email": "lina.koulla@example.com", "password": "$2b$10$fakehashedpassword4" },
-        { "id": 6, "nom": "Obame", "prenom": "Eric", "username": "e.obame", "role": "client", "email": "eric.obame@example.com", "password": "$2b$10$fakehashedpassword5" }
+        { "id": 1, "nom": "Ngue", "prenom": "Paul", "username": "p.ngue", "role": "client", "email": "paul.ngue@example.com", "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f" },
+        { "id": 2, "nom": "Abena", "prenom": "Sophie", "username": "s.abena", "role": "client", "email": "sophie.abena@example.com", "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f" },
+        { "id": 3, "nom": "Tchaptchet", "prenom": "Marc", "username": "m.tch", "role": "client", "email": "marc.tch@example.com", "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f" },
+        { "id": 4, "nom": "Admin", "prenom": "Super", "username": "admin", "role": "admin", "email": "admin@demo.com", "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f" },
+        { "id": 5, "nom": "Koulla", "prenom": "Lina", "username": "l.koulla", "role": "client", "email": "lina.koulla@example.com", "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f" },
+        { "id": 6, "nom": "Obame", "prenom": "Eric", "username": "e.obame", "role": "client", "email": "eric.obame@example.com", "password": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f" }
     ],
 
     "paniers": [

@@ -1,3 +1,5 @@
+import { stopPageLoage } from "./helpers.js";
+
 secureAdminPages()
 
 const popupOverlay = document.querySelector('#popup-overlay')
@@ -103,3 +105,5 @@ selects?.forEach(select => {
 
 
 setStepOrder()
+
+stopPageLoage()

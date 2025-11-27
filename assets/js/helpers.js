@@ -16,3 +16,12 @@ export function builderProductsFirst(product) {
                 </article> 
         `
 }
+
+export function stopPageLoage() {
+    setTimeout(() => {
+        const contentHtml = document.querySelector('#page-loade-overlay')
+        if (contentHtml) {
+            contentHtml.classList.add('hide')
+        }
+    }, [400])
+}

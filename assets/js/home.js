@@ -1,4 +1,4 @@
-import { builderProductsFirst } from "./helpers.js";
+import { builderProductsFirst, stopPageLoage } from "./helpers.js";
 
 const homeDatas = {
     banner: db?.products.sort(() => Math.random() - 0.5).slice(0, 3) ?? [],
@@ -40,7 +40,7 @@ function initBanner() {
                                 <div class="slider">
                                     <img src="${p.img}"
                                         alt="casque_sans_fil_-_oraimo_boompop_2s">
-                                    <img src="/assets/images/iphone15pro.jpeg" alt="Iphone 15 Pro">
+                                    <img src="/assets/img/other/iphone15pro.jpeg" alt="Iphone 15 Pro">
                                 </div>
                             </div>
                         </div>
@@ -160,4 +160,6 @@ const mySwiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+stopPageLoage()
 

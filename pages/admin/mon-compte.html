@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +13,12 @@
     <!-- js global -->
     <script src="../../datas/db.js" defer></script>
     <script src="../../assets/js/index.js" defer></script>
-    <script src="../../assets/js/commandes.js" defer></script>
-    
+    <script type="module" src="../../assets/js/mon-compte.js" defer></script>
+
 </head>
-<body><header>
+
+<body>
+    <header>
         <div id="anchor-top"></div>
         <div id="header-block">
         </div>
@@ -154,9 +157,9 @@
             </div>
         </div>
     </header>
-    
+
     <main class="container">
-       
+
 
         <div class="account-grid">
             <aside class="sidebars">
@@ -180,8 +183,8 @@
                         <span class="menu-icon"></span>
                         <span>Paramètres</span>
                     </div>
-            
-                  <div class="menu-item">
+
+                    <div class="menu-item">
                         <span class="menu-icon"></span>
                         <span class="deconnexion">Déconnexion</span>
                     </div>
@@ -215,8 +218,8 @@
                         </div>
                     </div>
 
-                    
-                   
+
+
                 </div>
             </div>
         </div>
@@ -224,15 +227,15 @@
 
     <script>
         const menuItems = document.querySelectorAll('.menu-item');
-        
+
         menuItems.forEach(item => {
-            item.addEventListener('click', function() {
+            item.addEventListener('click', function () {
                 menuItems.forEach(i => i.classList.remove('active'));
                 this.classList.add('active');
             });
         });
     </script>
-     <footer>
+    <footer>
         <div id="new-letter">
             <div class="container new-letter-content">
                 <div>
@@ -255,7 +258,7 @@
                     <ul>
                         <li><a href="/pages/apropos.html">À propos</a></li>
                         <li><a href="/pages/equipe.html">Notre équipe</a></li>
-                        <li><a href="/pages/contact.html">Nous contacter</a></li> 
+                        <li><a href="/pages/contact.html">Nous contacter</a></li>
                     </ul>
                 </div>
 
@@ -383,4 +386,5 @@
         </div>
     </footer>
 </body>
+
 </html>

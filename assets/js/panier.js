@@ -1,3 +1,5 @@
+import { stopPageLoage } from "./helpers.js";
+
 secureAdminPages()
 
 let cart = getCartUser()
@@ -158,3 +160,6 @@ function addToCart(product) {
 document.addEventListener('DOMContentLoaded', () => {
     updateCountCartUser();
 });
+
+
+stopPageLoage()

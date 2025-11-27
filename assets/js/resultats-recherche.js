@@ -1,4 +1,4 @@
-import { builderProductsFirst } from "./helpers.js";
+import { builderProductsFirst, stopPageLoage } from "./helpers.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const query = urlParams.get('query');
@@ -36,3 +36,6 @@ resultsPageHtml.innerHTML = `
     </div>
     ${noResultsHtml}
 `;
+
+
+stopPageLoage()

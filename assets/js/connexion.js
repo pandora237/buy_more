@@ -29,7 +29,12 @@ function getUtilisateursLocalStorage() {
 // FONCTION : TROUVER UTILISATEUR
 
 function trouverUtilisateur(email, password) {
-    return db?.users.find(user => user.email === email && user.password === password)
+    return db?.users.find(user => user.email === email && verifyPasswordDb(password, user.password))
+}
+
+async function verifyPasswordDb(plainText, hashedPassword) {
+    const hashOfPlain = await hashedPassword(plainText);
+    return hashOfPlain === hashedPassword;
 }
 
 

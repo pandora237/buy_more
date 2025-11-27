@@ -1,3 +1,5 @@
+import { stopPageLoage } from "./helpers.js";
+
 const urlParams = new URLSearchParams(window.location.search);
 const id_product = urlParams.get('id');
 const produit = db.products.find(p => p.id == id_product)
@@ -188,3 +190,6 @@ function changeImage(element) {
 
 // Empêcher les erreurs si les éléments n'existent pas
 console.log('Tabs.js chargé avec succès');
+
+
+stopPageLoage()

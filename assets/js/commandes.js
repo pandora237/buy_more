@@ -1,3 +1,5 @@
+import { stopPageLoage } from "./helpers.js";
+
 secureAdminPages()
 
 let orders = getOrderUser()
@@ -57,3 +59,5 @@ function updateOrdersHtml() {
 
 
 updateOrdersHtml()
+
+stopPageLoage()

@@ -1,3 +1,5 @@
+import { stopPageLoage } from "./helpers.js"
+
 secureAdminPages()
 
 const form = document.querySelector('#form-step-1')
@@ -48,5 +50,7 @@ inputs?.forEach(input => {
 selects?.forEach(select => {
     select.addEventListener('change', e => HtmlValidate(e.target))
 })
+
+stopPageLoage()
 
 
