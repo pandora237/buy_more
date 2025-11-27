@@ -112,6 +112,17 @@ section {
     color: gold;
 }
 
+.not-result {
+    width: max-content;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding: 100px 0px;
+    text-align: center;
+    color: var(--col-danger);
+}
+
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -493,8 +504,9 @@ header {
         max-height: 50%;
     }
 }
+
 @media (max-width: 450px) {
-   .menu-items  { 
+    .menu-items {
         overflow-x: auto;
         max-width: 100%;
     }

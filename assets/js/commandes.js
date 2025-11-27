@@ -1,3 +1,5 @@
+secureAdminPages()
+
 let orders = getOrderUser()
 console.log(' orders : ', orders)
 
@@ -6,16 +8,16 @@ const contairnerOrders = document.querySelector('#contairner-orders')
 
 function updateOrdersHtml() {
 
-    contairnerOrders.innerHTML = '';
-    orders.forEach(elt => {
-        const id_prod = JSON.parse(elt.id_prod);
-        const products = db.products.filter(item => id_prod.includes(item.id));
+  contairnerOrders.innerHTML = '';
+  orders.forEach(elt => {
+    const id_prod = JSON.parse(elt.id_prod);
+    const products = db.products.filter(item => id_prod.includes(item.id));
 
-        console.log('orders.id_prod : ', products);
+    console.log('orders.id_prod : ', products);
 
-        const productsHtml = products.map(p => `<p>• ${p.nom}</p>`).join('');
+    const productsHtml = products.map(p => `<p>• ${p.nom}</p>`).join('');
 
-        const item = `
+    const item = `
     <div class="commande-card">
       <div class="commande-header">
         <div>
@@ -23,13 +25,13 @@ function updateOrdersHtml() {
           <p class="commande-date">${elt?.date}</p>
         </div>
         <span class="badge ${elt?.status === 'paid'
-                ? 'success'
-                : elt?.status === 'pending'
-                    ? 'warning'
-                    : elt?.status === 'cancel'
-                        ? 'danger'
-                        : 'default'
-            }">
+        ? 'success'
+        : elt?.status === 'pending'
+          ? 'warning'
+          : elt?.status === 'cancel'
+            ? 'danger'
+            : 'default'
+      }">
           ${elt?.status}
         </span>
       </div>
@@ -47,8 +49,8 @@ function updateOrdersHtml() {
     </div>
   `;
 
-        contairnerOrders.innerHTML += item;
-    });
+    contairnerOrders.innerHTML += item;
+  });
 
 
 }

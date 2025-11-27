@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="../assets/css/equipe.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <script src="/datas/db.js" defer></script>
 </head>
 
 <body>
-    <header>
+     <header>
         <div id="anchor-top"></div>
         <div id="header-block">
         </div>
@@ -65,15 +67,15 @@
                         </div>  
                 </div> -->
                     <div class="logo">
-                        <a href="/index.html">
+                        <a href="../index.html">
                             <img src="/assets/img/logo2.png" alt="logo" title="Buy More" height="50">
                         </a>
                     </div>
                 </div>
 
                 <div class="search-bar">
-                    <form>
-                        <input type="text" placeholder="Rechercher un produit...">
+                    <form id="form-searchbar">
+                        <input type="text" name="query" placeholder="Rechercher un produit...">
                         <button type="submit">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white"
                                 viewBox="0 0 24 24">
@@ -90,17 +92,18 @@
                         <option value="en">EN</option>
                     </select>
 
-                    <div class="profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#333" viewBox="0 0 24 24">
+                    <div class="profile ">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#333" viewBox="0 0 24 24">
                             <path
                                 d="M12 2a5 5 0 110 10 5 5 0 010-10zm0 12c4.97 0 9 2.91 9 6.5V22H3v-1.5C3 16.91 7.03 14 12 14z" />
-                        </svg>
+                        </svg> -->
+                        <i class="fa-solid fa-user"></i>
 
                         <ul class="profile-menu">
-                            <li><a href="/pages/inscription.html">Inscription</a></li>
-                            <li><a href="/pages/connexion.html">Connexion</a></li>
-                            <li><a href="/pages/admin/mon-compte.html">Mon compte</a></li>
-                            <li><a href="#">Déconnexion</a></li>
+                            <li class="inscription"><a href="/pages/inscription.html">Inscription</a></li>
+                            <li class="connexion"><a href="/pages/connexion.html">Connexion</a></li>
+                            <li class="mon-compte"><a href="/pages/admin/mon-compte.html">Mon compte</a></li>
+                            <li class="deconnexion"><span>Déconnexion</span></li>
                         </ul>
                     </div>
 
@@ -113,16 +116,16 @@
                    L20.9 6H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 16.37 
                    5.48 18 7 18h12v-2H7l1.1-2h9.45c.75 0 1.41-.41 
                    1.75-1.05z" />
-                            </svg>
-                            <span class="cart-count">3</span>
-                        </div>
-                    </a>
-                </div>
-            </nav>
-            <div id="menu" class=" ">
-                <div class="menu-items">
-                    <ul class="">
-                        <li class="menu-item">
+              </svg>
+              <span class="cart-count hide">3</span>
+            </div>
+          </a>
+        </div>
+      </nav>
+      <div id="menu" class=" ">
+        <div class="menu-items">
+          <div class="menu-items">
+                    <ul class="" id="menu-item-content">
                             <a href="#">
                                 <span><i class="fa-solid fa-tv"></i></span>
                                 <span>Électronique</span>
@@ -147,10 +150,10 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-            </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
     <main class="container">
         <section class="team-section">

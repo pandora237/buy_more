@@ -1,3 +1,5 @@
+secureAdminPages()
+
 let cart = getCartUser()
 console.log(' cart : ', cart)
 let products = cart?.produits ?? []

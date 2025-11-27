@@ -201,8 +201,7 @@ const db = {
             "date_add": "2025-10-12",
             "reduction": 0
         }
-    ]
-    ,
+    ],
 
     "produit_categorie": [
         { "id_cat": 1, "id_prod": 1 },

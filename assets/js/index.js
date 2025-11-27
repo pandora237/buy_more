@@ -1,4 +1,8 @@
+
 console.log(db)
+
+
+
 
 // start message 
 const containerChat = document.querySelector('#chat-container')
@@ -7,6 +11,7 @@ const boxChat = containerChat.querySelector('#chat-box')
 const formChat = containerChat.querySelector('#form-chat-footer')
 const chatToggle = containerChat.querySelector('#chatToggle')
 const closeChat = containerChat.querySelector('#close-btn')
+const searchFormHtml = document.querySelector('#form-searchbar')
 
 const messages = [
     {
@@ -14,8 +19,6 @@ const messages = [
         content: "Bonjour ! Comment puis-je vous aider ?"
     }
 ]
-
-
 
 function updateMessBox() {
     bodyChat.innerHTML = ''
@@ -63,6 +66,29 @@ updateMessBox()
 
 // end messages
 
+
+function secureAdminPages() {
+    const currentUser = getUser()
+    const pathnameTab = window.location.pathname?.split('/');
+    const key_admin = pathnameTab.length > 1 ? pathnameTab[1] : ''
+    if (!(key_admin == 'admin' && !currentUser)) {
+        window.location.href = `/pages/connexion.html?redirect=${window.location.href}`
+    }
+}
+
+
+// search products 
+function searchProduct() {
+    searchFormHtml.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const query = e.target.querySelector('input').value.trim();
+        if (query && query != '') {
+            window.location.href = `/pages/resultats-recherche.html?query=${query}`
+            searchFormHtml.reset()
+        }
+    })
+}
+searchProduct()
 
 
 const USER_CART_KEY = 'USER_CART'

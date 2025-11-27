@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - Buy More</title>
@@ -73,8 +72,8 @@
                 </div>
 
                 <div class="search-bar">
-                    <form>
-                        <input type="text" placeholder="Rechercher un produit...">
+                    <form id="form-searchbar">
+                        <input type="text" name="query" placeholder="Rechercher un produit...">
                         <button type="submit">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white"
                                 viewBox="0 0 24 24">
@@ -115,44 +114,44 @@
                    L20.9 6H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 16.37 
                    5.48 18 7 18h12v-2H7l1.1-2h9.45c.75 0 1.41-.41 
                    1.75-1.05z" />
-              </svg>
-              <span class="cart-count hide">3</span>
-            </div>
-          </a>
-        </div>
-      </nav>
-      <div id="menu" class=" ">
-        <div class="menu-items">
-         <div class="menu-items">
-                    <ul class="" id="menu-item-content">
+                            </svg>
+                            <span class="cart-count hide">3</span>
+                        </div>
+                    </a>
+                </div>
+            </nav>
+            <div id="menu" class=" ">
+                <div class="menu-items">
+                    <div class="menu-items">
+                        <ul class="" id="menu-item-content">
                             <a href="#">
                                 <span><i class="fa-solid fa-tv"></i></span>
                                 <span>Électronique</span>
                             </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">
-                                <span><i class="fa-solid fa-utensils"></i></span>
-                                <span>Alimentation</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">
-                                <span><i class="fa-solid fa-shirt"></i></span>
-                                <span>Mode</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">
-                                <span><i class="fa-solid fa-couch"></i></span>
-                                <span>Maison</span>
-                            </a>
-                        </li>
-                    </ul>
-        </div>
-      </div>
-    </div>
-  </header>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">
+                                    <span><i class="fa-solid fa-utensils"></i></span>
+                                    <span>Alimentation</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">
+                                    <span><i class="fa-solid fa-shirt"></i></span>
+                                    <span>Mode</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">
+                                    <span><i class="fa-solid fa-couch"></i></span>
+                                    <span>Maison</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </header>
 
     <main class="container">
 
@@ -249,7 +248,7 @@
                     <ul>
                         <li><a href="/pages/apropos.html">À propos</a></li>
                         <li><a href="/pages/equipe.html">Notre équipe</a></li>
-                        <li><a href="/pages/contact.html">Nous contacter</a></li> 
+                        <li><a href="/pages/contact.html">Nous contacter</a></li>
                     </ul>
                 </div>
 
@@ -376,8 +375,8 @@
             </button>
         </div>
     </footer>
-    <script src="../assets/js/db.js"></script>
-    <script src="../assets/js/index.js"></script>
+    <script src="../datas/db.js"></script>
+    <script src="../assets/js/index.js" defer></script>
     <script src="../assets/js/connexion.js"></script>
 
 </body>

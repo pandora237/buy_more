@@ -1,3 +1,5 @@
+secureAdminPages()
+
 const popupOverlay = document.querySelector('#popup-overlay')
 const summaryTotalBlock = document.querySelector('#summary-box')
 const inputs = document.querySelectorAll('input.go-to-validate')

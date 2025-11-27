@@ -1,3 +1,4 @@
+secureAdminPages()
 
 const form = document.querySelector('#form-step-1')
 const summaryTotalBlock = document.querySelector('#summary-box')
@@ -26,7 +27,7 @@ if (summaryTotalBlock) {
     summaryTotalBlock.innerHTML = ''
     const cart = getCartUser()
     const total = cart?.produits?.reduce((summ, p) => summ + p.prix, 0)
-     const html = `
+    const html = `
           <div class="paiement-pub">
            <img src="/assets/img/orange-money.png" alt=""> 
            <img src="/assets/img/mobile-money.jpg" alt="">  
