@@ -11,6 +11,10 @@ h1.title {
     text-decoration: underline;
 }
 
+h2.sub-title {
+    margin-bottom: 15px;
+}
+
 .content-compte {
     display: flex;
     gap: 20px;
@@ -48,47 +52,137 @@ aside ul li a {
     transition: all 0.3s;
 }
 
-aside ul li a i {
+
+aside ul li a:hover {
+    background-color: #e9f3ff;
+}
+
+.container {
+    position: relative;
+}
+
+.content .header {
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .header h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.container .header p {
+    color: #666;
+}
+
+.container .account-grid {}
+
+.sidebars {
+    background: white;
+    border-radius: 0%;
+    padding: 25px;
+    height: fit-content;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.deconnexion {
+    color: var(--col-danger);
+}
+
+.profile-section {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(30deg, var(--col-primary), var(--col-secondary), var(--col-primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.profile-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.profile-email {
+    font-size: 14px;
+    color: #666;
+}
+
+.sideBar .menu-item {
+    padding: 15px 20px;
+    margin: 5px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #555;
+    font-weight: 500;
+}
+
+.sideBar .menu-item:hover {
+    background: linear-gradient(30deg, var(--col-primary), var(--col-secondary));
+    color: white;
+    transform: translateX(5px);
+}
+
+.sideBar .menu-item.active {
+    background: linear-gradient(30deg, var(--col-primary), var(--col-secondary));
+    color: white;
+}
+
+.sideBar .menu-item.active i {
+    color: white !important;
+}
+
+
+.sideBar .menu-item i {
     margin-right: 10px;
     color: var(--col-primary);
     width: 20px;
     text-align: center;
 }
 
-aside ul li a:hover {
-    background-color: #e9f3ff;
+.menu-icon {
+    font-size: 20px;
 }
 
-/*  */
-.bredcrum {
+.content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     width: 100%;
-    background-color: var(--col-white);
-    display: flex;
-}
 
-.bredcrum a {
-    color: var(--col-primary);
-}
-
-.bredcrum.item {
-    text-decoration: underline;
 }
 
 /* Content */
-.content {
-    width: 100%;
-}
 
-.content-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 20px;
-}
 
 
 @media (max-width: 768px) {
-    aside .item-aside {
-        display: none;
+    .content-compte {
+        flex-direction: column;
     }
 }

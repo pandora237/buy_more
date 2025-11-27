@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon-compte - Buy More</title>
+    <title>Mes parametres - Buy More</title>
 
-    <link rel="stylesheet" href="/assets/css/index.css">
-    <link rel="stylesheet" href="/assets/css/index-admin.css">
-    <link rel="stylesheet" href="/assets/css/mon-compte.css">
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="../../assets/css/index-admin.css">
+    <link rel="stylesheet" href="../../assets/css/parametres.css">
 </head>
 
 <body>
@@ -162,7 +162,7 @@
                     </div>
                     <ul>
                         <li>
-                            <a href="./mon-compte.html" class="menu-item active"><i class="fa fa-user"> </i>
+                            <a href="./mon-compte.html" class="menu-item "><i class="fa fa-user"> </i>
                                 <span class="item-aside">Informations</span>
                             </a>
                         </li>
@@ -173,7 +173,7 @@
                         </li>
 
                         <li>
-                            <a href="./parametres.html" class="menu-item "><i class="fa fa-heart"></i>
+                            <a href="./parametres.html" class="menu-item active"><i class="fa fa-heart"></i>
                                 <span class="item-aside">Paramètres</span>
                             </a>
                         </li>
@@ -185,49 +185,39 @@
                     </ul>
                 </aside>
             </div>
-
-            <div class="content">
+            <section class="content">
                 <div class="header">
-                    <h1>Mon Compte</h1>
-                    <p>Gérez vos informations personnelles </p>
+                    <h1>Mes Reglages</h1>
                 </div>
 
-                <h2 class="sub-title">Informations personnelles</h2>
+                <div class="settings-form">
+                    <h2>Modifier mes informations</h2>
 
-                <div class="info content-grid">
-                    <div class="info-grid">
-
-                        <div class="info-card">
-                            <div class="info-label">
-                                <i class="fa-solid fa-user"></i> Nom complet
-                            </div>
-                            <div class="info-value">Jean Tchomgo</div>
-                        </div>
-
-                        <div class="info-card">
-                            <div class="info-label">
-                                <i class="fa-solid fa-envelope"></i> Email
-                            </div>
-                            <div class="info-value">jean.tchomgo@email.com</div>
-                        </div>
-
-                        <div class="info-card">
-                            <div class="info-label">
-                                <i class="fa-solid fa-phone"></i> Téléphone
-                            </div>
-                            <div class="info-value">+237 6 12 34 56 78</div>
-                        </div>
-
-                        <div class="info-card">
-                            <div class="info-label">
-                                <i class="fa-solid fa-calendar"></i> Date d'inscription
-                            </div>
-                            <div class="info-value">15 Mars 2024</div>
-                        </div>
-
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom">
                     </div>
+
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Adresse email</label>
+                        <input type="email" id="email" name="email" placeholder="exemple@mail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telephone">Téléphone</label>
+                        <input type="text" id="telephone" name="telephone" placeholder="Numéro de téléphone">
+                    </div>
+
+
+                    <button type="submit" class="btn btn-success">Enregistrer </button>
                 </div>
-            </div>
+
+            </section>
         </section>
     </main>
 

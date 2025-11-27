@@ -137,7 +137,7 @@ section {
 }
 
 .btn-success:hover {
-    background-color: var(--col-success-hover);
+   opacity: 0.8;
 }
 
 .btn-warning {
