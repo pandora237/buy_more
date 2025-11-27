@@ -146,13 +146,7 @@ function getOrderUser() {
 }
 
 function logginUser(user) {
-    const session = {
-        id: user.id,
-        nom: user.nom,
-        prenom: user.prenom,
-        email: user.email,
-        dateConnexion: new Date().toISOString()
-    };
+    const { password, ...session } = user
     const cart = db?.paniers.find(p => p.id_user == user.id)
     const order = db?.commandes.filter(c => c.id_panier == cart.id)
 
