@@ -22,12 +22,6 @@
     margin: 15px 0;
 }
 
-.rate-content {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: gold;
-}
-
 .banner-image img {
     max-width: 300px;
     border-radius: 12px;
@@ -54,9 +48,9 @@
 }
 
 /*  */
-.best-product   {
-     display: flex;
-     flex-direction: column;
+.best-product {
+    display: flex;
+    flex-direction: column;
 }
 
 /*  */
@@ -92,10 +86,11 @@
 }
 
 /* ===== Section Catégories ===== */
-.best-categories{
+.best-categories {
     display: flex;
     flex-direction: column;
 }
+
 .category-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -141,5 +136,5 @@
         flex-direction: column;
         text-align: center;
     }
- 
+
 }

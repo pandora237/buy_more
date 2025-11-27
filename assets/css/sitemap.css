@@ -1,0 +1,27 @@
+.sitemap {
+    display: flex;
+    gap: 10;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.sitemap ul {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.sitemap h2 {
+    margin-top: 25px;
+    color: #333;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.sitemap a {
+    color: var(--col-secondary);
+    text-decoration: none;
+}
+
+.sitemap a:hover {
+    text-decoration: underline;
+}

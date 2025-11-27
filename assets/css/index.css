@@ -89,6 +89,13 @@ section {
 
 .title {
     margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.rate-content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: gold;
 }
 
 .btn {
@@ -868,6 +875,7 @@ footer #go-top {
     padding: 15px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 400px;
 }
 
 .product-card:hover {
