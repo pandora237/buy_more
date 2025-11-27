@@ -1,14 +1,4 @@
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700;800&display=swap" rel="stylesheet">
-:root{
-  --accent:#7c1f1f; /* maroon-ish title color */
-  --muted:#f6f4f3;
-  --box:#fff;
-  --input-border:#ddd;
-  --text:#333;
-  --maxw:1100px;
-  --radius:8px;
-}
 
 .wrap{
   max-width:var(--maxw);

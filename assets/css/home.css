@@ -99,6 +99,8 @@
 .best-product {
     display: flex;
     flex-direction: column;
+}
+
 .best-product {
     display: flex;
     flex-direction: column;
@@ -164,7 +166,7 @@
 }
 
 .category-card img {
-    max-width: 100% ;
+    max-width: 100%;
     height: 250px;
     object-fit: contain;
 }
