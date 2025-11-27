@@ -410,6 +410,12 @@ header {
         max-height: 50%;
     }
 }
+@media (max-width: 450px) {
+   .menu-items  { 
+        overflow-x: auto;
+        max-width: 100%;
+    }
+}
 
 /* end header */
 
