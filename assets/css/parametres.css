@@ -1,0 +1,32 @@
+.settings-form {
+    background: var(--col-white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.settings-form h2 {
+    margin-bottom: 20px;
+    color: var(--col-primary);
+}
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--col-primary);
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #f7f7f7;
+}
