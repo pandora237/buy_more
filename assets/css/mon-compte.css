@@ -271,3 +271,72 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* Responsive supplémentaires */
+@media (max-width: 1024px) {
+    .container .content h2 {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .container .sidebars {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .container .account-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cart-dash {
+        padding: 15px;
+    }
+
+    .cart-dash i {
+        font-size: 28px;
+    }
+
+    .cart-dash h2 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .content {
+        padding: 15px;
+    }
+
+    .container .menu-item {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .container .menu-icon {
+        font-size: 18px;
+    }
+
+    .cart-dash i {
+        font-size: 24px;
+    }
+
+    .cart-dash h2 {
+        font-size: 14px;
+    }
+
+    .container .avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
+    }
+
+    .container .profile-name {
+        font-size: 16px;
+    }
+
+    .container .profile-email {
+        font-size: 12px;
+    }
+}
