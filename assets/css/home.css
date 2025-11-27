@@ -99,6 +99,9 @@
 .best-product {
     display: flex;
     flex-direction: column;
+.best-product {
+    display: flex;
+    flex-direction: column;
 }
 
 /*  */

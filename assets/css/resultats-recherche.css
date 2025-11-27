@@ -1,0 +1,17 @@
+ .results .title {
+     font-size: 28px;
+     color: var(--col-primary);
+     margin-bottom: 5px;
+ }
+
+ .results-count {
+     color: var(--col-secondary);
+     margin-bottom: 20px;
+     font-weight: 500;
+ }
+
+ .products-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+     gap: 20px;
+ }
